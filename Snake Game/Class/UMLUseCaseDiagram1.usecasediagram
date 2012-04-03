@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="6a74fe6a-d479-43f2-900e-ceeb9486fcf5" name="UMLUseCaseDiagram1" linkedPackageId="956d4a56-81f3-4b8b-87d4-d85e04a56436" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="b9463bf6-44eb-490d-b37b-46e441f9b831">
+      <profileInstance Id="fc83319e-b6e8-470f-9940-0c9158fea5a8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="495d1a18-9d96-40c1-b6f9-3d8b05e60f7a">
+      <profileInstance Id="5d6285e7-0b8f-42d2-aabb-1b3c8d054b80" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="52244f7b-9c03-4d2b-b0ae-b410de84fc1e" name="Player" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="274bfe88-7d32-46c6-aaf0-4dff9cdd3952" />
+        <targetEnds>
+          <association Id="0815cc16-488d-443a-bbf6-436bae930a7c" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Start new game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cb910c64-5edd-4f45-a2af-190bb45e76c2" LastKnownName="Start new game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6d1c9b8-8c73-4e07-bb2e-ffeaab74eaa2" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4e11371c-9977-4849-8f3e-7c55ee285422" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d81adf87-1522-4061-bc86-deb6404848e2" name="Start new game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4ad8b454-9fee-492e-8d15-ab8de82ba642" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="05b4b98b-9593-4088-8a51-a9a3b6b22555" />
+          </association>
+          <association Id="4a5b4ed4-e212-4f5a-82e6-7b7fc201fdaf" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Read help" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="68192554-a3ae-4df4-9c0a-5228147733cb" LastKnownName="Read help" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="37f89a40-c8d5-48a9-b760-1ce3e84b8681" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a1199481-7afd-436a-9565-e4b7de04b09f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb6208fb-a0bd-432b-9b1e-8a6ac0f2ed84" name="Read help" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6b93cf5b-307a-4642-ba54-54f562e8a712" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4bafb384-81a8-4e47-9a4b-ece8773c1f48" />
+          </association>
+          <association Id="f651e5c8-00c7-4e31-bd4d-f38d9e05c8f7" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Quit game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0353e3be-b704-4770-a099-2244021c5255" LastKnownName="Quit game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b3e7251-6c77-4998-be48-91af468840b6" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="70299199-706f-40a3-bcd6-28dbf6a4e521" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3bfa42a7-f46e-40d8-86ee-2c07589f8ef2" name="Quit game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9a0c610a-1dba-40f1-82f4-7843b73e4491" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="584b203e-3d21-469e-81dd-763162b51eda" />
+          </association>
+          <association Id="db9b6821-fba3-4895-9543-171529ca6d86" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Select difficulty level" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="64a5da27-cca3-4e74-8f19-dbae0046c39e" LastKnownName="Select difficulty level" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a3ccab55-2e9d-44a7-a1be-9f0f208512e3" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c38af36d-11e2-4166-bdf2-95b2a002eff5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69005df0-d992-44b3-a7e7-f035c128fc5f" name="Select difficulty level" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="08f3baa0-fd6d-44a8-b2ef-4605611c2e6f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6c70ba9b-a9a9-44a7-b773-d0426bbd791d" />
+          </association>
+          <association Id="73d806f6-ef46-4f6a-830b-eb8b1dc6b526" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Play game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4f57f2c6-17ed-4a7d-a0fd-48cbd2f9f20c" LastKnownName="Play game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aeb8d84a-9daf-4ce8-9910-248e586bf2bb" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="03fca98c-ab9b-43ff-aa49-42cc7c28874c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d599cb7a-7897-49c3-ae6e-587da3c7b503" name="Play game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ecfe6a10-6806-4bd0-af16-0419f72bae94" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0f26e3d3-2d3a-4604-942a-9b401b7ebf28" />
+          </association>
+          <association Id="f77a483b-032e-4d32-8c8f-f457e73c4949" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Pause game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f5281e3-f46e-433a-9c70-2f5fc3e787ac" LastKnownName="Pause game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66ae7a57-d6cd-4369-a198-a06f023e15b4" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4dc733d7-1a02-40ec-b43b-ee175199df62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="42d7efa4-8fbe-4325-8019-106c30653f2a" name="Pause game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="835a16f0-9e71-4ee0-8a3d-57900a529a3b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fd735122-b88f-4dc6-81c9-6c944accdf0a" />
+          </association>
+          <association Id="31c315a1-fbf1-43d0-8f14-902bb1a2d7b9" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Resume game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6ed1ebd4-0d00-41df-a135-d2cd534e2d13" LastKnownName="Resume game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f4c28475-7566-4ef8-82a4-06d1be181b1f" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="59cda596-bfe9-40c4-a51e-dd14194467cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ace2acce-3ff6-456d-bcf1-636791a9869d" name="Resume game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9360e855-800e-419c-b56c-0591f3b8b1b7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c5f64a2b-da40-47c9-84b2-67be55135f17" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" name="Snake Game" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="77396a9f-53f4-44ec-9dc0-de95baa8bf3b" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="cb910c64-5edd-4f45-a2af-190bb45e76c2" name="Start new game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ad80fc37-3fec-4679-ae01-334d344a3460" />
+        <suppliersInternal>
+          <dependency Id="a0a3f787-1c1d-43dd-a861-7c53962bc961">
+            <useCaseMoniker Id="64a5da27-cca3-4e74-8f19-dbae0046c39e" LastKnownName="Select difficulty level" />
+            <elementDefinition Id="93353ede-9bc7-4e2d-930a-4294629fecba" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2f5281e3-f46e-433a-9c70-2f5fc3e787ac" name="Pause game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6ebd8073-422a-48ee-adb6-cf221702cacd" />
+        <suppliersInternal>
+          <dependency Id="d201966a-c633-4468-8bff-a46df914274c">
+            <useCaseMoniker Id="6ed1ebd4-0d00-41df-a135-d2cd534e2d13" LastKnownName="Resume game" />
+            <elementDefinition Id="86a50452-a54d-4a7d-b8d7-10ef5cd1af57" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6ed1ebd4-0d00-41df-a135-d2cd534e2d13" name="Resume game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26566a05-6765-4400-a3df-9b8915664cdc" />
+        <suppliersInternal>
+          <dependency Id="74578827-f553-45a9-9ac4-8f266ece95dc">
+            <useCaseMoniker Id="4f57f2c6-17ed-4a7d-a0fd-48cbd2f9f20c" LastKnownName="Play game" />
+            <elementDefinition Id="95c426ec-bdc2-44dd-99f6-8bd315c37829" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0353e3be-b704-4770-a099-2244021c5255" name="Quit game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a078b388-6e90-4553-9ed0-c353a2315eb6" />
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="68192554-a3ae-4df4-9c0a-5228147733cb" name="Read help" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd4444d0-e354-496b-934d-803f02501521" />
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="64a5da27-cca3-4e74-8f19-dbae0046c39e" name="Select difficulty level" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb61a535-540c-4578-97ac-c143e529a2be" />
+        <suppliersInternal>
+          <dependency Id="960caa03-6251-47b9-8c7d-0c4ecc1f801e">
+            <useCaseMoniker Id="4f57f2c6-17ed-4a7d-a0fd-48cbd2f9f20c" LastKnownName="Play game" />
+            <elementDefinition Id="86aadea8-cfdc-44fd-b64e-65d91f68a63a" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4f57f2c6-17ed-4a7d-a0fd-48cbd2f9f20c" name="Play game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="11db256d-7987-4eca-af1c-2b7494c4fda7" />
+        <suppliersInternal>
+          <dependency Id="2b3359cb-b09c-4334-9e65-5661e050cb8a">
+            <useCaseMoniker Id="2f5281e3-f46e-433a-9c70-2f5fc3e787ac" LastKnownName="Pause game" />
+            <elementDefinition Id="57c1f842-1ac7-4610-b3ca-496e7b63b1cd" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="d06dcc33-3400-4683-8852-ddc5d1ce4db2" LastKnownName="Snake Game" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="956d4a56-81f3-4b8b-87d4-d85e04a56436" name="Class">
+    <elementDefinition Id="86f14228-af53-462e-ac67-774a171b1384" />
+  </package>
+</useCaseModelRoot>
