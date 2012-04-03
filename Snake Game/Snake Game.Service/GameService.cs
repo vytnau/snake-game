@@ -11,15 +11,18 @@ namespace Snake_Game.Service
     {
         private readonly int STAGE_HEIGTH = 40;
         private readonly int STAGE_WIDTH = 60;
+        private readonly int POINT = 15;
         private readonly IGameStage stage;
         private readonly ISnakeService snake;
         private readonly IGameComponent food;
+        private readonly IPlayerService player;
         //private bool orent;
         public GameService()
         {
             stage = new GameStageService(STAGE_WIDTH, STAGE_HEIGTH);
             snake = new SnakeService();
             food = new FoodService();
+            player = new PlayerService();
 
             food.AddItem(new Vector2(10, 10));
             //orent = true;
@@ -57,6 +60,9 @@ namespace Snake_Game.Service
             return false;
         }
 
+        /// ToDO 
+        /// perasyt si metoda, isskaidyti i mazesnius ir t.t.
+        
 
         //judejimo metodas, na toks nemenkas gausis
         public void SetMovment(int x, int y)
@@ -135,6 +141,7 @@ namespace Snake_Game.Service
             if (list.Contains(snakeHead))
             {
                 food.RemoveItem(snakeHead);
+                player.AddPoint(POINT); 
                 CreateFood();
                 return true;
             }
@@ -186,6 +193,16 @@ namespace Snake_Game.Service
             {
                 stage.SetSnakeFood(a);
             }
+        }
+
+        public string GetPoints()
+        {
+            return player.GetPoints().ToString();
+        }
+
+        public string GetLives()
+        {
+            return player.GetLive().ToString();
         }
     }
 }

@@ -116,7 +116,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="GameStageUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -126,18 +126,6 @@
     <ProjectReference Include="..\..\Busines Logic\Busines Logic.csproj">
       <Project>{E56FEE51-3887-4B4E-AC51-76A171969274}</Project>
       <Name>Busines Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\DomainModel\Snake Game.DomainModel.csproj">
-      <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
-      <Name>Snake Game.DomainModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Repositories\Snake Game.Repositories.csproj">
-      <Project>{2C26111A-436B-4EA1-B851-C76B916160D0}</Project>
-      <Name>Snake Game.Repositories</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Snake Game.DataContracts\Snake Game.DataContracts.csproj">
-      <Project>{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}</Project>
-      <Name>Snake Game.DataContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Snake Game.ServiceContracts\Snake Game.ServiceContracts.csproj">
       <Project>{093A6E86-0767-4D3F-87A8-BF4305CC02B1}</Project>

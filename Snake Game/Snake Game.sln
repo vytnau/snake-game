@@ -5,23 +5,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "Snake Game\Snake Game
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake GameContent", "Snake Game\Snake GameContent\Snake GameContent.contentproj", "{CF016A5F-6C4B-47B0-A029-FB44610F95A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.Repositories", "Repositories\Snake Game.Repositories.csproj", "{2C26111A-436B-4EA1-B851-C76B916160D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.DomainModel", "DomainModel\Snake Game.DomainModel.csproj", "{DF688D8E-C642-4A42-B1D5-93ECF294F09F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.Service", "Snake Game.Service\Snake Game.Service.csproj", "{C8838FEE-13EE-433F-A627-B36D3DBAA494}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Busines Logic", "Busines Logic\Busines Logic.csproj", "{E56FEE51-3887-4B4E-AC51-76A171969274}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.ServiceContracts", "Snake Game.ServiceContracts\Snake Game.ServiceContracts.csproj", "{093A6E86-0767-4D3F-87A8-BF4305CC02B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.DataContracts", "Snake Game.DataContracts\Snake Game.DataContracts.csproj", "{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}"
-EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Class", "..\..\ver 1\Snake Game\Class\Class.modelproj", "{353ADA2D-4AC6-40D6-AE63-1DFBCB7DFAB7}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs19
 		SccLocalPath0 = .
@@ -31,27 +25,18 @@ Global
 		SccProjectUniqueName2 = Busines\u0020Logic\\Busines\u0020Logic.csproj
 		SccProjectName2 = Busines\u0020Logic
 		SccLocalPath2 = Busines\u0020Logic
-		SccProjectUniqueName3 = DomainModel\\Snake\u0020Game.DomainModel.csproj
-		SccProjectName3 = DomainModel
-		SccLocalPath3 = DomainModel
-		SccProjectUniqueName4 = Repositories\\Snake\u0020Game.Repositories.csproj
-		SccProjectName4 = Repositories
-		SccLocalPath4 = Repositories
-		SccProjectUniqueName5 = Snake\u0020Game.DataContracts\\Snake\u0020Game.DataContracts.csproj
-		SccProjectName5 = Snake\u0020Game.DataContracts
-		SccLocalPath5 = Snake\u0020Game.DataContracts
-		SccProjectUniqueName6 = Snake\u0020Game.Service\\Snake\u0020Game.Service.csproj
-		SccProjectName6 = Snake\u0020Game.Service
-		SccLocalPath6 = Snake\u0020Game.Service
-		SccProjectUniqueName7 = Snake\u0020Game.ServiceContracts\\Snake\u0020Game.ServiceContracts.csproj
-		SccProjectName7 = Snake\u0020Game.ServiceContracts
-		SccLocalPath7 = Snake\u0020Game.ServiceContracts
-		SccProjectUniqueName8 = Snake\u0020Game\\Snake\u0020Game\\UI.csproj
-		SccProjectName8 = Snake\u0020Game/Snake\u0020Game
-		SccLocalPath8 = Snake\u0020Game\\Snake\u0020Game
-		SccProjectUniqueName9 = Snake\u0020Game\\Snake\u0020GameContent\\Snake\u0020GameContent.contentproj
-		SccProjectName9 = Snake\u0020Game/Snake\u0020GameContent
-		SccLocalPath9 = Snake\u0020Game\\Snake\u0020GameContent
+		SccProjectUniqueName3 = Snake\u0020Game.Service\\Snake\u0020Game.Service.csproj
+		SccProjectName3 = Snake\u0020Game.Service
+		SccLocalPath3 = Snake\u0020Game.Service
+		SccProjectUniqueName4 = Snake\u0020Game.ServiceContracts\\Snake\u0020Game.ServiceContracts.csproj
+		SccProjectName4 = Snake\u0020Game.ServiceContracts
+		SccLocalPath4 = Snake\u0020Game.ServiceContracts
+		SccProjectUniqueName5 = Snake\u0020Game\\Snake\u0020Game\\UI.csproj
+		SccProjectName5 = Snake\u0020Game/Snake\u0020Game
+		SccLocalPath5 = Snake\u0020Game\\Snake\u0020Game
+		SccProjectUniqueName6 = Snake\u0020Game\\Snake\u0020GameContent\\Snake\u0020GameContent.contentproj
+		SccProjectName6 = Snake\u0020Game/Snake\u0020GameContent
+		SccLocalPath6 = Snake\u0020Game\\Snake\u0020GameContent
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,26 +63,6 @@ Global
 		{CF016A5F-6C4B-47B0-A029-FB44610F95A6}.Release|Any CPU.ActiveCfg = Release|x86
 		{CF016A5F-6C4B-47B0-A029-FB44610F95A6}.Release|Mixed Platforms.ActiveCfg = Release|x86
 		{CF016A5F-6C4B-47B0-A029-FB44610F95A6}.Release|x86.ActiveCfg = Release|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Debug|x86.ActiveCfg = Debug|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Debug|x86.Build.0 = Debug|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|Any CPU.ActiveCfg = Release|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|Mixed Platforms.Build.0 = Release|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|x86.ActiveCfg = Release|x86
-		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|x86.Build.0 = Release|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Debug|x86.ActiveCfg = Debug|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Debug|x86.Build.0 = Debug|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Release|Any CPU.ActiveCfg = Release|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Release|Mixed Platforms.Build.0 = Release|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Release|x86.ActiveCfg = Release|x86
-		{DF688D8E-C642-4A42-B1D5-93ECF294F09F}.Release|x86.Build.0 = Release|x86
 		{C8838FEE-13EE-433F-A627-B36D3DBAA494}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{C8838FEE-13EE-433F-A627-B36D3DBAA494}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{C8838FEE-13EE-433F-A627-B36D3DBAA494}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -128,16 +93,6 @@ Global
 		{093A6E86-0767-4D3F-87A8-BF4305CC02B1}.Release|Mixed Platforms.Build.0 = Release|x86
 		{093A6E86-0767-4D3F-87A8-BF4305CC02B1}.Release|x86.ActiveCfg = Release|x86
 		{093A6E86-0767-4D3F-87A8-BF4305CC02B1}.Release|x86.Build.0 = Release|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Debug|x86.ActiveCfg = Debug|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Debug|x86.Build.0 = Debug|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Release|Any CPU.ActiveCfg = Release|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Release|Mixed Platforms.Build.0 = Release|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Release|x86.ActiveCfg = Release|x86
-		{FFF1C9E9-2611-43BF-BD45-77C1199E6C4B}.Release|x86.Build.0 = Release|x86
 		{353ADA2D-4AC6-40D6-AE63-1DFBCB7DFAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{353ADA2D-4AC6-40D6-AE63-1DFBCB7DFAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{353ADA2D-4AC6-40D6-AE63-1DFBCB7DFAB7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
