@@ -23,5 +23,9 @@ namespace Snake_Game.ServiceContracts
         /// Gyvatės pajudėjimas.
         /// </summary>
         void StageUpdate();
+
+        string GetPoints();
+
+        string GetLives();
     }
 }

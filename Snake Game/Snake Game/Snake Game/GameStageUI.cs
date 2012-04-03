@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -16,11 +16,12 @@ namespace Snake_Game
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class GameStageUI : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
+        SpriteFont text;
         Vector2 direction;
         bool up;
         bool down;
@@ -28,7 +29,7 @@ namespace Snake_Game
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private readonly IGameService game;
 
-        public Game1()
+        public GameStageUI()
         {
             game = new GameService();
             graphics = new GraphicsDeviceManager(this);
@@ -62,6 +63,7 @@ namespace Snake_Game
             Content.RootDirectory = "Content";//Content
             //Snake Game\Snake GameContent\Arial.spritefont";
             font = Content.Load<SpriteFont>("Font\\Arial");
+            text = Content.Load<SpriteFont>("Font\\Fontas");
             // TODO: use this.Content to load your game content here
         }
 
@@ -149,14 +151,22 @@ namespace Snake_Game
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            DrawStage();
+            DrwaPlayerInfo();
+            base.Draw(gameTime);
+        }
+
+        private void DrawStage()
+        {
             int[,] matrix = game.GetGameStage();
             spriteBatch.Begin();
-            for(int i=0; i < 60; i++){
-                for (int j = 0; j < 40; j++ )
+            for (int i = 0; i < 60; i++)
+            {
+                for (int j = 0; j < 40; j++)
                 {
                     if (matrix[i, j] == 0)
                     {
-                    //    spriteBatch.DrawString(font, "0", new Vector2(i * 10, j * 10), Color.Black);
+                            spriteBatch.DrawString(font, "0", new Vector2(i * 10, j * 10), Color.Black);
                     }
                     if (matrix[i, j] == 1)
                     {
@@ -169,10 +179,19 @@ namespace Snake_Game
                 }
             }
             spriteBatch.End();
-    
-            // TODO: Add your drawing code here
+        }
 
-            base.Draw(gameTime);
+        private void DrwaPlayerInfo()
+        {
+            string point = game.GetPoints();
+            string lives = game.GetLives();
+            spriteBatch.Begin();            
+            spriteBatch.DrawString(text, "zaidejas", new Vector2(680, 50), Color.Black);
+            spriteBatch.DrawString(text, "Turimi taskai:", new Vector2(640, 80), Color.Black);
+            spriteBatch.DrawString(text, point, new Vector2(680, 100), Color.Black);
+            spriteBatch.DrawString(text, "Gyvybes:", new Vector2(640, 120), Color.Black);
+            spriteBatch.DrawString(text, lives, new Vector2(730, 120), Color.Black);
+            spriteBatch.End();
         }
     }
 }

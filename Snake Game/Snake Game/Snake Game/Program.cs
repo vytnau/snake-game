@@ -10,7 +10,7 @@ namespace Snake_Game
         /// </summary>
         static void Main(string[] args)
         {
-            using (Game1 game = new Game1())
+            using (GameStageUI game = new GameStageUI())
             {
                 game.Run();
             }
