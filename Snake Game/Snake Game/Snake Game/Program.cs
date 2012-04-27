@@ -1,5 +1,5 @@
 using System;
-
+using System.Windows.Forms;
 namespace Snake_Game
 {
 #if WINDOWS || XBOX
@@ -11,8 +11,13 @@ namespace Snake_Game
         static void Main(string[] args)
         {
             using (GameStageUI game = new GameStageUI())
+            //using (Meniu game = new Meniu())
             {
+               
+                    // The old contents of Main go here
+                    //game.Run();
                 game.Run();
+                
             }
         }
     }
