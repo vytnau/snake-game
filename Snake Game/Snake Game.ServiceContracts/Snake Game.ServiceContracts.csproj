@@ -41,6 +41,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IBugService.cs" />
     <Compile Include="IGameComponent.cs" />
     <Compile Include="IGameService.cs" />
     <Compile Include="IGameStage.cs" />

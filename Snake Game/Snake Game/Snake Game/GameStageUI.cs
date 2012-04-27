@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -10,6 +11,8 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Snake_Game.ServiceContracts;
 using Snake_Game.Service;
+using DataAccess;
+
 
 namespace Snake_Game
 {
@@ -17,26 +20,44 @@ namespace Snake_Game
     /// This is the main type for your game
     /// </summary>
     public class GameStageUI : Microsoft.Xna.Framework.Game
-    {
+    {       
+        public enum GameStates
+        {
+            Menu,
+            Running,
+            Pause,
+            End
+        }
+
+
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
         SpriteFont text;
         Vector2 direction;
+        MeniuTexture meniuTexture;
+
+
         bool up;
         bool down;
         int millisecondsPerFrame = 70; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private readonly IGameService game;
+        public static GameStates gamestate;
+        private Meniu menu;
 
         public GameStageUI()
         {
             game = new GameService();
+            menu = new Meniu();
+            meniuTexture = new MeniuTexture();
             graphics = new GraphicsDeviceManager(this);
             direction.X = 1;
             direction.Y = 1;
             up = true;
             down = true;
+            
         }
 
         /// <summary>
@@ -48,7 +69,14 @@ namespace Snake_Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            //InitGraphicsMode(1280, 720, false);
 
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 449;
+            graphics.ApplyChanges();
+            millisecondsPerFrame = 100; //Update every 1 second
+            gamestate = GameStates.Menu;
+            //gamestate = GameStates.Running;
             base.Initialize();
         }
 
@@ -64,6 +92,22 @@ namespace Snake_Game
             //Snake Game\Snake GameContent\Arial.spritefont";
             font = Content.Load<SpriteFont>("Font\\Arial");
             text = Content.Load<SpriteFont>("Font\\Fontas");
+
+            meniuTexture.background = Content.Load<Texture2D>("Texture\\Meniu\\meniu_background");
+            meniuTexture.gameTitle = Content.Load<Texture2D>("Texture\\Meniu\\gameTitle");
+            meniuTexture.signPole =  Content.Load<Texture2D>("Texture\\Meniu\\signPole");
+            meniuTexture.new_game = Content.Load<Texture2D>("Texture\\Meniu\\newGame");
+            meniuTexture.new_game_marked = Content.Load<Texture2D>("Texture\\Meniu\\newGameMarked");
+            meniuTexture.highscores = Content.Load<Texture2D>("Texture\\Meniu\\highscores");
+            meniuTexture.highscores_marked = Content.Load<Texture2D>("Texture\\Meniu\\highscoresMarked");
+            meniuTexture.help = Content.Load<Texture2D>("Texture\\Meniu\\help");
+            meniuTexture.help_marked = Content.Load<Texture2D>("Texture\\Meniu\\helpMarked");
+            meniuTexture.quit = Content.Load<Texture2D>("Texture\\Meniu\\quit");
+            meniuTexture.quit_marked = Content.Load<Texture2D>("Texture\\Meniu\\quitMarked");   
+        
+
+            
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -83,55 +127,96 @@ namespace Snake_Game
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            KeyboardState key = Keyboard.GetState();
+            KeyboardState key = Keyboard.GetState(); 
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (timeSinceLastUpdate >= millisecondsPerFrame)
             {
-                timeSinceLastUpdate = 0;                           
-
-            if (key.IsKeyDown(Keys.Left))
-            {
-                if (direction.Y != 1)
+                timeSinceLastUpdate = 0;
+                if (gamestate == GameStates.Running)
                 {
-                    direction.X = -1;
-                    direction.Y = 1;
-                    up = true;
-                    down = true;
+
+
+                    if (key.IsKeyDown(Keys.Left))
+                    {
+                        if (direction.Y != 1)
+                        {
+                            direction.X = -1;
+                            direction.Y = 1;
+                            up = true;
+                            down = true;
+                        }
+                    }
+
+                    if (key.IsKeyDown(Keys.Right))
+                    {
+                        if (direction.Y != 1)
+                        {
+                            direction.X = 1;
+                            direction.Y = 1;
+                            up = true;
+                            down = true;
+                        }
+                    }
+
+                    if (key.IsKeyDown(Keys.Up))
+                    {
+                        if (up)
+                        {
+                            down = false;
+                            direction.X = 1;
+                            direction.Y = -1;
+                        }
+                    }
+
+                    if (key.IsKeyDown(Keys.Down))
+                    {
+                        if (down)
+                        {
+                            up = false;
+                            direction.X = -1;
+                            direction.Y = -1;
+                        }
+                    }
+
+                    game.SetMovment((int)direction.X, (int)direction.Y);
+                }
+            
+                else if (gamestate == GameStates.Menu)
+                {
+
+                    if (key.IsKeyDown(Keys.Down))
+                    {
+                        menu.Iterator++;
+                    }
+                    else if (key.IsKeyDown(Keys.Up))
+                    {
+                        menu.Iterator--;
+                    }
+                    else if (key.IsKeyDown(Keys.Enter))
+                    {
+                        menu.Enter();
+                    }
+
+                    /*if (input.MenuSelect)
+                    {
+                        if (menu.Iterator == 0)
+                        {
+                            gamestate = GameStates.Running;
+                            SetUpSingle();
+                        }
+                        else if (menu.Iterator == 1)
+                        {
+                            gamestate = GameStates.Running;
+                            SetUpMulti();
+                        }
+                        else if (menu.Iterator == 2)
+                        {
+                            this.Exit();
+                        }
+                        menu.Iterator = 0;
+                    }*/
                 }
             }
-
-            if (key.IsKeyDown(Keys.Right))
-            {
-                if (direction.Y != 1)
-                {
-                    direction.X = 1;
-                    direction.Y = 1;
-                    up = true;
-                    down = true;
-                }
-            }
-
-            if (key.IsKeyDown(Keys.Up))
-            {
-                if (up)
-                {
-                    down = false;
-                    direction.X = 1;
-                    direction.Y = -1;
-                }
-            }
-
-            if (key.IsKeyDown(Keys.Down))
-            {
-                if (down)
-                {
-                    up = false;
-                    direction.X = -1;
-                    direction.Y = -1;
-                }
-            }
-
-            game.SetMovment((int)direction.X, (int)direction.Y);
             //game.SetMovment(
 
             // Allows the game to exit
@@ -140,7 +225,7 @@ namespace Snake_Game
 
             // TODO: Add your update logic here
   
-                        } 
+                         
             base.Update(gameTime);
         }
 
@@ -150,9 +235,16 @@ namespace Snake_Game
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            DrawStage();
-            DrwaPlayerInfo();
+            if (gamestate == GameStates.Running)
+            {
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+                DrawStage();
+                DrwaPlayerInfo();
+            }
+            else if (gamestate == GameStates.Menu)
+            {
+                menu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
+            }
             base.Draw(gameTime);
         }
 
@@ -166,7 +258,7 @@ namespace Snake_Game
                 {
                     if (matrix[i, j] == 0)
                     {
-                            spriteBatch.DrawString(font, "0", new Vector2(i * 10, j * 10), Color.Black);
+                          //  spriteBatch.DrawString(font, "0", new Vector2(i * 10, j * 10), Color.Black);
                     }
                     if (matrix[i, j] == 1)
                     {
@@ -175,6 +267,10 @@ namespace Snake_Game
                     if (matrix[i, j] == 2)
                     {
                         spriteBatch.DrawString(font, "2", new Vector2(i * 10, j * 10), Color.Black);
+                    }
+                    if (matrix[i, j] == 3)
+                    {
+                        spriteBatch.DrawString(font, "3", new Vector2(i * 10, j * 10), Color.Black);
                     }
                 }
             }
@@ -194,4 +290,52 @@ namespace Snake_Game
             spriteBatch.End();
         }
     }
+/*
+    /// <summary>
+        /// Attempt to set the display mode to the desired resolution.  Itterates through the display
+        /// capabilities of the default graphics adapter to determine if the graphics adapter supports the
+        /// requested resolution.  If so, the resolution is set and the function returns true.  If not,
+        /// no change is made and the function returns false.
+        /// </summary>
+        /// <param name="iWidth">Desired screen width.</param>
+        /// <param name="iHeight">Desired screen height.</param>
+        /// <param name="bFullScreen">True if you wish to go to Full Screen, false for Windowed Mode.</param>
+        private bool InitGraphicsMode(int iWidth, int iHeight, bool bFullScreen)
+        {
+            // If we aren't using a full screen mode, the height and width of the window can
+            // be set to anything equal to or smaller than the actual screen size.
+            if (bFullScreen == false)
+            {
+                if ((iWidth <= GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width)
+                    && (iHeight <= GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height))
+                {
+                    graphics.PreferredBackBufferWidth = iWidth;
+                    graphics.PreferredBackBufferHeight = iHeight;
+                    graphics.IsFullScreen = bFullScreen;
+                    graphics.ApplyChanges();
+                    return true;
+                }
+            }
+            else
+            {
+                // If we are using full screen mode, we should check to make sure that the display
+                // adapter can handle the video mode we are trying to set.  To do this, we will
+                // iterate thorugh the display modes supported by the adapter and check them against
+                // the mode we want to set.
+                foreach (DisplayMode dm in GraphicsAdapter.DefaultAdapter.SupportedDisplayModes)
+                {
+                    // Check the width and height of each mode against the passed values
+                    if ((dm.Width == iWidth) && (dm.Height == iHeight))
+                    {
+                        // The mode is supported, so set the buffer formats, apply changes and return
+                        graphics.PreferredBackBufferWidth = iWidth;
+                        graphics.PreferredBackBufferHeight = iHeight;
+                        graphics.IsFullScreen = bFullScreen;
+                        graphics.ApplyChanges();
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }*/
 }

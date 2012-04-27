@@ -16,10 +16,13 @@ namespace Snake_Game.Service
         private readonly ISnakeService snake;
         private readonly IGameComponent food;
         private readonly IPlayerService player;
+        private readonly IBugService bug;
+
         //private bool orent;
         public GameService()
         {
             stage = new GameStageService(STAGE_WIDTH, STAGE_HEIGTH);
+            bug = new BugService(STAGE_WIDTH, STAGE_HEIGTH);
             snake = new SnakeService();
             food = new FoodService();
             player = new PlayerService();
@@ -69,6 +72,8 @@ namespace Snake_Game.Service
         {
             Vector2 head = snake.GetSnakeHead();
             Vector2 tail = snake.GetSnakeTail();
+            RemoveBug(bug.GetCoord());
+
             if (x == 1)
             {
                 if (y == 1)
@@ -77,6 +82,7 @@ namespace Snake_Game.Service
                     {
                         head.X += 1;
                         snake.Move(head);
+                        bug.SetDirection(head);
                     }
                     else
                     {
@@ -89,6 +95,7 @@ namespace Snake_Game.Service
                     {
                         head.Y -= 1;
                         snake.Move(head);
+                        bug.SetDirection(head);
                     }
                     else
                     {
@@ -104,6 +111,7 @@ namespace Snake_Game.Service
                     {
                         head.X -= 1;
                         snake.Move(head);
+                        bug.SetDirection(head);
                     }
                     else
                     {
@@ -116,6 +124,7 @@ namespace Snake_Game.Service
                     {
                         head.Y += 1;
                         snake.Move(head);
+                        bug.SetDirection(head);
                     }
                     else
                     {
@@ -177,6 +186,12 @@ namespace Snake_Game.Service
         {
             FillSnakeCoord(snake.GetSnakeCoordinates());
             FillFoodCoord(food.GetList());
+            FillBugCoord();
+        }
+
+        private void RemoveBug(Vector2 bugCoor)
+        {
+            stage.RemoveBugCoord(bug.GetCoord());
         }
 
         private void FillSnakeCoord(LinkedList<Vector2> list)
@@ -193,6 +208,11 @@ namespace Snake_Game.Service
             {
                 stage.SetSnakeFood(a);
             }
+        }
+
+        private void FillBugCoord()
+        {
+            stage.SetBugCoord(bug.GetCoord());
         }
 
         public string GetPoints()
