@@ -94,18 +94,33 @@ namespace Snake_Game
             text = Content.Load<SpriteFont>("Font\\Fontas");
 
             meniuTexture.background = Content.Load<Texture2D>("Texture\\Meniu\\meniu_background");
-            meniuTexture.gameTitle = Content.Load<Texture2D>("Texture\\Meniu\\gameTitle");
-            meniuTexture.signPole =  Content.Load<Texture2D>("Texture\\Meniu\\signPole");
-            meniuTexture.new_game = Content.Load<Texture2D>("Texture\\Meniu\\newGame");
-            meniuTexture.new_game_marked = Content.Load<Texture2D>("Texture\\Meniu\\newGameMarked");
-            meniuTexture.highscores = Content.Load<Texture2D>("Texture\\Meniu\\highscores");
-            meniuTexture.highscores_marked = Content.Load<Texture2D>("Texture\\Meniu\\highscoresMarked");
-            meniuTexture.help = Content.Load<Texture2D>("Texture\\Meniu\\help");
-            meniuTexture.help_marked = Content.Load<Texture2D>("Texture\\Meniu\\helpMarked");
-            meniuTexture.quit = Content.Load<Texture2D>("Texture\\Meniu\\quit");
-            meniuTexture.quit_marked = Content.Load<Texture2D>("Texture\\Meniu\\quitMarked");   
-        
+            meniuTexture.gameTitle = Content.Load<Texture2D>("Texture\\Meniu\\Main\\gameTitle");
+            meniuTexture.signPole = Content.Load<Texture2D>("Texture\\Meniu\\signPole");
+            meniuTexture.sNew_game = Content.Load<Texture2D>("Texture\\Meniu\\Main\\newGame");
+            meniuTexture.sNew_game_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\newGameMarked");
+            meniuTexture.sHighscores = Content.Load<Texture2D>("Texture\\Meniu\\Main\\highscores");
+            meniuTexture.sHighscores_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\highscoresMarked");
+            meniuTexture.sHelp = Content.Load<Texture2D>("Texture\\Meniu\\Main\\help");
+            meniuTexture.sHelp_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\helpMarked");
+            meniuTexture.sQuit = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quit");
+            meniuTexture.sQuit_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quitMarked");
 
+            //choose
+            meniuTexture.sArcade = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcade");
+            meniuTexture.sArcade_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcadeMarked");
+            meniuTexture.sBack = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\back");
+            meniuTexture.sBack_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\backMarked");
+            meniuTexture.sClassical = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classical");
+            meniuTexture.sClassical_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classicalMarked");
+            meniuTexture.gameTypeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\chooseTypeTitle");
+
+            //difficult level
+            meniuTexture.sEasy = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easy");
+            meniuTexture.sEasy_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easyMarked");
+            meniuTexture.sMedium = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\medium");
+            meniuTexture.sMedium_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\mediumMarked");
+            meniuTexture.sHard = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hard");
+            meniuTexture.sHard_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hardMarked");
             
 
             // TODO: use this.Content to load your game content here

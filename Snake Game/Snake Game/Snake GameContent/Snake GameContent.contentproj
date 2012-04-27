@@ -61,7 +61,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Texture\Meniu\meniu.png">
+    <Compile Include="Texture\Meniu\Main\meniu.png">
       <Name>meniu</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -75,7 +75,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Texture\Meniu\gameTitle.png">
+    <Compile Include="Texture\Meniu\Main\gameTitle.png">
       <Name>gameTitle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -89,57 +89,126 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Texture\Meniu\newGame.png">
+    <Compile Include="Texture\Meniu\Main\newGame.png">
       <Name>newGame</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Texture\Meniu\changeUser.png">
+    <Compile Include="Texture\Meniu\Main\changeUser.png">
       <Name>changeUser</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\changeUserMarked.png">
+    <Compile Include="Texture\Meniu\Main\changeUserMarked.png">
       <Name>changeUserMarked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\highscores.png">
+    <Compile Include="Texture\Meniu\Main\highscores.png">
       <Name>highscores</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\highscoresMarked.png">
+    <Compile Include="Texture\Meniu\Main\highscoresMarked.png">
       <Name>highscoresMarked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\newGameMarked.png">
+    <Compile Include="Texture\Meniu\Main\newGameMarked.png">
       <Name>newGameMarked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\quit.png">
+    <Compile Include="Texture\Meniu\Main\quit.png">
       <Name>quit</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\quitMarked.png">
+    <Compile Include="Texture\Meniu\Main\quitMarked.png">
       <Name>quitMarked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Texture\Meniu\help.png">
+    <Compile Include="Texture\Meniu\Main\help.png">
       <Name>help</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\helpMarked.png">
+    <Compile Include="Texture\Meniu\Main\helpMarked.png">
       <Name>helpMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Meniu\ChooseType\arcade.png">
+      <Name>arcade</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseType\arcadeMarked.png">
+      <Name>arcadeMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseType\back.png">
+      <Name>back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseType\backMarked.png">
+      <Name>backMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseType\chooseTypeTitle.png">
+      <Name>chooseTypeTitle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseType\classical.png">
+      <Name>classical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseType\classicalMarked.png">
+      <Name>classicalMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Meniu\Difficult\easy.png">
+      <Name>easy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\Difficult\easyMarked.png">
+      <Name>easyMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\Difficult\hard.png">
+      <Name>hard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\Difficult\hardMarked.png">
+      <Name>hardMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\Difficult\medium.png">
+      <Name>medium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\Difficult\mediumMarked.png">
+      <Name>mediumMarked</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
