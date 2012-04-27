@@ -22,11 +22,13 @@ namespace Snake_Game
             Difficulty,
             ChooseSnake,
             Highscores,
-            Level
+            Level, 
+            Help,
+            Quit
         }
 
 
-        private List<string> MenuItems;
+        private int MenuItems;
         private int iterator;
         private MeniuState meniuState;
         public string InfoText { get; set; }
@@ -41,21 +43,16 @@ namespace Snake_Game
             set
             {
                 iterator = value;
-                if (iterator > MenuItems.Count - 1) iterator = MenuItems.Count - 1;
+                if (iterator > MenuItems) iterator = MenuItems;
                 if (iterator < 1) iterator = 1;
             }
         }
 
         public Meniu()
         {
+            MenuItems = 4;
             meniuState = MeniuState.Main;
             Title = "Meniu";
-            MenuItems = new List<string>();
-            MenuItems.Add("Pradeti zaidima");
-            MenuItems.Add("Pagalba");
-            MenuItems.Add("Baigti zaidima");
-            MenuItems.Add("Baigti zaidima");
-            MenuItems.Add("Baigti zaidima");
             Iterator = 0;
             InfoText = string.Empty;
         }
@@ -68,7 +65,7 @@ namespace Snake_Game
                     DrawMainMeniu(batch, 1000, texture);
                     break;
                 case MeniuState.GameType:
-                    DrawGameType(batch, 1000, texture);
+                    DrawGameType(batch, texture);
                     break;
                 case MeniuState.Difficulty:
                     break;
@@ -82,44 +79,37 @@ namespace Snake_Game
           
         }
 
-        private void DrawGameType(SpriteBatch batch, int screenWidth, MeniuTexture texture)
+        //zaidimo rezimo pasirinkimas
+        private void DrawGameType(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
             batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.gameTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.gameTypeTitle, new Vector2(380, 30), Color.White);
             batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
             System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
-                batch.Draw(texture.new_game_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.sClassical_marked, new Vector2(555, 190), Color.White);
             }
             else
             {
-                batch.Draw(texture.new_game, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.sClassical, new Vector2(555, 190), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.highscores_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.sArcade_marked, new Vector2(555, 260), Color.White);
             }
             else
             {
-                batch.Draw(texture.highscores, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.sArcade, new Vector2(555, 260), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.help_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.sBack_marked, new Vector2(555, 320), Color.White);
             }
             else
             {
-                batch.Draw(texture.help, new Vector2(555, 320), Color.White);
-            }
-            if (Iterator == 4)
-            {
-                batch.Draw(texture.quit_marked, new Vector2(555, 380), Color.White);
-            }
-            else
-            {
-                batch.Draw(texture.quit, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.sBack, new Vector2(555, 320), Color.White);
             }
             batch.End();
         }
@@ -134,35 +124,35 @@ namespace Snake_Game
             System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
-                batch.Draw(texture.new_game_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.sNew_game_marked, new Vector2(555, 190), Color.White);
             }
             else
             {
-                batch.Draw(texture.new_game, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.sNew_game, new Vector2(555, 190), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.highscores_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.sHighscores_marked, new Vector2(555, 260), Color.White);
             }
             else
             {
-                batch.Draw(texture.highscores, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.sHighscores, new Vector2(555, 260), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.help_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.sHelp_marked, new Vector2(555, 320), Color.White);
             }
             else
             {
-                batch.Draw(texture.help, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.sHelp, new Vector2(555, 320), Color.White);
             }
             if (Iterator == 4)
             {
-                batch.Draw(texture.quit_marked, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.sQuit_marked, new Vector2(555, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.quit, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.sQuit, new Vector2(555, 380), Color.White);
             }
             batch.End();
         }
@@ -176,22 +166,81 @@ namespace Snake_Game
 
         public int GetNumberOfOptions()
         {
-            return MenuItems.Count;
+            return MenuItems;
         }
 
-        public string GetItem(int index)
+       /* public string GetItem(int index)
         {
             return MenuItems[index];
-        }
-
-    /*    protected override void LoadContent()
-        {
-           // spriteBatch = new SpriteBatch(GraphicsDevice);
-            mainBackground = Content.Load<Texture2D>("content\\Texture\\Meniu\\meniu");
         }*/
+
+
         public void Enter()
         {
+            switch (meniuState)
+            {
+                case MeniuState.Main:
+                    SelectMainMenu();
+                    break;
+                case MeniuState.GameType:
+                    SelectGameType();
+                    break;
+                case MeniuState.Difficulty:
+                    break;
+                case MeniuState.ChooseSnake:
+                    break;
+                case MeniuState.Highscores:
+                    break;
+                case MeniuState.Level:
+                    break;
+            }
+        }
 
+        private void SelectGameType()
+        {
+            switch (Iterator)
+            {
+                case 1:
+                    meniuState = MeniuState.ChooseSnake;
+                    MenuItems = 4;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Level;
+                    MenuItems = 2;///????????????????????????????
+                    break;
+                case 3:
+                    meniuState = MeniuState.Main;
+                    MenuItems = 4;
+                    Iterator = 1;
+                    break;
+            }
+        }
+
+
+        //pagrindinis langas
+        private void SelectMainMenu()
+        {
+            switch (Iterator)
+            {
+                case 1:
+                    meniuState = MeniuState.GameType;
+                    MenuItems = 3;
+                    Iterator = 1;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Highscores;
+                    MenuItems = 2;
+                    Iterator = 1;
+                    break;
+                case 3:
+                    meniuState = MeniuState.Help;
+                    MenuItems = 2;
+                    Iterator = 1;
+                    break;
+                case 4:
+                    meniuState = MeniuState.Quit;
+                    break;
+            }
         }
     }
 }
