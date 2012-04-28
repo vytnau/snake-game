@@ -34,6 +34,18 @@ namespace DataAccess
             public Texture2D sMedium_marked { set; get; }
             public Texture2D sHard { set; get; }
             public Texture2D sHard_marked { set; get; }
+
+            public Texture2D chooseSnakeTitle { set; get; }
+            public Texture2D sSnake1 { set; get; }
+            public Texture2D sSnake1_marked { set; get; }
+            public Texture2D sSnake2 { set; get; }
+            public Texture2D sSnake2_marked { set; get; }
+            public Texture2D sSnake3 { set; get; }
+            public Texture2D sSnake3_marked { set; get; }
+            public Texture2D bTreeSnake1 { set; get; }
+            public Texture2D bTreeSnake2 { set; get; }
+            public Texture2D bTreeSnake3 { set; get; }
+ 
    
    
                

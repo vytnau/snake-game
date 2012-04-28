@@ -45,12 +45,12 @@ namespace Snake_Game
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private readonly IGameService game;
         public static GameStates gamestate;
-        private Meniu menu;
+        private Meniu meniu;
 
         public GameStageUI()
         {
             game = new GameService();
-            menu = new Meniu();
+            meniu = new Meniu();
             meniuTexture = new MeniuTexture();
             graphics = new GraphicsDeviceManager(this);
             direction.X = 1;
@@ -73,12 +73,24 @@ namespace Snake_Game
 
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 449;
+           // graphics.PreparingDeviceSettings += new EventHandler<PreparingDeviceSettingsEventArgs>(graphics_PreparingDeviceSettings);
+            //graphics.PreferMultiSampling = false;
+            //this.graphics.IsFullScreen = true;
             graphics.ApplyChanges();
             millisecondsPerFrame = 100; //Update every 1 second
             gamestate = GameStates.Menu;
             //gamestate = GameStates.Running;
             base.Initialize();
         }
+
+       /* void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
+        {
+            DisplayMode displayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
+            e.GraphicsDeviceInformation.PresentationParameters.BackBufferFormat = displayMode.Format;
+            e.GraphicsDeviceInformation.PresentationParameters.BackBufferWidth = displayMode.Width;
+            e.GraphicsDeviceInformation.PresentationParameters.BackBufferHeight = displayMode.Height;
+
+        }*/
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -121,6 +133,18 @@ namespace Snake_Game
             meniuTexture.sMedium_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\mediumMarked");
             meniuTexture.sHard = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hard");
             meniuTexture.sHard_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hardMarked");
+
+            //choose snake
+            meniuTexture.sSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1");
+            meniuTexture.sSnake1_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1Marked");
+            meniuTexture.sSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2");
+            meniuTexture.sSnake2_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2Marked");
+            meniuTexture.sSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow3");
+            meniuTexture.sSnake3_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow3Marked");
+            meniuTexture.bTreeSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake1");
+            meniuTexture.bTreeSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake2");
+            meniuTexture.bTreeSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake3");
+            meniuTexture.chooseSnakeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakechooseTitle");
             
 
             // TODO: use this.Content to load your game content here
@@ -201,15 +225,19 @@ namespace Snake_Game
 
                     if (key.IsKeyDown(Keys.Down))
                     {
-                        menu.Iterator++;
+                        meniu.Iterator++;
                     }
                     else if (key.IsKeyDown(Keys.Up))
                     {
-                        menu.Iterator--;
+                        meniu.Iterator--;
                     }
                     else if (key.IsKeyDown(Keys.Enter))
                     {
-                        menu.Enter();
+                        meniu.Enter();
+                    }
+                    if (meniu.meniuState == MeniuState.Play)
+                    {
+                        gamestate = GameStates.Running;
                     }
 
                     /*if (input.MenuSelect)
@@ -258,7 +286,7 @@ namespace Snake_Game
             }
             else if (gamestate == GameStates.Menu)
             {
-                menu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
+                meniu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
             }
             base.Draw(gameTime);
         }

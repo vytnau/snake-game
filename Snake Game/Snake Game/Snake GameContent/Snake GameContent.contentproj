@@ -155,11 +155,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\ChooseType\back.png">
-      <Name>back</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Texture\Meniu\ChooseType\backMarked.png">
       <Name>backMarked</Name>
       <Importer>TextureImporter</Importer>
@@ -209,6 +204,65 @@
     </Compile>
     <Compile Include="Texture\Meniu\Difficult\mediumMarked.png">
       <Name>mediumMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Meniu\ChooseSnake\snake1.png">
+      <Name>snake1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snake2.png">
+      <Name>snake2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snake3.png">
+      <Name>snake3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakeArrow1.png">
+      <Name>snakeArrow1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakeArrow1Marked.png">
+      <Name>snakeArrow1Marked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakeArrow2.png">
+      <Name>snakeArrow2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakeArrow2Marked.png">
+      <Name>snakeArrow2Marked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakeArrow3.png">
+      <Name>snakeArrow3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakeArrow3Marked.png">
+      <Name>snakeArrow3Marked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Meniu\ChooseSnake\snakechooseTitle.png">
+      <Name>snakechooseTitle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Meniu\ChooseType\back.png">
+      <Name>back</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
