@@ -8,14 +8,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Snake_Game
-{
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
-    public class Meniu 
-    {
-
-        public enum MeniuState
+{       
+    public enum MeniuState
         {
             Main,
             GameType,
@@ -24,15 +18,25 @@ namespace Snake_Game
             Highscores,
             Level, 
             Help,
+            Play,
             Quit
         }
+    /// <summary>
+    /// This is the main type for your game
+    /// </summary>
+    public class Meniu 
+    {
+
+
 
 
         private int MenuItems;
         private int iterator;
-        private MeniuState meniuState;
+        public MeniuState meniuState {set; get;}
         public string InfoText { get; set; }
         public string Title { get; set; }
+        public int SnakeType { get; set; }
+        
 
         public int Iterator
         {
@@ -57,19 +61,28 @@ namespace Snake_Game
             InfoText = string.Empty;
         }
 
+        /// <summary>
+        /// Meniu piešimo parinkimas.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="screenWidth"></param>
+        /// <param name="arial"></param>
+        /// <param name="texture"></param>
         public void DrawMenu(SpriteBatch batch, int screenWidth, SpriteFont arial, MeniuTexture texture)
         {
             switch (meniuState)
             {
                 case MeniuState.Main:
-                    DrawMainMeniu(batch, 1000, texture);
+                    DrawMainMenu(batch, 1000, texture);
                     break;
                 case MeniuState.GameType:
                     DrawGameType(batch, texture);
                     break;
                 case MeniuState.Difficulty:
+                    DrawDifficultScreen(batch, texture);
                     break;
                 case MeniuState.ChooseSnake:
+                    DrawChoseSnakeMenu(batch, texture);
                     break;
                 case MeniuState.Highscores:
                     break;
@@ -79,7 +92,11 @@ namespace Snake_Game
           
         }
 
-        //zaidimo rezimo pasirinkimas
+        /// <summary>
+        /// Piešiamas žaidimo stiliaus pasirinkimas.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
         private void DrawGameType(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
@@ -112,10 +129,17 @@ namespace Snake_Game
                 batch.Draw(texture.sBack, new Vector2(555, 320), Color.White);
             }
             batch.End();
-        }
-
+        }        
+        
         //pakoreguoti kintamuosius
-        private void DrawMainMeniu(SpriteBatch batch, int screenWidth, MeniuTexture texture)
+
+        /// <summary>
+        /// Piešia pagrindinį meniu.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="screenWidth"></param>
+        /// <param name="texture"></param>
+        private void DrawMainMenu(SpriteBatch batch, int screenWidth, MeniuTexture texture)
         {
             batch.Begin();
             batch.Draw(texture.background, Vector2.Zero, Color.White);
@@ -156,6 +180,123 @@ namespace Snake_Game
             }
             batch.End();
         }
+        /// <summary>
+        /// Piešiamas gyvatės pasirinkimo langas.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
+        private void DrawChoseSnakeMenu(SpriteBatch batch, MeniuTexture texture)
+        {
+            batch.Begin();
+            batch.Draw(texture.background, Vector2.Zero, Color.White);
+            batch.Draw(texture.chooseSnakeTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
+            System.Console.WriteLine(Iterator.ToString());
+            if (Iterator == 1)
+            {
+                batch.Draw(texture.sSnake1_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.bTreeSnake1, new Vector2(108, 57), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sSnake1, new Vector2(555, 190), Color.White);
+            }
+            if (Iterator == 2)
+            {
+                batch.Draw(texture.sSnake2_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.bTreeSnake2, new Vector2(108, 57), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sSnake2, new Vector2(555, 260), Color.White);
+            }
+            if (Iterator == 3)
+            {
+                batch.Draw(texture.sSnake3_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.bTreeSnake3, new Vector2(108, 57), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sSnake3, new Vector2(555, 320), Color.White);
+            }
+            if (Iterator == 4)
+            {
+                batch.Draw(texture.sBack_marked, new Vector2(555, 380), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sBack, new Vector2(555, 380), Color.White);
+            }
+            batch.End();
+        }
+
+        /// <summary>
+        /// Sudėtingumo lango piešimas
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
+        private void DrawDifficultScreen(SpriteBatch batch, MeniuTexture texture)
+        {
+            batch.Begin();
+            batch.Draw(texture.background, Vector2.Zero, Color.White);
+            batch.Draw(texture.chooseSnakeTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
+            DrawChosenSnake(batch, texture);
+            if (Iterator == 1)
+            {
+                batch.Draw(texture.sEasy_marked, new Vector2(555, 190), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sEasy, new Vector2(555, 190), Color.White);
+            }
+            if (Iterator == 2)
+            {
+                batch.Draw(texture.sMedium_marked, new Vector2(555, 260), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sMedium, new Vector2(555, 260), Color.White);
+            }
+            if (Iterator == 3)
+            {
+                batch.Draw(texture.sHard_marked, new Vector2(555, 320), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sHard, new Vector2(555, 320), Color.White);
+            }
+            if (Iterator == 4)
+            {
+                batch.Draw(texture.sBack_marked, new Vector2(555, 380), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sBack, new Vector2(555, 380), Color.White);
+            }
+            batch.End();
+        }
+
+        /// <summary>
+        /// Sudėtingumo lange nupiešiama pasirinkta gyvatė.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
+        private void DrawChosenSnake(SpriteBatch batch, MeniuTexture texture)
+        {
+            switch (SnakeType)
+            {
+                case 1:
+                    batch.Draw(texture.bTreeSnake1, new Vector2(108, 57), Color.White);
+                    break;
+                case 2:
+                    batch.Draw(texture.bTreeSnake2, new Vector2(108, 57), Color.White);
+                    break;
+                case 3:
+                    batch.Draw(texture.bTreeSnake3, new Vector2(108, 57), Color.White);
+                    break;
+            }
+        }
 
         public void DrawEndScreen(SpriteBatch batch, int screenWidth, SpriteFont arial)
         {
@@ -174,7 +315,9 @@ namespace Snake_Game
             return MenuItems[index];
         }*/
 
-
+        /// <summary>
+        /// Meniu iššrinkimo metodas.
+        /// </summary>
         public void Enter()
         {
             switch (meniuState)
@@ -186,8 +329,10 @@ namespace Snake_Game
                     SelectGameType();
                     break;
                 case MeniuState.Difficulty:
+                    SelectDifficult();
                     break;
                 case MeniuState.ChooseSnake:
+                    SelectSnakeType();
                     break;
                 case MeniuState.Highscores:
                     break;
@@ -196,6 +341,70 @@ namespace Snake_Game
             }
         }
 
+        /// <summary>
+        /// Žaidimo lygio sudėtingumo pasirinkimas.
+        /// </summary>
+        private void SelectDifficult()
+        {
+            ///TODO: sukurti kintamaji kuris saugotu koks sudetingumas parinktas
+            switch (Iterator)
+            {
+                case 1:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 3:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 4:
+                    meniuState = MeniuState.ChooseSnake;
+                    MenuItems = 4;
+                    Iterator = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Gyvatės pasirinkimas.
+        /// </summary>
+        private void SelectSnakeType()
+        {
+            switch (Iterator)
+            {
+                case 1:
+                    meniuState = MeniuState.Difficulty;
+                    MenuItems = 4;
+                    Iterator = 1;
+                    SnakeType = 1;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Difficulty;
+                    MenuItems = 4;///????????????????????????????
+                    Iterator = 1;
+                    SnakeType = 2;
+                    break;
+                case 3:
+                    meniuState = MeniuState.Difficulty;
+                    MenuItems = 4;
+                    Iterator = 1;
+                    SnakeType = 3;
+                    break;
+                case 4:
+                    meniuState = MeniuState.GameType;
+                    MenuItems = 4;
+                    Iterator = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Žaidimo lygio pasirinkimas.
+        /// </summary>
         private void SelectGameType()
         {
             switch (Iterator)
