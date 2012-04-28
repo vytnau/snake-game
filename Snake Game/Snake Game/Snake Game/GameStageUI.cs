@@ -145,7 +145,35 @@ namespace Snake_Game
             meniuTexture.bTreeSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake2");
             meniuTexture.bTreeSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake3");
             meniuTexture.chooseSnakeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakechooseTitle");
-            
+
+            meniuTexture.sBackS = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1");
+            meniuTexture.sBackSMarked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1Marked");
+            meniuTexture.chooseLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\chooseLevelTitle");
+            meniuTexture.darkLayer = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\darkLayer");
+            meniuTexture.darkSignPole = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\darkPole");
+            meniuTexture.sLevel1 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level1");
+            meniuTexture.sLevel1Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level1Marked");
+            meniuTexture.sLevel2 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level2");
+            meniuTexture.sLevel2Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level2Marked");
+            meniuTexture.sLevel3 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level3");
+            meniuTexture.sLevel3Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level3Marked");
+            meniuTexture.sLevel4 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level4");
+            meniuTexture.sLevel4Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level4Marked");
+            meniuTexture.sLevel5 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5");
+            meniuTexture.sLevel5Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5Marked");
+            meniuTexture.sLevel6 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6");
+            meniuTexture.sLevel6Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6Marked");
+
+            meniuTexture.sBack2 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2");
+            meniuTexture.sBack2Marked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2Marked");
+            meniuTexture.highScoresArc = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresArcade");
+            meniuTexture.highScoresCla = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresClas");
+            meniuTexture.bNext = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\next");
+            meniuTexture.bNextMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\nextMarked");
+
+            meniuTexture.help = Content.Load<Texture2D>("Texture\\Meniu\\Help\\help");
+            meniuTexture.bDown = Content.Load<Texture2D>("Texture\\Meniu\\Help\\down");
+            meniuTexture.bDownMarked = Content.Load<Texture2D>("Texture\\Meniu\\Help\\downMarked");
 
             // TODO: use this.Content to load your game content here
         }
@@ -223,11 +251,11 @@ namespace Snake_Game
                 else if (gamestate == GameStates.Menu)
                 {
 
-                    if (key.IsKeyDown(Keys.Down))
+                    if (key.IsKeyDown(Keys.Down) || key.IsKeyDown(Keys.Right))
                     {
                         meniu.Iterator++;
                     }
-                    else if (key.IsKeyDown(Keys.Up))
+                    else if (key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Left))
                     {
                         meniu.Iterator--;
                     }
@@ -240,6 +268,10 @@ namespace Snake_Game
                         gamestate = GameStates.Running;
                     }
 
+                    if (meniu.meniuState == MeniuState.Quit)
+                    {
+                        this.Exit();
+                    }
                     /*if (input.MenuSelect)
                     {
                         if (menu.Iterator == 0)

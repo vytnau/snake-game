@@ -45,7 +45,35 @@ namespace DataAccess
             public Texture2D bTreeSnake1 { set; get; }
             public Texture2D bTreeSnake2 { set; get; }
             public Texture2D bTreeSnake3 { set; get; }
- 
+
+            public Texture2D sLevel1 { set; get; }
+            public Texture2D sLevel1Marked { set; get; }
+            public Texture2D sLevel2 { set; get; }
+            public Texture2D sLevel2Marked { set; get; }
+            public Texture2D sLevel3 { set; get; }
+            public Texture2D sLevel3Marked { set; get; }
+            public Texture2D sLevel4 { set; get; }
+            public Texture2D sLevel4Marked { set; get; }
+            public Texture2D sLevel5 { set; get; }
+            public Texture2D sLevel5Marked { set; get; }
+            public Texture2D sLevel6 { set; get; }
+            public Texture2D sLevel6Marked { set; get; }
+            public Texture2D darkLayer { set; get; }
+            public Texture2D chooseLevelTitle { set; get; }
+            public Texture2D sBackS { set; get; }
+            public Texture2D sBackSMarked { set; get; }
+            public Texture2D darkSignPole { set; get; }
+
+            public Texture2D highScoresArc { set; get; }
+            public Texture2D highScoresCla { set; get; }
+            public Texture2D bNext { set; get; }
+            public Texture2D bNextMarked { set; get; }
+            public Texture2D sBack2 { set; get; }
+            public Texture2D sBack2Marked { set; get; }
+
+            public Texture2D help { set; get; }
+            public Texture2D bDown { set; get; }
+            public Texture2D bDownMarked { set; get; }
    
    
                

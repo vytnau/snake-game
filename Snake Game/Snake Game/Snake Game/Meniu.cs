@@ -27,11 +27,16 @@ namespace Snake_Game
     public class Meniu 
     {
 
-
+        public enum HighScoresType
+        {
+            Clasic,
+            Arcade
+        }
 
 
         private int MenuItems;
         private int iterator;
+        private HighScoresType highScore;
         public MeniuState meniuState {set; get;}
         public string InfoText { get; set; }
         public string Title { get; set; }
@@ -56,6 +61,7 @@ namespace Snake_Game
         {
             MenuItems = 4;
             meniuState = MeniuState.Main;
+            highScore = HighScoresType.Clasic;
             Title = "Meniu";
             Iterator = 0;
             InfoText = string.Empty;
@@ -82,11 +88,16 @@ namespace Snake_Game
                     DrawDifficultScreen(batch, texture);
                     break;
                 case MeniuState.ChooseSnake:
-                    DrawChoseSnakeMenu(batch, texture);
+                    DrawChooseSnakeMeniu(batch, texture);
                     break;
                 case MeniuState.Highscores:
+                    DrawHighScores(batch, texture);
                     break;
                 case MeniuState.Level:
+                    DrawChoseLevelMeniu(batch, texture);
+                    break;
+                case MeniuState.Help:
+                    DrawHelpScreen(batch, texture);
                     break;
             }
           
@@ -185,7 +196,7 @@ namespace Snake_Game
         /// </summary>
         /// <param name="batch"></param>
         /// <param name="texture"></param>
-        private void DrawChoseSnakeMenu(SpriteBatch batch, MeniuTexture texture)
+        private void DrawChooseSnakeMeniu(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
             batch.Draw(texture.background, Vector2.Zero, Color.White);
@@ -226,6 +237,167 @@ namespace Snake_Game
             else
             {
                 batch.Draw(texture.sBack, new Vector2(555, 380), Color.White);
+            }
+            batch.End();
+        }
+
+        /// <summary>
+        /// Piešiamas pagalbos langas.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
+        private void DrawHelpScreen(SpriteBatch batch, MeniuTexture texture)
+        {
+            batch.Begin();
+            batch.Draw(texture.background, Vector2.Zero, Color.White);
+            batch.Draw(texture.gameTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.darkLayer, Vector2.Zero, Color.White);
+            batch.Draw(texture.help, new Vector2(8, 0), Color.White);
+            batch.Draw(texture.darkSignPole, new Vector2(680, 380), Color.White);
+
+            if (Iterator == 1)
+            {
+                batch.Draw(texture.bDownMarked, new Vector2(65, 360), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.bDown, new Vector2(65, 360), Color.White);
+            }
+            if (Iterator == 2)
+            {
+                batch.Draw(texture.sBack2Marked, new Vector2(620, 380), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sBack2, new Vector2(620, 380), Color.White);
+            }
+
+            batch.End();
+        }
+
+        /// <summary>
+        /// Piešiama pasiekimų lentelė.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
+        private void DrawHighScores(SpriteBatch batch, MeniuTexture texture)
+        {
+            batch.Begin();
+            batch.Draw(texture.background, Vector2.Zero, Color.White);
+            batch.Draw(texture.gameTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.darkLayer, Vector2.Zero, Color.White);
+            if (highScore == HighScoresType.Clasic)
+            {
+                batch.Draw(texture.highScoresCla, new Vector2(115, 0), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.highScoresArc, new Vector2(115, 0), Color.White);
+            }
+            batch.Draw(texture.darkSignPole, new Vector2(680, 380), Color.White);
+
+            if (Iterator == 1)
+            {
+                batch.Draw(texture.bNextMarked, new Vector2(620, 335), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.bNext, new Vector2(620, 335), Color.White);
+            }
+            if (Iterator == 2)
+            {
+                batch.Draw(texture.sBack2Marked, new Vector2(620, 380), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sBack2, new Vector2(620, 380), Color.White);
+            }
+            if (Iterator == 3)
+            {
+               // batch.Draw(texture.sHelp_marked, new Vector2(555, 320), Color.White);
+            }
+            else
+            {
+               // batch.Draw(texture.sHelp, new Vector2(555, 320), Color.White);
+            }
+            if (Iterator == 4)
+            {
+              //  batch.Draw(texture.sQuit_marked, new Vector2(555, 380), Color.White);
+            }
+            else
+            {
+               // batch.Draw(texture.sQuit, new Vector2(555, 380), Color.White);
+            }
+            batch.End();
+        }
+
+        /// <summary>
+        /// Piešiamas nuotykių rėžimo lygio pasirinkimų meniu.
+        /// </summary>
+        /// <param name="batch"></param>
+        /// <param name="texture"></param>
+        private void DrawChoseLevelMeniu(SpriteBatch batch, MeniuTexture texture)
+        {
+            batch.Begin();
+            batch.Draw(texture.background, Vector2.Zero, Color.White);
+            batch.Draw(texture.darkLayer, Vector2.Zero, Color.White);
+            batch.Draw(texture.chooseLevelTitle, new Vector2(270, 50), Color.White);
+            batch.Draw(texture.darkSignPole, new Vector2(620, 180), Color.White);
+            if (Iterator == 6)
+            {
+                batch.Draw(texture.sLevel6Marked, new Vector2(600, 0), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sLevel6, new Vector2(600, 0), Color.White);
+            }
+            if (Iterator == 5)
+            {
+                batch.Draw(texture.sLevel5Marked, new Vector2(550, 150), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sLevel5, new Vector2(550, 150), Color.White);
+            }
+            if (Iterator == 4)
+            {
+                batch.Draw(texture.sLevel4Marked, new Vector2(400, 275), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sLevel4, new Vector2(400, 275), Color.White);
+            }
+            if (Iterator == 3)
+            {
+                batch.Draw(texture.sLevel3Marked, new Vector2(250, 160), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sLevel3, new Vector2(250, 160), Color.White);
+            }
+            if (Iterator == 2)
+            {
+                batch.Draw(texture.sLevel2Marked, new Vector2(90, 20), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sLevel2, new Vector2(90, 20), Color.White);
+            }
+            if (Iterator == 1)
+            {
+                batch.Draw(texture.sLevel1Marked, new Vector2(25, 240), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sLevel1, new Vector2(25, 240), Color.White);
+            }                 
+            if (Iterator == 7)
+            {
+                batch.Draw(texture.sBackSMarked, new Vector2(660, 380), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.sBackS, new Vector2(660, 380), Color.White);
             }
             batch.End();
         }
@@ -335,8 +507,96 @@ namespace Snake_Game
                     SelectSnakeType();
                     break;
                 case MeniuState.Highscores:
+                    SelectHighScore();
                     break;
                 case MeniuState.Level:
+                    SelectLevel();
+                    break;
+                case MeniuState.Help:
+                    SelectHelp();
+                    break;
+            }
+        }
+
+
+        private void SelectHelp()
+        {
+            switch (Iterator)
+            {
+                case 1:
+                    Iterator = 1;
+                    MenuItems = 2;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Main;
+                    Iterator = 1;
+                    MenuItems = 4;
+                    break;
+
+            }
+        }
+
+        private void SelectHighScore()
+        {
+            switch (Iterator)
+            {
+                case 1:
+                    if (highScore == HighScoresType.Arcade)
+                    {
+                        highScore = HighScoresType.Clasic;
+                    }
+                    else
+                    {
+                        highScore = HighScoresType.Arcade;
+                    }
+                    Iterator = 1;
+                    MenuItems = 2;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Main;
+                    Iterator = 1;
+                    MenuItems = 4;
+                    break;
+                
+            }
+        }
+
+        /// <summary>
+        /// Žaidimo lygio pasirinkimas.
+        /// </summary>
+        private void SelectLevel()
+        {
+            // ToDo: sukurti kintamaji kuris nurodytu koks zaiimo lygis buvo parinktas
+            switch (Iterator)
+            {
+                case 1:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 3:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 4:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 5:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 6:
+                    meniuState = MeniuState.Play;
+                    Iterator = 1;
+                    break;
+                case 7:
+                    meniuState = MeniuState.GameType;
+                    MenuItems = 3;
+                    Iterator = 1;
                     break;
             }
         }
@@ -411,11 +671,13 @@ namespace Snake_Game
             {
                 case 1:
                     meniuState = MeniuState.ChooseSnake;
+                    Iterator = 1;
                     MenuItems = 4;
                     break;
                 case 2:
                     meniuState = MeniuState.Level;
-                    MenuItems = 2;///????????????????????????????
+                    Iterator = 1;
+                    MenuItems = 7;
                     break;
                 case 3:
                     meniuState = MeniuState.Main;
