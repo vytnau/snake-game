@@ -160,11 +160,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Meniu\ChooseType\chooseTypeTitle.png">
-      <Name>chooseTypeTitle</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Texture\Meniu\ChooseType\classical.png">
       <Name>classical</Name>
       <Importer>TextureImporter</Importer>
@@ -406,6 +401,20 @@
     </Compile>
     <Compile Include="Texture\Meniu\Help\help.png">
       <Name>help</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Meniu\ChooseType\chooseTypeTitle.png">
+      <Name>chooseTypeTitle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Meniu\Difficult\difficultLevelTitle.png">
+      <Name>difficultLevelTitle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

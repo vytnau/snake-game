@@ -104,7 +104,31 @@ namespace Snake_Game
             //Snake Game\Snake GameContent\Arial.spritefont";
             font = Content.Load<SpriteFont>("Font\\Arial");
             text = Content.Load<SpriteFont>("Font\\Fontas");
+            LoadMeniuContent();
 
+
+
+            // TODO: use this.Content to load your game content here
+        }
+
+        /// <summary>
+        /// Iškviečiami metodai įkrauti reikalingas meniu tekstūras.
+        /// </summary>
+        private void LoadMeniuContent()
+        {
+            LoadMainMeniuContent();
+            LoadGameTypeMeniuContent();
+            LoadSnakeChooseMeniuContent();
+            LoadDifficultMeniuContent();
+            LoadArcadeLevelsMeniuContent();
+            LoadHighScoresmeniuContent();
+            LoadHelpMeniuContent();
+        }
+        /// <summary>
+        /// Įkraunamos pagrininio meniu tekstūros.
+        /// </summary>
+        private void LoadMainMeniuContent()
+        {
             meniuTexture.background = Content.Load<Texture2D>("Texture\\Meniu\\meniu_background");
             meniuTexture.gameTitle = Content.Load<Texture2D>("Texture\\Meniu\\Main\\gameTitle");
             meniuTexture.signPole = Content.Load<Texture2D>("Texture\\Meniu\\signPole");
@@ -116,8 +140,12 @@ namespace Snake_Game
             meniuTexture.sHelp_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\helpMarked");
             meniuTexture.sQuit = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quit");
             meniuTexture.sQuit_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quitMarked");
-
-            //choose
+        }
+        /// <summary>
+        /// Įkraunamos žaidimo tipo pasirinkimo tekstūros.
+        /// </summary>
+        private void LoadGameTypeMeniuContent()
+        {
             meniuTexture.sArcade = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcade");
             meniuTexture.sArcade_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcadeMarked");
             meniuTexture.sBack = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\back");
@@ -125,16 +153,12 @@ namespace Snake_Game
             meniuTexture.sClassical = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classical");
             meniuTexture.sClassical_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classicalMarked");
             meniuTexture.gameTypeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\chooseTypeTitle");
-
-            //difficult level
-            meniuTexture.sEasy = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easy");
-            meniuTexture.sEasy_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easyMarked");
-            meniuTexture.sMedium = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\medium");
-            meniuTexture.sMedium_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\mediumMarked");
-            meniuTexture.sHard = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hard");
-            meniuTexture.sHard_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hardMarked");
-
-            //choose snake
+        }
+        /// <summary>
+        /// Įkraunamos gyvatės pasirinkimo tekstūros.
+        /// </summary>
+        private void LoadSnakeChooseMeniuContent()
+        {
             meniuTexture.sSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1");
             meniuTexture.sSnake1_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1Marked");
             meniuTexture.sSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2");
@@ -145,7 +169,25 @@ namespace Snake_Game
             meniuTexture.bTreeSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake2");
             meniuTexture.bTreeSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake3");
             meniuTexture.chooseSnakeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakechooseTitle");
-
+        }
+        /// <summary>
+        /// Įkraunamos žaidimo sudėtingumo tekstūros.
+        /// </summary>
+        private void LoadDifficultMeniuContent()
+        {
+            meniuTexture.diffLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\difficultLevelTitle");
+            meniuTexture.sEasy = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easy");
+            meniuTexture.sEasy_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easyMarked");
+            meniuTexture.sMedium = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\medium");
+            meniuTexture.sMedium_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\mediumMarked");
+            meniuTexture.sHard = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hard");
+            meniuTexture.sHard_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hardMarked");
+        }
+        /// <summary>
+        /// Įkraunamos nuotykių rėžimo lygių pasirinkimo tekstūros.
+        /// </summary>
+        private void LoadArcadeLevelsMeniuContent()
+        {
             meniuTexture.sBackS = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1");
             meniuTexture.sBackSMarked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1Marked");
             meniuTexture.chooseLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\chooseLevelTitle");
@@ -163,19 +205,27 @@ namespace Snake_Game
             meniuTexture.sLevel5Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5Marked");
             meniuTexture.sLevel6 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6");
             meniuTexture.sLevel6Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6Marked");
-
+        }
+        /// <summary>
+        /// Įkraunamos pasiekimo lango tekstūros.
+        /// </summary>
+        private void LoadHighScoresmeniuContent()
+        {
             meniuTexture.sBack2 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2");
             meniuTexture.sBack2Marked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2Marked");
             meniuTexture.highScoresArc = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresArcade");
             meniuTexture.highScoresCla = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresClas");
             meniuTexture.bNext = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\next");
             meniuTexture.bNextMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\nextMarked");
-
+        }
+        /// <summary>
+        /// Įkraunamos pagalbos lango tekstūros.
+        /// </summary>
+        private void LoadHelpMeniuContent()
+        {
             meniuTexture.help = Content.Load<Texture2D>("Texture\\Meniu\\Help\\help");
             meniuTexture.bDown = Content.Load<Texture2D>("Texture\\Meniu\\Help\\down");
             meniuTexture.bDownMarked = Content.Load<Texture2D>("Texture\\Meniu\\Help\\downMarked");
-
-            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>

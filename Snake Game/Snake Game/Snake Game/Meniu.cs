@@ -411,7 +411,7 @@ namespace Snake_Game
         {
             batch.Begin();
             batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.chooseSnakeTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.diffLevelTitle, new Vector2(310, 10), Color.White);
             batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
             DrawChosenSnake(batch, texture);
             if (Iterator == 1)
