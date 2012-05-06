@@ -24,13 +24,19 @@ namespace Snake_Game.ServiceContracts
         /// masyvą.
         /// </summary>
         /// <param name="x"></param>
-        void SetSnakeCoordinates(Vector2 coord);
+        void SetSnakeCoordinates(Vector3 coord);
+
+        void SetSnakeTurnCoord(Vector3 coord, int orent);
+
+        void SetSnakeHead(Vector3 Coord);
+
+        void SetSnakeTail(Vector3 Coord, int orent);
 
         /// <summary>
         /// Iš žaidimo lango šalinama gyvatės uodega.
         /// </summary>
         /// <param name="coord"></param>
-        void RemoveSnkaeTail(Vector2 coord);
+        void RemoveSnkaeTail(Vector2 coordPrev, Vector2 coordCuren);
 
         /// <summary>
         /// Pašalina gyvatės uodegos koordinatęs.

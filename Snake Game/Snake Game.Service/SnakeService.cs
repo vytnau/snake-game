@@ -9,7 +9,7 @@ namespace Snake_Game.Service
 {
     public class SnakeService : ISnakeService
     {
-        private LinkedList<Vector2> snake;
+        private LinkedList<Vector3> snake;
 
         public SnakeService()
         {
@@ -18,37 +18,37 @@ namespace Snake_Game.Service
 
         private void Initialize()
         {
-            snake = new LinkedList<Vector2>();
+            snake = new LinkedList<Vector3>();
             for (int i = 0; i < 6; i++)
             {
-                snake.AddLast(new Vector2(13 + i, 10));
+                snake.AddLast(new Vector3(13 + i, 10, -1));
             }
         }
 
-        public void GrowSnake(Vector2 tail)
+        public void GrowSnake(Vector3 tail)
         {
             snake.AddLast(tail);
         }
 
 
-        public void Move(Vector2 xy)
+        public void Move(Vector3 xy)
         {
             snake.RemoveLast();
             snake.AddFirst(xy);
         }
 
 
-        public LinkedList<Vector2> GetSnakeCoordinates()
+        public LinkedList<Vector3> GetSnakeCoordinates()
         {
             return snake;
         }
 
-        public Vector2 GetSnakeHead()
+        public Vector3 GetSnakeHead()
         {
             return snake.First();
         }
 
-        public Vector2 GetSnakeTail()
+        public Vector3 GetSnakeTail()
         {
             return snake.Last();
         }

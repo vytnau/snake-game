@@ -11,30 +11,30 @@ namespace Snake_Game.ServiceContracts
         /// <summary>
         /// Auginama gyvatė.
         /// </summary>
-        void GrowSnake(Vector2 tail);
+        void GrowSnake(Vector3 tail);
 
         /// <summary>
         /// Gyvatės judijėimas.
         /// </summary>
         /// <param name="xy"></param>
-        void Move(Vector2 xy);
+        void Move(Vector3 xy);
 
         /// <summary>
         /// Gražinamos gyvatės koordinačių masyvas.
         /// </summary>
         /// <returns></returns>
-        LinkedList<Vector2> GetSnakeCoordinates();
+        LinkedList<Vector3> GetSnakeCoordinates();
 
         /// <summary>
         /// Gražinama gyvatės galvos koordinatės.
         /// </summary>
         /// <returns></returns>
-        Vector2 GetSnakeHead();
+        Vector3 GetSnakeHead();
 
         /// <summary>
         /// Gyvatės uodegos koordinatės.
         /// </summary>
         /// <returns></returns>
-        Vector2 GetSnakeTail();
+        Vector3 GetSnakeTail();
     }
 }
