@@ -9,8 +9,8 @@ namespace Snake_Game.Service
 {
     public class GameService : IGameService
     {
-        private readonly int STAGE_HEIGTH = 40;
-        private readonly int STAGE_WIDTH = 60;
+        private readonly int STAGE_HEIGTH = 13;
+        private readonly int STAGE_WIDTH = 25;
         private readonly int POINT = 15;
         private readonly IGameStage stage;
         private readonly ISnakeService snake;
@@ -37,28 +37,35 @@ namespace Snake_Game.Service
             return stage.GetStageCoord();
         }
 
+        private bool EmtyCoord(LinkedList<Vector3> coord, Vector2 newCord)
+        {
+            foreach(Vector3 list in coord){
+                if (list.X == newCord.X && list.Y == newCord.Y)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private bool MoveX(int x)
         {
-            LinkedList<Vector2> coord = snake.GetSnakeCoordinates();
-            if (x > 0 &&  x < STAGE_WIDTH)
+            LinkedList<Vector3> coord = snake.GetSnakeCoordinates();
+            Vector3 head = snake.GetSnakeHead();
+            if (x >= 0 &&  x < STAGE_WIDTH)
             {
-                if (!coord.Contains(new Vector2(x, snake.GetSnakeHead().Y)))
-                {
-                    return true;
-                }
+                return EmtyCoord(coord, new Vector2(x, head.Y));
             }
             return false;
         }
 
         private bool MoveY(int y)
         {
-            LinkedList<Vector2> coord = snake.GetSnakeCoordinates();
-            if (y > 1 && y < STAGE_HEIGTH)
+            LinkedList<Vector3> coord = snake.GetSnakeCoordinates();
+            Vector3 head = snake.GetSnakeHead();
+            if (y >= 0 && y < STAGE_HEIGTH)
             {
-                if (!coord.Contains(new Vector2(snake.GetSnakeHead().X, y)))
-                {
-                    return true;
-                }
+                return EmtyCoord(coord, new Vector2(head.X, y));
             }
             return false;
         }
@@ -70,19 +77,20 @@ namespace Snake_Game.Service
         //judejimo metodas, na toks nemenkas gausis
         public void SetMovment(int x, int y)
         {
-            Vector2 head = snake.GetSnakeHead();
-            Vector2 tail = snake.GetSnakeTail();
+            Vector3 head = snake.GetSnakeHead();
+            Vector3 tail = snake.GetSnakeTail();
             RemoveBug(bug.GetCoord());
 
-            if (x == 1)
+            if (x == 1) //x as fiksuotas
             {
                 if (y == 1)
                 {
                     if (MoveX((int)head.X + x))
                     {
                         head.X += 1;
+                        head.Z = 1;
                         snake.Move(head);
-                        bug.SetDirection(head);
+                        //bug.SetDirection(head);
                     }
                     else
                     {
@@ -94,8 +102,9 @@ namespace Snake_Game.Service
                     if (MoveY((int)head.Y - 1))
                     {
                         head.Y -= 1;
+                        head.Z = 2;
                         snake.Move(head);
-                        bug.SetDirection(head);
+                        //bug.SetDirection(head);
                     }
                     else
                     {
@@ -109,9 +118,10 @@ namespace Snake_Game.Service
                 {
                     if (MoveX((int)head.X - 1))
                     {
+                        head.Z = -1;
                         head.X -= 1;
                         snake.Move(head);
-                        bug.SetDirection(head);
+                        //bug.SetDirection(head);
                     }
                     else
                     {
@@ -122,9 +132,10 @@ namespace Snake_Game.Service
                 {
                     if (MoveY((int)head.Y + 1))
                     {
+                        head.Z = -2;
                         head.Y += 1;
                         snake.Move(head);
-                        bug.SetDirection(head);
+                       // bug.SetDirection(head);
                     }
                     else
                     {
@@ -132,9 +143,9 @@ namespace Snake_Game.Service
                     }
                 }
             }
-            if (!EatFood(head))
+            if (!EatFood(new Vector2(head.X, head.Y)))
             {
-                stage.RemoveSnkaeTail(tail);
+                stage.RemoveSnkaeTail(new Vector2(tail.X, tail.Y), new Vector2(snake.GetSnakeTail().X, snake.GetSnakeTail().Y));
             }
             else
             {
@@ -194,12 +205,15 @@ namespace Snake_Game.Service
             stage.RemoveBugCoord(bug.GetCoord());
         }
 
-        private void FillSnakeCoord(LinkedList<Vector2> list)
+        private void FillSnakeCoord(LinkedList<Vector3> list)
         {
-            foreach (var a in list)
+            stage.SetSnakeHead(list.First());
+            for (int i = 1; i < list.Count - 2; i++)
             {
-                stage.SetSnakeCoordinates(a);
+                stage.SetSnakeTurnCoord(list.ElementAt(i), (int)list.ElementAt(i-1).Z);
+                //stage.SetSnakeCoordinates(list.ElementAt(i));
             }
+            stage.SetSnakeTail(list.Last(), (int)list.ElementAt(list.Count -2).Z);
         }
 
         private void FillFoodCoord(LinkedList<Vector2> list)

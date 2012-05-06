@@ -19,6 +19,7 @@ namespace Snake_Game
             Level, 
             Help,
             Play,
+            Pause,
             Quit
         }
     /// <summary>
@@ -70,7 +71,7 @@ namespace Snake_Game
         /// <summary>
         /// Meniu piešimo parinkimas.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="screenWidth"></param>
         /// <param name="arial"></param>
         /// <param name="texture"></param>
@@ -99,6 +100,10 @@ namespace Snake_Game
                 case MeniuState.Help:
                     DrawHelpScreen(batch, texture);
                     break;
+                case MeniuState.Pause:
+                    MenuItems = 2;
+                    DrawPauseScreen(batch, texture);
+                    break;
             }
           
         }
@@ -106,38 +111,38 @@ namespace Snake_Game
         /// <summary>
         /// Piešiamas žaidimo stiliaus pasirinkimas.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawGameType(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.gameTypeTitle, new Vector2(380, 30), Color.White);
-            batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.GameTypeTitle, new Vector2(380, 30), Color.White);
+            batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
             System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
-                batch.Draw(texture.sClassical_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SClassical_marked, new Vector2(555, 190), Color.White);
             }
             else
             {
-                batch.Draw(texture.sClassical, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SClassical, new Vector2(555, 190), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sArcade_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SArcade_marked, new Vector2(555, 260), Color.White);
             }
             else
             {
-                batch.Draw(texture.sArcade, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SArcade, new Vector2(555, 260), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.sBack_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SBack_marked, new Vector2(555, 320), Color.White);
             }
             else
             {
-                batch.Draw(texture.sBack, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SBack, new Vector2(555, 320), Color.White);
             }
             batch.End();
         }        
@@ -145,98 +150,98 @@ namespace Snake_Game
         //pakoreguoti kintamuosius
 
         /// <summary>
-        /// Piešia pagrindinį meniu.
+        /// Piešia pagrindinį Meniu.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="screenWidth"></param>
         /// <param name="texture"></param>
         private void DrawMainMenu(SpriteBatch batch, int screenWidth, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.gameTitle, new Vector2(500, 10), Color.White);
-            batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.GameTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
             System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
-                batch.Draw(texture.sNew_game_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SNew_game_marked, new Vector2(555, 190), Color.White);
             }
             else
             {
-                batch.Draw(texture.sNew_game, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SNew_game, new Vector2(555, 190), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sHighscores_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SHighscores_marked, new Vector2(555, 260), Color.White);
             }
             else
             {
-                batch.Draw(texture.sHighscores, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SHighscores, new Vector2(555, 260), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.sHelp_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SHelp_marked, new Vector2(555, 320), Color.White);
             }
             else
             {
-                batch.Draw(texture.sHelp, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SHelp, new Vector2(555, 320), Color.White);
             }
             if (Iterator == 4)
             {
-                batch.Draw(texture.sQuit_marked, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.SQuit_marked, new Vector2(555, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.sQuit, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.SQuit, new Vector2(555, 380), Color.White);
             }
             batch.End();
         }
         /// <summary>
         /// Piešiamas gyvatės pasirinkimo langas.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawChooseSnakeMeniu(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.chooseSnakeTitle, new Vector2(500, 10), Color.White);
-            batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.ChooseSnakeTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
             System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
-                batch.Draw(texture.sSnake1_marked, new Vector2(555, 190), Color.White);
-                batch.Draw(texture.bTreeSnake1, new Vector2(108, 57), Color.White);
+                batch.Draw(texture.SSnake1_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.BTreeSnake1, new Vector2(108, 57), Color.White);
             }
             else
             {
-                batch.Draw(texture.sSnake1, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SSnake1, new Vector2(555, 190), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sSnake2_marked, new Vector2(555, 260), Color.White);
-                batch.Draw(texture.bTreeSnake2, new Vector2(108, 57), Color.White);
+                batch.Draw(texture.SSnake2_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.BTreeSnake2, new Vector2(108, 57), Color.White);
             }
             else
             {
-                batch.Draw(texture.sSnake2, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SSnake2, new Vector2(555, 260), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.sSnake3_marked, new Vector2(555, 320), Color.White);
-                batch.Draw(texture.bTreeSnake3, new Vector2(108, 57), Color.White);
+                batch.Draw(texture.SSnake3_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.BTreeSnake3, new Vector2(108, 57), Color.White);
             }
             else
             {
-                batch.Draw(texture.sSnake3, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SSnake3, new Vector2(555, 320), Color.White);
             }
             if (Iterator == 4)
             {
-                batch.Draw(texture.sBack_marked, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.SBack_marked, new Vector2(555, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.sBack, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.SBack, new Vector2(555, 380), Color.White);
             }
             batch.End();
         }
@@ -244,32 +249,32 @@ namespace Snake_Game
         /// <summary>
         /// Piešiamas pagalbos langas.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawHelpScreen(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.gameTitle, new Vector2(500, 10), Color.White);
-            batch.Draw(texture.darkLayer, Vector2.Zero, Color.White);
-            batch.Draw(texture.help, new Vector2(8, 0), Color.White);
-            batch.Draw(texture.darkSignPole, new Vector2(680, 380), Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.GameTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.DarkLayer, Vector2.Zero, Color.White);
+            batch.Draw(texture.Help, new Vector2(8, 0), Color.White);
+            batch.Draw(texture.DarkSignPole, new Vector2(680, 380), Color.White);
 
             if (Iterator == 1)
             {
-                batch.Draw(texture.bDownMarked, new Vector2(65, 360), Color.White);
+                batch.Draw(texture.BDownMarked, new Vector2(65, 360), Color.White);
             }
             else
             {
-                batch.Draw(texture.bDown, new Vector2(65, 360), Color.White);
+                batch.Draw(texture.BDown, new Vector2(65, 360), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sBack2Marked, new Vector2(620, 380), Color.White);
+                batch.Draw(texture.SBack2Marked, new Vector2(620, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.sBack2, new Vector2(620, 380), Color.White);
+                batch.Draw(texture.SBack2, new Vector2(620, 380), Color.White);
             }
 
             batch.End();
@@ -278,126 +283,126 @@ namespace Snake_Game
         /// <summary>
         /// Piešiama pasiekimų lentelė.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawHighScores(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.gameTitle, new Vector2(500, 10), Color.White);
-            batch.Draw(texture.darkLayer, Vector2.Zero, Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.GameTitle, new Vector2(500, 10), Color.White);
+            batch.Draw(texture.DarkLayer, Vector2.Zero, Color.White);
             if (highScore == HighScoresType.Clasic)
             {
-                batch.Draw(texture.highScoresCla, new Vector2(115, 0), Color.White);
+                batch.Draw(texture.HighScoresCla, new Vector2(115, 0), Color.White);
             }
             else
             {
-                batch.Draw(texture.highScoresArc, new Vector2(115, 0), Color.White);
+                batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
             }
-            batch.Draw(texture.darkSignPole, new Vector2(680, 380), Color.White);
+            batch.Draw(texture.DarkSignPole, new Vector2(680, 380), Color.White);
 
             if (Iterator == 1)
             {
-                batch.Draw(texture.bNextMarked, new Vector2(620, 335), Color.White);
+                batch.Draw(texture.BNextMarked, new Vector2(620, 335), Color.White);
             }
             else
             {
-                batch.Draw(texture.bNext, new Vector2(620, 335), Color.White);
+                batch.Draw(texture.BNext, new Vector2(620, 335), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sBack2Marked, new Vector2(620, 380), Color.White);
+                batch.Draw(texture.SBack2Marked, new Vector2(620, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.sBack2, new Vector2(620, 380), Color.White);
+                batch.Draw(texture.SBack2, new Vector2(620, 380), Color.White);
             }
             if (Iterator == 3)
             {
-               // batch.Draw(texture.sHelp_marked, new Vector2(555, 320), Color.White);
+               // Batch.Draw(texture.SHelp_marked, new Vector2(555, 320), Color.White);
             }
             else
             {
-               // batch.Draw(texture.sHelp, new Vector2(555, 320), Color.White);
+               // Batch.Draw(texture.SHelp, new Vector2(555, 320), Color.White);
             }
             if (Iterator == 4)
             {
-              //  batch.Draw(texture.sQuit_marked, new Vector2(555, 380), Color.White);
+              //  Batch.Draw(texture.SQuit_marked, new Vector2(555, 380), Color.White);
             }
             else
             {
-               // batch.Draw(texture.sQuit, new Vector2(555, 380), Color.White);
+               // Batch.Draw(texture.SQuit, new Vector2(555, 380), Color.White);
             }
             batch.End();
         }
 
         /// <summary>
-        /// Piešiamas nuotykių rėžimo lygio pasirinkimų meniu.
+        /// Piešiamas nuotykių rėžimo lygio pasirinkimų Meniu.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawChoseLevelMeniu(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.darkLayer, Vector2.Zero, Color.White);
-            batch.Draw(texture.chooseLevelTitle, new Vector2(270, 50), Color.White);
-            batch.Draw(texture.darkSignPole, new Vector2(620, 180), Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.DarkLayer, Vector2.Zero, Color.White);
+            batch.Draw(texture.ChooseLevelTitle, new Vector2(270, 50), Color.White);
+            batch.Draw(texture.DarkSignPole, new Vector2(620, 180), Color.White);
             if (Iterator == 6)
             {
-                batch.Draw(texture.sLevel6Marked, new Vector2(600, 0), Color.White);
+                batch.Draw(texture.SLevel6Marked, new Vector2(600, 0), Color.White);
             }
             else
             {
-                batch.Draw(texture.sLevel6, new Vector2(600, 0), Color.White);
+                batch.Draw(texture.SLevel6, new Vector2(600, 0), Color.White);
             }
             if (Iterator == 5)
             {
-                batch.Draw(texture.sLevel5Marked, new Vector2(550, 150), Color.White);
+                batch.Draw(texture.SLevel5Marked, new Vector2(550, 150), Color.White);
             }
             else
             {
-                batch.Draw(texture.sLevel5, new Vector2(550, 150), Color.White);
+                batch.Draw(texture.SLevel5, new Vector2(550, 150), Color.White);
             }
             if (Iterator == 4)
             {
-                batch.Draw(texture.sLevel4Marked, new Vector2(400, 275), Color.White);
+                batch.Draw(texture.SLevel4Marked, new Vector2(400, 275), Color.White);
             }
             else
             {
-                batch.Draw(texture.sLevel4, new Vector2(400, 275), Color.White);
+                batch.Draw(texture.SLevel4, new Vector2(400, 275), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.sLevel3Marked, new Vector2(250, 160), Color.White);
+                batch.Draw(texture.SLevel3Marked, new Vector2(250, 160), Color.White);
             }
             else
             {
-                batch.Draw(texture.sLevel3, new Vector2(250, 160), Color.White);
+                batch.Draw(texture.SLevel3, new Vector2(250, 160), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sLevel2Marked, new Vector2(90, 20), Color.White);
+                batch.Draw(texture.SLevel2Marked, new Vector2(90, 20), Color.White);
             }
             else
             {
-                batch.Draw(texture.sLevel2, new Vector2(90, 20), Color.White);
+                batch.Draw(texture.SLevel2, new Vector2(90, 20), Color.White);
             }
             if (Iterator == 1)
             {
-                batch.Draw(texture.sLevel1Marked, new Vector2(25, 240), Color.White);
+                batch.Draw(texture.SLevel1Marked, new Vector2(25, 240), Color.White);
             }
             else
             {
-                batch.Draw(texture.sLevel1, new Vector2(25, 240), Color.White);
+                batch.Draw(texture.SLevel1, new Vector2(25, 240), Color.White);
             }                 
             if (Iterator == 7)
             {
-                batch.Draw(texture.sBackSMarked, new Vector2(660, 380), Color.White);
+                batch.Draw(texture.SBackSMarked, new Vector2(660, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.sBackS, new Vector2(660, 380), Color.White);
+                batch.Draw(texture.SBackS, new Vector2(660, 380), Color.White);
             }
             batch.End();
         }
@@ -405,46 +410,46 @@ namespace Snake_Game
         /// <summary>
         /// Sudėtingumo lango piešimas
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawDifficultScreen(SpriteBatch batch, MeniuTexture texture)
         {
             batch.Begin();
-            batch.Draw(texture.background, Vector2.Zero, Color.White);
-            batch.Draw(texture.diffLevelTitle, new Vector2(310, 10), Color.White);
-            batch.Draw(texture.signPole, new Vector2(620, 180), Color.White);
+            batch.Draw(texture.Background, Vector2.Zero, Color.White);
+            batch.Draw(texture.DiffLevelTitle, new Vector2(310, 10), Color.White);
+            batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
             DrawChosenSnake(batch, texture);
             if (Iterator == 1)
             {
-                batch.Draw(texture.sEasy_marked, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SEasy_marked, new Vector2(555, 190), Color.White);
             }
             else
             {
-                batch.Draw(texture.sEasy, new Vector2(555, 190), Color.White);
+                batch.Draw(texture.SEasy, new Vector2(555, 190), Color.White);
             }
             if (Iterator == 2)
             {
-                batch.Draw(texture.sMedium_marked, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SMedium_marked, new Vector2(555, 260), Color.White);
             }
             else
             {
-                batch.Draw(texture.sMedium, new Vector2(555, 260), Color.White);
+                batch.Draw(texture.SMedium, new Vector2(555, 260), Color.White);
             }
             if (Iterator == 3)
             {
-                batch.Draw(texture.sHard_marked, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SHard_marked, new Vector2(555, 320), Color.White);
             }
             else
             {
-                batch.Draw(texture.sHard, new Vector2(555, 320), Color.White);
+                batch.Draw(texture.SHard, new Vector2(555, 320), Color.White);
             }
             if (Iterator == 4)
             {
-                batch.Draw(texture.sBack_marked, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.SBack_marked, new Vector2(555, 380), Color.White);
             }
             else
             {
-                batch.Draw(texture.sBack, new Vector2(555, 380), Color.White);
+                batch.Draw(texture.SBack, new Vector2(555, 380), Color.White);
             }
             batch.End();
         }
@@ -452,22 +457,46 @@ namespace Snake_Game
         /// <summary>
         /// Sudėtingumo lange nupiešiama pasirinkta gyvatė.
         /// </summary>
-        /// <param name="batch"></param>
+        /// <param name="Batch"></param>
         /// <param name="texture"></param>
         private void DrawChosenSnake(SpriteBatch batch, MeniuTexture texture)
         {
             switch (SnakeType)
             {
+                case 0:
+                    batch.Draw(texture.BTreeSnake1, new Vector2(108, 57), Color.White);
+                    break;
                 case 1:
-                    batch.Draw(texture.bTreeSnake1, new Vector2(108, 57), Color.White);
+                    batch.Draw(texture.BTreeSnake2, new Vector2(108, 57), Color.White);
                     break;
                 case 2:
-                    batch.Draw(texture.bTreeSnake2, new Vector2(108, 57), Color.White);
-                    break;
-                case 3:
-                    batch.Draw(texture.bTreeSnake3, new Vector2(108, 57), Color.White);
+                    batch.Draw(texture.BTreeSnake3, new Vector2(108, 57), Color.White);
                     break;
             }
+        }
+
+        private void DrawPauseScreen(SpriteBatch batch, MeniuTexture texture)
+        {
+            batch.Begin();
+            batch.Draw(texture.BigDarkLayer, Vector2.Zero, Color.White);
+            batch.Draw(texture.PauseSign, new Vector2(160, 110), Color.White);
+            if (Iterator == 1)
+            {
+                batch.Draw(texture.TResumeMarked, new Vector2(350, 215), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.TResume, new Vector2(350, 220), Color.White);
+            }
+            if (Iterator == 2)
+            {
+                batch.Draw(texture.TMeniuMarked, new Vector2(280, 255), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.TMeniu, new Vector2(280, 255), Color.White);
+            }
+            batch.End();
         }
 
         public void DrawEndScreen(SpriteBatch batch, int screenWidth, SpriteFont arial)
@@ -512,12 +541,31 @@ namespace Snake_Game
                 case MeniuState.Level:
                     SelectLevel();
                     break;
+                case MeniuState.Pause:
+                    SelectPause();
+                    break;
                 case MeniuState.Help:
-                    SelectHelp();
+                    SelectPause();
                     break;
             }
         }
 
+
+        private void SelectPause()
+        {
+            switch (Iterator)
+            {
+                case 1:
+                    meniuState = MeniuState.Play;
+                    break;
+                case 2:
+                    meniuState = MeniuState.Main;
+                    Iterator = 1;
+                    MenuItems = 4;
+                    break;
+
+            }
+        }
 
         private void SelectHelp()
         {
@@ -640,19 +688,19 @@ namespace Snake_Game
                     meniuState = MeniuState.Difficulty;
                     MenuItems = 4;
                     Iterator = 1;
-                    SnakeType = 1;
+                    SnakeType = 0;
                     break;
                 case 2:
                     meniuState = MeniuState.Difficulty;
                     MenuItems = 4;///????????????????????????????
                     Iterator = 1;
-                    SnakeType = 2;
+                    SnakeType = 1;
                     break;
                 case 3:
                     meniuState = MeniuState.Difficulty;
                     MenuItems = 4;
                     Iterator = 1;
-                    SnakeType = 3;
+                    SnakeType = 2;
                     break;
                 case 4:
                     meniuState = MeniuState.GameType;

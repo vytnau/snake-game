@@ -37,26 +37,39 @@ namespace Snake_Game
         SpriteFont text;
         Vector2 direction;
         MeniuTexture meniuTexture;
+        GameStageTexture stageTexture;
+        SnakeTexture[] snakeTexture = new SnakeTexture[3];
+        SnakeDrawingService snakeDraw;
+        StageDrawingService stageDraw;
+
+        Texture2D kvad;
 
 
         bool up;
         bool down;
         int millisecondsPerFrame = 70; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
-        private readonly IGameService game;
+        private IGameService game;
         public static GameStates gamestate;
         private Meniu meniu;
 
         public GameStageUI()
         {
-            game = new GameService();
+            //game = new GameService();
             meniu = new Meniu();
             meniuTexture = new MeniuTexture();
-            graphics = new GraphicsDeviceManager(this);
+            stageTexture = new GameStageTexture();
+            snakeTexture[0] = new SnakeTexture();
+            snakeTexture[1] = new SnakeTexture();
+            snakeTexture[2] = new SnakeTexture();
+            graphics = new GraphicsDeviceManager(this);           
+            stageDraw = new StageDrawingService();
+            snakeDraw = new SnakeDrawingService(0, snakeTexture);
             direction.X = 1;
             direction.Y = 1;
             up = true;
             down = true;
+            
             
         }
 
@@ -77,20 +90,13 @@ namespace Snake_Game
             //graphics.PreferMultiSampling = false;
             //this.graphics.IsFullScreen = true;
             graphics.ApplyChanges();
-            millisecondsPerFrame = 100; //Update every 1 second
+            millisecondsPerFrame = 120; //Update every 1 second
             gamestate = GameStates.Menu;
             //gamestate = GameStates.Running;
             base.Initialize();
         }
 
-       /* void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
-        {
-            DisplayMode displayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
-            e.GraphicsDeviceInformation.PresentationParameters.BackBufferFormat = displayMode.Format;
-            e.GraphicsDeviceInformation.PresentationParameters.BackBufferWidth = displayMode.Width;
-            e.GraphicsDeviceInformation.PresentationParameters.BackBufferHeight = displayMode.Height;
 
-        }*/
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -100,19 +106,116 @@ namespace Snake_Game
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            snakeDraw.Batch = spriteBatch;
             Content.RootDirectory = "Content";//Content
             //Snake Game\Snake GameContent\Arial.spritefont";
             font = Content.Load<SpriteFont>("Font\\Arial");
             text = Content.Load<SpriteFont>("Font\\Fontas");
             LoadMeniuContent();
+            LoadGameStageContent();
 
-
-
+            kvad = Content.Load<Texture2D>("Texture\\Game\\Snake\\kvadratas");
             // TODO: use this.Content to load your game content here
         }
 
         /// <summary>
-        /// Iškviečiami metodai įkrauti reikalingas meniu tekstūras.
+        /// Iškviečiami metodai, įkrauti žaidimo lauko ir kitas tekstūras reikalingas žaisti žaidimą.
+        /// </summary>
+        private void LoadGameStageContent()
+        {
+            LoadStageBackgroundContent();
+            LoadSnakeContent();
+        }
+
+        private void LoadSnakeContent()
+        {
+            LoadSnake1Content();
+            LoadSnake2Content();
+            LoadSnake3Content();
+        }
+
+        /// <summary>
+        /// Įkraunamos pirmos gyvatės tekstūros. 
+        /// </summary>
+        private void LoadSnake1Content()
+        {
+            snakeTexture[0].BodyLR = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\bodyRight");
+            snakeTexture[0].BodyUD = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\bodyUp");
+            snakeTexture[0].CornerRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\cornerDR");
+            snakeTexture[0].CornerLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\cornerLD");
+            snakeTexture[0].CornerUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\cornerLU");
+            snakeTexture[0].CornerDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\cornerUR");
+            snakeTexture[0].TailDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\tailDown");
+            snakeTexture[0].TailUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\tailUp");
+            snakeTexture[0].TailLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\tailLeft");
+            snakeTexture[0].TailRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\tailRight");
+            snakeTexture[0].HeadDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\headDown");
+            snakeTexture[0].HeadLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\headLeft");
+            snakeTexture[0].HeadRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\headRight");
+            snakeTexture[0].HeadUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake1\\headUp");
+        }
+        /// <summary>
+        /// Įkraunamos antros gyvatės tekstūros. 
+        /// </summary>
+        private void LoadSnake2Content()
+        {
+            snakeTexture[1].BodyLR = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\bodyRight");
+            snakeTexture[1].BodyUD = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\bodyUp");
+            snakeTexture[1].CornerRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\cornerDR");
+            snakeTexture[1].CornerLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\cornerLD");
+            snakeTexture[1].CornerUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\cornerLU");
+            snakeTexture[1].CornerDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\cornerUR");
+            snakeTexture[1].TailDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\tailDown");
+            snakeTexture[1].TailUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\tailUp");
+            snakeTexture[1].TailLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\tailLeft");
+            snakeTexture[1].TailRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\tailRight");
+            snakeTexture[1].HeadDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\headDown");
+            snakeTexture[1].HeadLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\headLeft");
+            snakeTexture[1].HeadRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\headRight");
+            snakeTexture[1].HeadUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake2\\headUp");
+        }
+
+        /// <summary>
+        /// Įkraunamos trečios gyvatės tekstūros. 
+        /// </summary>
+        private void LoadSnake3Content()
+        {
+            snakeTexture[2].BodyLR = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\bodyRight");
+            snakeTexture[2].BodyUD = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\bodyUp");
+            snakeTexture[2].CornerRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\cornerDR");
+            snakeTexture[2].CornerLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\cornerLD");
+            snakeTexture[2].CornerUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\cornerLU");
+            snakeTexture[2].CornerDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\cornerUR");
+            snakeTexture[2].TailDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\tailDown");
+            snakeTexture[2].TailUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\tailUp");
+            snakeTexture[2].TailLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\tailLeft");
+            snakeTexture[2].TailRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\tailRight");
+            snakeTexture[2].HeadDown = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\headDown");
+            snakeTexture[2].HeadLeft = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\headLeft");
+            snakeTexture[2].HeadRight = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\headRight");
+            snakeTexture[2].HeadUp = Content.Load<Texture2D>("Texture\\Game\\Snake\\Snake3\\headUp");
+        }
+
+        /// <summary>
+        /// Įkraunamos žaidimo lango foninės tekstūros.
+        /// </summary>
+        private void LoadStageBackgroundContent()
+        {
+            stageTexture.Background = Content.Load<Texture2D>("Texture\\Game\\Background\\background");
+            stageTexture.LifeIcon = Content.Load<Texture2D>("Texture\\Game\\Background\\lifeIcon");
+            stageTexture.Panel = Content.Load<Texture2D>("Texture\\Game\\Background\\panel");
+            stageTexture.Radar = Content.Load<Texture2D>("Texture\\Game\\Background\\radar");
+            stageTexture.RadarBackg = Content.Load<Texture2D>("Texture\\Game\\Background\\radarBackground");
+            stageTexture.TLife = Content.Load<Texture2D>("Texture\\Game\\Background\\life");
+            stageTexture.TPoints = Content.Load<Texture2D>("Texture\\Game\\Background\\points");
+            stageTexture.TTIme = Content.Load<Texture2D>("Texture\\Game\\Background\\time");
+            stageTexture.Wall1 = Content.Load<Texture2D>("Texture\\Game\\Background\\bushWall");
+            stageTexture.Wall2 = Content.Load<Texture2D>("Texture\\Game\\Background\\logWall");
+        }
+
+
+        /// <summary>
+        /// Iškviečiami metodai įkrauti reikalingas Meniu tekstūras.
         /// </summary>
         private void LoadMeniuContent()
         {
@@ -123,109 +226,124 @@ namespace Snake_Game
             LoadArcadeLevelsMeniuContent();
             LoadHighScoresmeniuContent();
             LoadHelpMeniuContent();
+            LoadGamePauseContent();
         }
+
         /// <summary>
-        /// Įkraunamos pagrininio meniu tekstūros.
+        /// Įkraunamos žaidimo pauzės lango tekstūros
+        /// </summary>
+        private void LoadGamePauseContent()
+        {
+            meniuTexture.TMeniu = Content.Load<Texture2D>("Texture\\Game\\Pauze\\backToMeniu");
+            meniuTexture.TMeniuMarked = Content.Load<Texture2D>("Texture\\Game\\Pauze\\backToMeniuMarked");
+            meniuTexture.TResume = Content.Load<Texture2D>("Texture\\Game\\Pauze\\resume");
+            meniuTexture.TResumeMarked = Content.Load<Texture2D>("Texture\\Game\\Pauze\\resumeMarked");
+            meniuTexture.PauseSign = Content.Load<Texture2D>("Texture\\Game\\Pauze\\pauzeSign");
+            meniuTexture.BigDarkLayer = Content.Load<Texture2D>("Texture\\Game\\Pauze\\bigDarkLayer");
+        }
+
+        /// <summary>
+        /// Įkraunamos pagrininio Meniu tekstūros.
         /// </summary>
         private void LoadMainMeniuContent()
         {
-            meniuTexture.background = Content.Load<Texture2D>("Texture\\Meniu\\meniu_background");
-            meniuTexture.gameTitle = Content.Load<Texture2D>("Texture\\Meniu\\Main\\gameTitle");
-            meniuTexture.signPole = Content.Load<Texture2D>("Texture\\Meniu\\signPole");
-            meniuTexture.sNew_game = Content.Load<Texture2D>("Texture\\Meniu\\Main\\newGame");
-            meniuTexture.sNew_game_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\newGameMarked");
-            meniuTexture.sHighscores = Content.Load<Texture2D>("Texture\\Meniu\\Main\\highscores");
-            meniuTexture.sHighscores_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\highscoresMarked");
-            meniuTexture.sHelp = Content.Load<Texture2D>("Texture\\Meniu\\Main\\help");
-            meniuTexture.sHelp_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\helpMarked");
-            meniuTexture.sQuit = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quit");
-            meniuTexture.sQuit_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quitMarked");
+            meniuTexture.Background = Content.Load<Texture2D>("Texture\\Meniu\\meniu_background");
+            meniuTexture.GameTitle = Content.Load<Texture2D>("Texture\\Meniu\\Main\\gameTitle");
+            meniuTexture.SignPole = Content.Load<Texture2D>("Texture\\Meniu\\signPole");
+            meniuTexture.SNew_game = Content.Load<Texture2D>("Texture\\Meniu\\Main\\newGame");
+            meniuTexture.SNew_game_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\newGameMarked");
+            meniuTexture.SHighscores = Content.Load<Texture2D>("Texture\\Meniu\\Main\\highscores");
+            meniuTexture.SHighscores_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\highscoresMarked");
+            meniuTexture.SHelp = Content.Load<Texture2D>("Texture\\Meniu\\Main\\help");
+            meniuTexture.SHelp_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\helpMarked");
+            meniuTexture.SQuit = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quit");
+            meniuTexture.SQuit_marked = Content.Load<Texture2D>("Texture\\Meniu\\Main\\quitMarked");
         }
         /// <summary>
         /// Įkraunamos žaidimo tipo pasirinkimo tekstūros.
         /// </summary>
         private void LoadGameTypeMeniuContent()
         {
-            meniuTexture.sArcade = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcade");
-            meniuTexture.sArcade_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcadeMarked");
-            meniuTexture.sBack = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\back");
-            meniuTexture.sBack_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\backMarked");
-            meniuTexture.sClassical = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classical");
-            meniuTexture.sClassical_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classicalMarked");
-            meniuTexture.gameTypeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\chooseTypeTitle");
+            meniuTexture.SArcade = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcade");
+            meniuTexture.SArcade_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\arcadeMarked");
+            meniuTexture.SBack = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\back");
+            meniuTexture.SBack_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\backMarked");
+            meniuTexture.SClassical = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classical");
+            meniuTexture.SClassical_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\classicalMarked");
+            meniuTexture.GameTypeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseType\\chooseTypeTitle");
         }
         /// <summary>
         /// Įkraunamos gyvatės pasirinkimo tekstūros.
         /// </summary>
         private void LoadSnakeChooseMeniuContent()
         {
-            meniuTexture.sSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1");
-            meniuTexture.sSnake1_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1Marked");
-            meniuTexture.sSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2");
-            meniuTexture.sSnake2_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2Marked");
-            meniuTexture.sSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow3");
-            meniuTexture.sSnake3_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow3Marked");
-            meniuTexture.bTreeSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake1");
-            meniuTexture.bTreeSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake2");
-            meniuTexture.bTreeSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake3");
-            meniuTexture.chooseSnakeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakechooseTitle");
+            meniuTexture.SSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1");
+            meniuTexture.SSnake1_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow1Marked");
+            meniuTexture.SSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2");
+            meniuTexture.SSnake2_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow2Marked");
+            meniuTexture.SSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow3");
+            meniuTexture.SSnake3_marked = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakeArrow3Marked");
+            meniuTexture.BTreeSnake1 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake1");
+            meniuTexture.BTreeSnake2 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake2");
+            meniuTexture.BTreeSnake3 = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snake3");
+            meniuTexture.ChooseSnakeTitle = Content.Load<Texture2D>("Texture\\Meniu\\ChooseSnake\\snakechooseTitle");
         }
         /// <summary>
         /// Įkraunamos žaidimo sudėtingumo tekstūros.
         /// </summary>
         private void LoadDifficultMeniuContent()
         {
-            meniuTexture.diffLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\difficultLevelTitle");
-            meniuTexture.sEasy = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easy");
-            meniuTexture.sEasy_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easyMarked");
-            meniuTexture.sMedium = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\medium");
-            meniuTexture.sMedium_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\mediumMarked");
-            meniuTexture.sHard = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hard");
-            meniuTexture.sHard_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hardMarked");
+            meniuTexture.DiffLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\difficultLevelTitle");
+            meniuTexture.SEasy = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easy");
+            meniuTexture.SEasy_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\easyMarked");
+            meniuTexture.SMedium = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\medium");
+            meniuTexture.SMedium_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\mediumMarked");
+            meniuTexture.SHard = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hard");
+            meniuTexture.SHard_marked = Content.Load<Texture2D>("Texture\\Meniu\\Difficult\\hardMarked");
         }
         /// <summary>
         /// Įkraunamos nuotykių rėžimo lygių pasirinkimo tekstūros.
         /// </summary>
         private void LoadArcadeLevelsMeniuContent()
         {
-            meniuTexture.sBackS = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1");
-            meniuTexture.sBackSMarked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1Marked");
-            meniuTexture.chooseLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\chooseLevelTitle");
-            meniuTexture.darkLayer = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\darkLayer");
-            meniuTexture.darkSignPole = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\darkPole");
-            meniuTexture.sLevel1 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level1");
-            meniuTexture.sLevel1Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level1Marked");
-            meniuTexture.sLevel2 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level2");
-            meniuTexture.sLevel2Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level2Marked");
-            meniuTexture.sLevel3 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level3");
-            meniuTexture.sLevel3Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level3Marked");
-            meniuTexture.sLevel4 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level4");
-            meniuTexture.sLevel4Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level4Marked");
-            meniuTexture.sLevel5 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5");
-            meniuTexture.sLevel5Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5Marked");
-            meniuTexture.sLevel6 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6");
-            meniuTexture.sLevel6Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6Marked");
+            meniuTexture.SBackS = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1");
+            meniuTexture.SBackSMarked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\back1Marked");
+            meniuTexture.ChooseLevelTitle = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\chooseLevelTitle");
+            meniuTexture.DarkLayer = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\darkLayer");
+            meniuTexture.DarkSignPole = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\darkPole");
+            meniuTexture.SLevel1 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level1");
+            meniuTexture.SLevel1Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level1Marked");
+            meniuTexture.SLevel2 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level2");
+            meniuTexture.SLevel2Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level2Marked");
+            meniuTexture.SLevel3 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level3");
+            meniuTexture.SLevel3Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level3Marked");
+            meniuTexture.SLevel4 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level4");
+            meniuTexture.SLevel4Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level4Marked");
+            meniuTexture.SLevel5 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5");
+            meniuTexture.SLevel5Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5Marked");
+            meniuTexture.SLevel6 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6");
+            meniuTexture.SLevel6Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6Marked");
         }
         /// <summary>
         /// Įkraunamos pasiekimo lango tekstūros.
         /// </summary>
         private void LoadHighScoresmeniuContent()
         {
-            meniuTexture.sBack2 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2");
-            meniuTexture.sBack2Marked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2Marked");
-            meniuTexture.highScoresArc = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresArcade");
-            meniuTexture.highScoresCla = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresClas");
-            meniuTexture.bNext = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\next");
-            meniuTexture.bNextMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\nextMarked");
+            meniuTexture.SBack2 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2");
+            meniuTexture.SBack2Marked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\back2Marked");
+            meniuTexture.HighScoresArc = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresArcade");
+            meniuTexture.HighScoresCla = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresClas");
+            meniuTexture.BNext = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\next");
+            meniuTexture.BNextMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\nextMarked");
         }
         /// <summary>
         /// Įkraunamos pagalbos lango tekstūros.
         /// </summary>
         private void LoadHelpMeniuContent()
         {
-            meniuTexture.help = Content.Load<Texture2D>("Texture\\Meniu\\Help\\help");
-            meniuTexture.bDown = Content.Load<Texture2D>("Texture\\Meniu\\Help\\down");
-            meniuTexture.bDownMarked = Content.Load<Texture2D>("Texture\\Meniu\\Help\\downMarked");
+            meniuTexture.Help = Content.Load<Texture2D>("Texture\\Meniu\\Help\\help");
+            meniuTexture.BDown = Content.Load<Texture2D>("Texture\\Meniu\\Help\\down");
+            meniuTexture.BDownMarked = Content.Load<Texture2D>("Texture\\Meniu\\Help\\downMarked");
         }
 
         /// <summary>
@@ -251,107 +369,125 @@ namespace Snake_Game
                 timeSinceLastUpdate = 0;
                 if (gamestate == GameStates.Running)
                 {
-
-
-                    if (key.IsKeyDown(Keys.Left))
-                    {
-                        if (direction.Y != 1)
-                        {
-                            direction.X = -1;
-                            direction.Y = 1;
-                            up = true;
-                            down = true;
-                        }
-                    }
-
-                    if (key.IsKeyDown(Keys.Right))
-                    {
-                        if (direction.Y != 1)
-                        {
-                            direction.X = 1;
-                            direction.Y = 1;
-                            up = true;
-                            down = true;
-                        }
-                    }
-
-                    if (key.IsKeyDown(Keys.Up))
-                    {
-                        if (up)
-                        {
-                            down = false;
-                            direction.X = 1;
-                            direction.Y = -1;
-                        }
-                    }
-
-                    if (key.IsKeyDown(Keys.Down))
-                    {
-                        if (down)
-                        {
-                            up = false;
-                            direction.X = -1;
-                            direction.Y = -1;
-                        }
-                    }
-
-                    game.SetMovment((int)direction.X, (int)direction.Y);
+                    GamePlay();
                 }
-            
+
                 else if (gamestate == GameStates.Menu)
                 {
-
-                    if (key.IsKeyDown(Keys.Down) || key.IsKeyDown(Keys.Right))
-                    {
-                        meniu.Iterator++;
-                    }
-                    else if (key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Left))
-                    {
-                        meniu.Iterator--;
-                    }
-                    else if (key.IsKeyDown(Keys.Enter))
-                    {
-                        meniu.Enter();
-                    }
-                    if (meniu.meniuState == MeniuState.Play)
-                    {
-                        gamestate = GameStates.Running;
-                    }
-
-                    if (meniu.meniuState == MeniuState.Quit)
-                    {
-                        this.Exit();
-                    }
-                    /*if (input.MenuSelect)
-                    {
-                        if (menu.Iterator == 0)
-                        {
-                            gamestate = GameStates.Running;
-                            SetUpSingle();
-                        }
-                        else if (menu.Iterator == 1)
-                        {
-                            gamestate = GameStates.Running;
-                            SetUpMulti();
-                        }
-                        else if (menu.Iterator == 2)
-                        {
-                            this.Exit();
-                        }
-                        menu.Iterator = 0;
-                    }*/
+                    Meniu();
                 }
             }
-            //game.SetMovment(
-
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
-            // TODO: Add your update logic here
-  
-                         
+            // TODO: Add your update logic here                        
             base.Update(gameTime);
+        }
+
+        private void GamePlay()
+        {
+            KeyboardState key = Keyboard.GetState();
+            if (key.IsKeyDown(Keys.Left))
+            {
+                if (direction.Y != 1)
+                {
+                    direction.X = -1;
+                    direction.Y = 1;
+                    up = true;
+                    down = true;
+                }
+            }
+            if (key.IsKeyDown(Keys.Right))
+            {
+                if (direction.Y != 1)
+                {
+                    direction.X = 1;
+                    direction.Y = 1;
+                    up = true;
+                    down = true;
+                }
+            }
+            if (key.IsKeyDown(Keys.Up))
+            {
+                if (up)
+                {
+                    down = false;
+                    direction.X = 1;
+                    direction.Y = -1;
+                }
+            }
+            if (key.IsKeyDown(Keys.Down))
+            {
+                if (down)
+                {
+                    up = false;
+                    direction.X = -1;
+                    direction.Y = -1;
+                }
+            }
+            if (key.IsKeyDown(Keys.Escape))
+            {
+                meniu.meniuState = MeniuState.Pause;
+                gamestate = GameStates.Menu;
+            }
+            game.SetMovment((int)direction.X, (int)direction.Y);
+        }
+
+        private void Meniu()
+        {
+            KeyboardState key = Keyboard.GetState();
+            if (key.IsKeyDown(Keys.Down) || key.IsKeyDown(Keys.Right))
+            {
+                meniu.Iterator++;
+            }
+            else if (key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Left))
+            {
+                meniu.Iterator--;
+            }
+            else if (key.IsKeyDown(Keys.Enter))
+            {
+                if (meniu.meniuState == MeniuState.Pause && gamestate == GameStates.Menu)
+                {
+                    ChangeScreenSizeToMeniu();//grazinama meniu rezoliucija
+                }
+                meniu.Enter();
+            }
+            if (meniu.meniuState == MeniuState.Main)
+            {
+                StartNewGame();
+            }
+            if (meniu.meniuState == MeniuState.Play)
+            {
+                ChangeScreenSize();
+                gamestate = GameStates.Running;
+                snakeDraw.SnkateType = meniu.SnakeType;
+            }
+
+            if (meniu.meniuState == MeniuState.Pause)
+            {
+                if (key.IsKeyDown(Keys.Escape))
+                {
+                    gamestate = GameStates.Running;
+                }
+            }
+            if (meniu.meniuState == MeniuState.Quit)
+            {
+                this.Exit();
+            }
+        }        
+
+        private void StartNewGame()
+        {
+            game = new GameService();
+        }
+
+        private void ChangeScreenSizeToMeniu()
+        {
+            graphics.PreferredBackBufferHeight = 449;
+            graphics.ApplyChanges();
+        }
+
+        private void ChangeScreenSize()
+        {
+            graphics.PreferredBackBufferHeight = 575;
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -362,41 +498,38 @@ namespace Snake_Game
         {
             if (gamestate == GameStates.Running)
             {
-                GraphicsDevice.Clear(Color.CornflowerBlue);
-                DrawStage();
+                GraphicsDevice.Clear(Color.CornflowerBlue);                
+                stageDraw.DrawStage(spriteBatch, stageTexture);
+               // DrawStage();
+                snakeDraw.DrawSnake(game.GetGameStage());
+
                 DrwaPlayerInfo();
             }
             else if (gamestate == GameStates.Menu)
             {
+                if (meniu.meniuState == MeniuState.Pause)
+                {
+                    stageDraw.DrawStage(spriteBatch, stageTexture);
+                    snakeDraw.DrawSnake(game.GetGameStage());
+                }
                 meniu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
+            }
+            else
+            {
+
             }
             base.Draw(gameTime);
         }
 
         private void DrawStage()
         {
-            int[,] matrix = game.GetGameStage();
             spriteBatch.Begin();
-            for (int i = 0; i < 60; i++)
+            for (int i = 0; i < 25; i++)//60
             {
-                for (int j = 0; j < 40; j++)
+                for (int j = 0; j < 13; j++)//40
                 {
-                    if (matrix[i, j] == 0)
-                    {
-                          //  spriteBatch.DrawString(font, "0", new Vector2(i * 10, j * 10), Color.Black);
-                    }
-                    if (matrix[i, j] == 1)
-                    {
-                        spriteBatch.DrawString(font, "1", new Vector2(i * 10, j * 10), Color.Black);
-                    }
-                    if (matrix[i, j] == 2)
-                    {
-                        spriteBatch.DrawString(font, "2", new Vector2(i * 10, j * 10), Color.Black);
-                    }
-                    if (matrix[i, j] == 3)
-                    {
-                        spriteBatch.DrawString(font, "3", new Vector2(i * 10, j * 10), Color.Black);
-                    }
+                    spriteBatch.Draw(kvad, new Vector2(i * 30 + 40, j * 30 + 45), Color.White);
+                   
                 }
             }
             spriteBatch.End();
