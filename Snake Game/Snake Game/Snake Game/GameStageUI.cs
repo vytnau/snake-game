@@ -39,8 +39,10 @@ namespace Snake_Game
         MeniuTexture meniuTexture;
         GameStageTexture stageTexture;
         SnakeTexture[] snakeTexture = new SnakeTexture[3];
+        FoodTexture foodTexture;
         SnakeDrawingService snakeDraw;
         StageDrawingService stageDraw;
+
 
         Texture2D kvad;
 
@@ -62,6 +64,7 @@ namespace Snake_Game
             snakeTexture[0] = new SnakeTexture();
             snakeTexture[1] = new SnakeTexture();
             snakeTexture[2] = new SnakeTexture();
+            foodTexture = new FoodTexture();
             graphics = new GraphicsDeviceManager(this);           
             stageDraw = new StageDrawingService();
             snakeDraw = new SnakeDrawingService(0, snakeTexture);
@@ -125,7 +128,15 @@ namespace Snake_Game
         {
             LoadStageBackgroundContent();
             LoadSnakeContent();
+            LoadFoodContent();
         }
+
+        private void LoadFoodContent()
+        {
+            foodTexture.Apple = Content.Load<Texture2D>("Texture\\Food\\apple");
+            foodTexture.Mushroom = Content.Load<Texture2D>("Texture\\Food\\mushroom");
+        }
+
 
         private void LoadSnakeContent()
         {
