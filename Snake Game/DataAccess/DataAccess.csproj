@@ -56,6 +56,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FoodTexture.cs" />
     <Compile Include="GameStageTexture.cs" />
     <Compile Include="MeniuTexture.cs" />
     <Compile Include="SnakeTexture.cs" />

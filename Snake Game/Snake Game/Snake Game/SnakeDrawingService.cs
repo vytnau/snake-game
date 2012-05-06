@@ -118,19 +118,6 @@ namespace Snake_Game
                     {
                         DrawSnakeAngle(i, j, value);
                     }
-
-                   
-                    if (stageMatrix[i, j] == 8)//maistas
-                    {
-                       // Batch.DrawString(font, "2", new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
-                    }
-
-                    //vabzdys
-                    if (stageMatrix[i, j] == 3)
-                    {
-                        // Batch.DrawString(font, "3", new Vector2(i * 10, j * 10), Color.Black);
-                    }
-
                 }
             }
             Batch.End();
