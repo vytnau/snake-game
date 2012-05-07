@@ -42,6 +42,7 @@ namespace Snake_Game
         public string InfoText { get; set; }
         public string Title { get; set; }
         public int SnakeType { get; set; }
+        public int Difficult { get; set; }
         
 
         public int Iterator
@@ -660,14 +661,17 @@ namespace Snake_Game
                 case 1:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Difficult = 1;
                     break;
                 case 2:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Difficult = 2;
                     break;
                 case 3:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Difficult = 3;
                     break;
                 case 4:
                     meniuState = MeniuState.ChooseSnake;

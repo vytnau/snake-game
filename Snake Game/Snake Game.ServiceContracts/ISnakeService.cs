@@ -36,5 +36,7 @@ namespace Snake_Game.ServiceContracts
         /// </summary>
         /// <returns></returns>
         Vector3 GetSnakeTail();
+
+        void SetNewSnake();
     }
 }

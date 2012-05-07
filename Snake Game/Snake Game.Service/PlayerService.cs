@@ -11,6 +11,8 @@ namespace Snake_Game.Service
         private int points;
         private int lives;
 
+ 
+
         public PlayerService()
         {
             points = 0;
@@ -30,6 +32,16 @@ namespace Snake_Game.Service
         public int GetPoints()
         {
             return points;
+        }
+
+
+
+        public void DecreseLive()
+        {
+            if (lives > 0)
+            {
+                lives--;
+            }
         }
     }
 }

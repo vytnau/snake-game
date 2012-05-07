@@ -11,7 +11,7 @@ namespace Snake_Game.Service
     {
         private readonly int STAGE_HEIGTH = 13;
         private readonly int STAGE_WIDTH = 25;
-        private readonly int POINT = 15;
+        public int POINT {set; get;}
         private readonly IGameStage stage;
         private readonly ISnakeService snake;
         private readonly IGameComponent food;
@@ -21,6 +21,7 @@ namespace Snake_Game.Service
         //private bool orent;
         public GameService()
         {
+            POINT = 15;
             stage = new GameStageService(STAGE_WIDTH, STAGE_HEIGTH);
             bug = new BugService(STAGE_WIDTH, STAGE_HEIGTH);
             snake = new SnakeService();
@@ -30,6 +31,8 @@ namespace Snake_Game.Service
             food.AddItem(new Vector2(10, 10));
             //orent = true;
         }
+
+
 
         public int[,] GetGameStage()
         {
@@ -95,6 +98,7 @@ namespace Snake_Game.Service
                     else
                     {
                         //gyvate atsimuse
+                        SnakeHit();
                     }
                 }
                 else
@@ -109,6 +113,7 @@ namespace Snake_Game.Service
                     else
                     {
                         //gyvate atsimuse
+                        SnakeHit();
                     }
                 }
             }
@@ -126,6 +131,7 @@ namespace Snake_Game.Service
                     else
                     {
                         //gyvate atsimuse
+                        SnakeHit();
                     }
                 }
                 else
@@ -140,6 +146,7 @@ namespace Snake_Game.Service
                     else
                     {
                         //gyvate atsimuse
+                        SnakeHit();
                     }
                 }
             }
@@ -153,6 +160,13 @@ namespace Snake_Game.Service
             }
             StageUpdate();
 
+        }
+
+        private void SnakeHit()
+        {
+            player.DecreseLive();
+            RemoveSnakeCoord(snake.GetSnakeCoordinates());
+            snake.SetNewSnake();
         }
 
         private bool EatFood(Vector2 snakeHead)
@@ -216,6 +230,14 @@ namespace Snake_Game.Service
             stage.SetSnakeTail(list.Last(), (int)list.ElementAt(list.Count -2).Z);
         }
 
+        private void RemoveSnakeCoord(LinkedList<Vector3> list)
+        {
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                stage.RemoveSnakeCoordinate(list.ElementAt(i));
+            }
+        }
+
         private void FillFoodCoord(LinkedList<Vector2> list)
         {
             foreach (var a in list)
@@ -234,9 +256,15 @@ namespace Snake_Game.Service
             return player.GetPoints().ToString();
         }
 
-        public string GetLives()
+        public int GetLives()
         {
-            return player.GetLive().ToString();
+            return player.GetLive();
+        }
+
+
+        public void SetPoints(int point)
+        {
+            POINT = point;
         }
     }
 }

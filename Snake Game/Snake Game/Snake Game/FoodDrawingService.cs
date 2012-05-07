@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DataAccess;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace Snake_Game
 {
@@ -12,32 +13,39 @@ namespace Snake_Game
         FoodTexture texture;
         public SpriteBatch Batch { set; get; }
 
-        public FoodDrawingService(FoodTexture texture, SpriteBatch batch)
+        public FoodDrawingService(FoodTexture texture)
         {
             this.texture = texture;
-            this.Batch = batch;
         }
 
-        public void DrawFood(int[,] matrix)
+        public void Draw(int[,] matrix)
         {
-             Batch.Begin();
-             for (int i = 0; i < 25; i++)//60
-             {
-                 for (int j = 0; j < 13; j++)//40
-                 {
-                     if (matrix[i, j] == 8)//maistas
-                     {
-                         // Batch.DrawString(font, "2", new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
-                     }
+            Batch.Begin();
+            for (int i = 0; i < 25; i++)//60
+            {
+                for (int j = 0; j < 13; j++)//40
+                {
+                    if (matrix[i, j] == 8)//maistas
+                    {
+                        DrawFood(i, j);
+                        // Batch.DrawString(font, "2", new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+                    }
 
-                     //vabzdys
-                     if (matrix[i, j] == 3)
-                     {
-                         // Batch.DrawString(font, "3", new Vector2(i * 10, j * 10), Color.Black);
-                     }
-                 }
-             }
-             Batch.End();
+                    //vabzdys
+                    if (matrix[i, j] == 3)
+                    {
+                        // Batch.DrawString(font, "3", new Vector2(i * 10, j * 10), Color.Black);
+                    }
+                }
+            }
+            Batch.End();
+        }
+
+
+        private void DrawFood(int i, int j)
+        {
+            Batch.Draw(texture.Mushroom, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
         }
     }
+
 }

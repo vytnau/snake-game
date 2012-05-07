@@ -37,11 +37,14 @@ namespace Snake_Game
         SpriteFont text;
         Vector2 direction;
         MeniuTexture meniuTexture;
-        GameStageTexture stageTexture;
+        GameStageTexture stageTexture;        
         SnakeTexture[] snakeTexture = new SnakeTexture[3];
         FoodTexture foodTexture;
         SnakeDrawingService snakeDraw;
         StageDrawingService stageDraw;
+        FoodDrawingService foodDraw;
+        TimeSpan levelTime; 
+          
 
 
         Texture2D kvad;
@@ -57,7 +60,7 @@ namespace Snake_Game
 
         public GameStageUI()
         {
-            //game = new GameService();
+            game = new GameService();
             meniu = new Meniu();
             meniuTexture = new MeniuTexture();
             stageTexture = new GameStageTexture();
@@ -68,11 +71,11 @@ namespace Snake_Game
             graphics = new GraphicsDeviceManager(this);           
             stageDraw = new StageDrawingService();
             snakeDraw = new SnakeDrawingService(0, snakeTexture);
-            direction.X = 1;
+            foodDraw = new FoodDrawingService(foodTexture);
+            direction.X = -1;
             direction.Y = 1;
             up = true;
             down = true;
-            
             
         }
 
@@ -110,10 +113,12 @@ namespace Snake_Game
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             snakeDraw.Batch = spriteBatch;
+            foodDraw.Batch = spriteBatch;
             Content.RootDirectory = "Content";//Content
             //Snake Game\Snake GameContent\Arial.spritefont";
-            font = Content.Load<SpriteFont>("Font\\Arial");
-            text = Content.Load<SpriteFont>("Font\\Fontas");
+            text = Content.Load<SpriteFont>("Font\\Arial");
+            font = Content.Load<SpriteFont>("Font\\Fontas");
+            stageDraw.Font = font;
             LoadMeniuContent();
             LoadGameStageContent();
 
@@ -133,8 +138,8 @@ namespace Snake_Game
 
         private void LoadFoodContent()
         {
-            foodTexture.Apple = Content.Load<Texture2D>("Texture\\Food\\apple");
-            foodTexture.Mushroom = Content.Load<Texture2D>("Texture\\Food\\mushroom");
+            foodTexture.Apple = Content.Load<Texture2D>("Texture\\Game\\Food\\apple");
+            foodTexture.Mushroom = Content.Load<Texture2D>("Texture\\Game\\Food\\mushroom");
         }
 
 
@@ -373,16 +378,20 @@ namespace Snake_Game
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            KeyboardState key = Keyboard.GetState(); 
+            if (gamestate == GameStates.Running)
+            {
+                levelTime += gameTime.ElapsedGameTime;
+            }
+            KeyboardState key = Keyboard.GetState();             
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (timeSinceLastUpdate >= millisecondsPerFrame)
             {
                 timeSinceLastUpdate = 0;
                 if (gamestate == GameStates.Running)
-                {
+                {                   
                     GamePlay();
+                    
                 }
-
                 else if (gamestate == GameStates.Menu)
                 {
                     Meniu();
@@ -443,6 +452,7 @@ namespace Snake_Game
 
         private void Meniu()
         {
+            millisecondsPerFrame = 70;
             KeyboardState key = Keyboard.GetState();
             if (key.IsKeyDown(Keys.Down) || key.IsKeyDown(Keys.Right))
             {
@@ -463,10 +473,12 @@ namespace Snake_Game
             if (meniu.meniuState == MeniuState.Main)
             {
                 StartNewGame();
+                levelTime = TimeSpan.Zero; 
             }
             if (meniu.meniuState == MeniuState.Play)
             {
                 ChangeScreenSize();
+                SetDifficult(meniu.Difficult);
                 gamestate = GameStates.Running;
                 snakeDraw.SnkateType = meniu.SnakeType;
             }
@@ -482,7 +494,31 @@ namespace Snake_Game
             {
                 this.Exit();
             }
-        }        
+        }
+
+        /// <summary>
+        /// Metodas skirtas nustatyti žaidimo sudėtingumą, t.y. parinkti 
+        /// gyvatės greitį bei skiriamų taškų kiekį už suvalgytą gyvatės maistą. 
+        /// </summary>
+        /// <param name="level"></param>
+        private void SetDifficult(int level)
+        {
+            switch (level)
+            {
+                case 1:
+                    millisecondsPerFrame = 200;
+                    game.SetPoints(5);
+                    break;
+                case 2:
+                    millisecondsPerFrame = 120;
+                    game.SetPoints(10);
+                    break;
+                case 3:
+                    millisecondsPerFrame = 50;
+                    game.SetPoints(25);
+                    break;
+            }
+        }
 
         private void StartNewGame()
         {
@@ -510,17 +546,18 @@ namespace Snake_Game
             if (gamestate == GameStates.Running)
             {
                 GraphicsDevice.Clear(Color.CornflowerBlue);                
-                stageDraw.DrawStage(spriteBatch, stageTexture);
+                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
                // DrawStage();
                 snakeDraw.DrawSnake(game.GetGameStage());
-
-                DrwaPlayerInfo();
+                foodDraw.Draw(game.GetGameStage());
+                
+                //DrwaPlayerInfo();
             }
             else if (gamestate == GameStates.Menu)
             {
                 if (meniu.meniuState == MeniuState.Pause)
                 {
-                    stageDraw.DrawStage(spriteBatch, stageTexture);
+                    stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
                     snakeDraw.DrawSnake(game.GetGameStage());
                 }
                 meniu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
@@ -548,15 +585,15 @@ namespace Snake_Game
 
         private void DrwaPlayerInfo()
         {
-            string point = game.GetPoints();
-            string lives = game.GetLives();
+           /* string point = game.GetPoints();
+            int lives = game.GetLives();
             spriteBatch.Begin();            
             spriteBatch.DrawString(text, "zaidejas", new Vector2(680, 50), Color.Black);
             spriteBatch.DrawString(text, "Turimi taskai:", new Vector2(640, 80), Color.Black);
             spriteBatch.DrawString(text, point, new Vector2(680, 100), Color.Black);
             spriteBatch.DrawString(text, "Gyvybes:", new Vector2(640, 120), Color.Black);
             spriteBatch.DrawString(text, lives, new Vector2(730, 120), Color.Black);
-            spriteBatch.End();
+            spriteBatch.End();*/
         }
     }
 /*

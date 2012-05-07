@@ -40,8 +40,9 @@ namespace Snake_Game.Service
             }
         }
 
-        public void RemoveSnakeCoordinate(Vector2 coord)
+        public void RemoveSnakeCoordinate(Vector3 coord)
         {
+            stageMatrix[(int)coord.X, (int)coord.Y] = 0;
         }
 
         public void RemoveSnkaeTail(Vector2 coordPrev, Vector2 coordCuren)
