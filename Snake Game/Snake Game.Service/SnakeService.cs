@@ -18,11 +18,7 @@ namespace Snake_Game.Service
 
         private void Initialize()
         {
-            snake = new LinkedList<Vector3>();
-            for (int i = 0; i < 6; i++)
-            {
-                snake.AddLast(new Vector3(13 + i, 10, -1));
-            }
+            SetNewSnake();
         }
 
         public void GrowSnake(Vector3 tail)
@@ -51,6 +47,16 @@ namespace Snake_Game.Service
         public Vector3 GetSnakeTail()
         {
             return snake.Last();
+        }
+
+
+        public void SetNewSnake()
+        {
+            snake = new LinkedList<Vector3>();
+            for (int i = 0; i < 6; i++)
+            {
+                snake.AddLast(new Vector3(13 + i, 10, -1));
+            }
         }
     }
 }

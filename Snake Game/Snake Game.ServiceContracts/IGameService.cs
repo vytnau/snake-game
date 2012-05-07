@@ -26,6 +26,8 @@ namespace Snake_Game.ServiceContracts
 
         string GetPoints();
 
-        string GetLives();
+        void SetPoints(int point);
+
+        int GetLives();
     }
 }

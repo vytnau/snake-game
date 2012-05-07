@@ -19,6 +19,8 @@ namespace Snake_Game.ServiceContracts
         /// <returns></returns>
         int GetLive();
 
+        void DecreseLive();
+
         /// <summary>
         /// Gražinami surinkti taškai
         /// </summary>
