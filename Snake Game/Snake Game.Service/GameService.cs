@@ -17,6 +17,7 @@ namespace Snake_Game.Service
         private readonly IGameComponent food;
         private readonly IPlayerService player;
         private readonly IBugService bug;
+        private bool snakeHit = false;
 
         //private bool orent;
         public GameService()
@@ -28,7 +29,7 @@ namespace Snake_Game.Service
             food = new FoodService();
             player = new PlayerService();
 
-            food.AddItem(new Vector2(10, 10));
+            food.AddItem(new Vector3(10, 10,1));
             //orent = true;
         }
 
@@ -82,7 +83,7 @@ namespace Snake_Game.Service
         {
             Vector3 head = snake.GetSnakeHead();
             Vector3 tail = snake.GetSnakeTail();
-            RemoveBug(bug.GetCoord());
+            //RemoveBug(bug.GetCoord());
 
             if (x == 1) //x as fiksuotas
             {
@@ -150,7 +151,7 @@ namespace Snake_Game.Service
                     }
                 }
             }
-            if (!EatFood(new Vector2(head.X, head.Y)))
+            if (!EatFood(snake.GetSnakeHead()))
             {
                 stage.RemoveSnkaeTail(new Vector2(tail.X, tail.Y), new Vector2(snake.GetSnakeTail().X, snake.GetSnakeTail().Y));
             }
@@ -162,17 +163,21 @@ namespace Snake_Game.Service
 
         }
 
+        /// <summary>
+        /// Metodas fiksuojantis gyvatės atsimušimą į kliūtį ar į savo kūną.
+        /// </summary>
         private void SnakeHit()
         {
+            snakeHit = true;
             player.DecreseLive();
-            RemoveSnakeCoord(snake.GetSnakeCoordinates());
-            snake.SetNewSnake();
+            /*RemoveSnakeCoord(snake.GetSnakeCoordinates());
+            snake.SetNewSnake();*/
         }
 
-        private bool EatFood(Vector2 snakeHead)
+        private bool EatFood(Vector3 snakeHead)
         {
-            LinkedList<Vector2> list = food.GetList();
-            if (list.Contains(snakeHead))
+            LinkedList<Vector2> list = food.GetVector2List();
+            if (list.Contains(new Vector2(snakeHead.X, snakeHead.Y)))
             {
                 food.RemoveItem(snakeHead);
                 player.AddPoint(POINT); 
@@ -184,7 +189,7 @@ namespace Snake_Game.Service
 
         private void CreateFood()
         {
-            var coord = new Vector2();
+            var coord = new Vector3();
             bool check = true;
             int[,] stageCoord = stage.GetStageCoord();
             while (check)
@@ -198,12 +203,13 @@ namespace Snake_Game.Service
             food.AddItem(coord);
         }
 
-        private Vector2 RandomCoord()
+        private Vector3 RandomCoord()
         {
-            var coord = new Vector2();
+            var coord = new Vector3();
             Random random = new Random();
             coord.X = random.Next(2, this.STAGE_WIDTH-1);
             coord.Y = random.Next(2, this.STAGE_HEIGTH-1);
+            coord.Z = random.Next(1, 3);
             return coord;
         }
 
@@ -211,7 +217,7 @@ namespace Snake_Game.Service
         {
             FillSnakeCoord(snake.GetSnakeCoordinates());
             FillFoodCoord(food.GetList());
-            FillBugCoord();
+           // FillBugCoord();
         }
 
         private void RemoveBug(Vector2 bugCoor)
@@ -222,23 +228,22 @@ namespace Snake_Game.Service
         private void FillSnakeCoord(LinkedList<Vector3> list)
         {
             stage.SetSnakeHead(list.First());
-            for (int i = 1; i < list.Count - 2; i++)
+            for (int i = 1; i < list.Count - 1; i++)
             {
                 stage.SetSnakeTurnCoord(list.ElementAt(i), (int)list.ElementAt(i-1).Z);
-                //stage.SetSnakeCoordinates(list.ElementAt(i));
             }
             stage.SetSnakeTail(list.Last(), (int)list.ElementAt(list.Count -2).Z);
         }
 
         private void RemoveSnakeCoord(LinkedList<Vector3> list)
         {
-            for (int i = 0; i < list.Count - 1; i++)
+            for (int i = 0; i < list.Count; i++)
             {
                 stage.RemoveSnakeCoordinate(list.ElementAt(i));
             }
         }
 
-        private void FillFoodCoord(LinkedList<Vector2> list)
+        private void FillFoodCoord(LinkedList<Vector3> list)
         {
             foreach (var a in list)
             {
@@ -265,6 +270,43 @@ namespace Snake_Game.Service
         public void SetPoints(int point)
         {
             POINT = point;
+        }
+
+
+        bool IGameService.SnakeHit()
+        {
+            return snakeHit;
+        }
+
+
+        public void NewGame()
+        {
+            RemoveSnakeCoord(snake.GetSnakeCoordinates());
+            snake.SetNewSnake();
+            snakeHit = false;
+        }
+
+
+        /// <summary>
+        /// Metodas formuoja dvimačią matricą, kurioje įrašoma informaciją apie tai, kur
+        /// nuo gyvatės galvos, per 4 vienetus yra nutolęs gyvatės maistas. Rezultatas naudojamas piešiant radarą.
+        /// </summary>
+        /// <returns>Gražiną dvimatę matricą užpildytą vienetais, ten kur yra gyvatės maistas</returns>
+        public int[,] RadarData()
+        {
+            int[,] radarData = new int[9, 9];
+            Vector2 head = new Vector2(snake.GetSnakeHead().X, snake.GetSnakeHead().Y);
+            LinkedList<Vector2> list = food.GetVector2List();
+            for (int i = -4; i < 5; i++)
+            {
+                for (int j = -4; j < 5; j++)
+                {
+                    if(list.Contains(new Vector2(head.X +i, head.Y+j))){
+                        radarData[4+i, 4+j] = 1;
+                    }
+                }
+            }
+            return radarData;
         }
     }
 }

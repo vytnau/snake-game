@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Media;
 using Snake_Game.ServiceContracts;
 using Snake_Game.Service;
 using DataAccess;
+using DataAccess.Texture;
+using Snake_Game.DrawingService;
 
 
 namespace Snake_Game
@@ -26,6 +28,7 @@ namespace Snake_Game
             Menu,
             Running,
             Pause,
+            Hit,
             End
         }
 
@@ -40,12 +43,17 @@ namespace Snake_Game
         GameStageTexture stageTexture;        
         SnakeTexture[] snakeTexture = new SnakeTexture[3];
         FoodTexture foodTexture;
+        InfoTexture infoWindTexture;
+        RadarTexture radarTexture;
+        BarrierTexture barrierTexture;
         SnakeDrawingService snakeDraw;
         StageDrawingService stageDraw;
         FoodDrawingService foodDraw;
+        InfoDrawService infoDraw;
+        RadarDrawingService radarDraw;
+        BarrierDrawingService barrierDraw;
         TimeSpan levelTime; 
-          
-
+        KeyboardState oldKeyState;
 
         Texture2D kvad;
 
@@ -68,14 +76,21 @@ namespace Snake_Game
             snakeTexture[1] = new SnakeTexture();
             snakeTexture[2] = new SnakeTexture();
             foodTexture = new FoodTexture();
+            infoWindTexture = new InfoTexture();
+            radarTexture = new RadarTexture();
+            barrierTexture = new BarrierTexture();
             graphics = new GraphicsDeviceManager(this);           
             stageDraw = new StageDrawingService();
             snakeDraw = new SnakeDrawingService(0, snakeTexture);
             foodDraw = new FoodDrawingService(foodTexture);
+            infoDraw = new InfoDrawService(infoWindTexture);
+            radarDraw = new RadarDrawingService(radarTexture);
+            barrierDraw = new BarrierDrawingService(barrierTexture);
             direction.X = -1;
             direction.Y = 1;
             up = true;
             down = true;
+            
             
         }
 
@@ -91,14 +106,14 @@ namespace Snake_Game
             //InitGraphicsMode(1280, 720, false);
 
             graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 449;
+            graphics.PreferredBackBufferHeight = 575;//449;
            // graphics.PreparingDeviceSettings += new EventHandler<PreparingDeviceSettingsEventArgs>(graphics_PreparingDeviceSettings);
             //graphics.PreferMultiSampling = false;
             //this.graphics.IsFullScreen = true;
             graphics.ApplyChanges();
-            millisecondsPerFrame = 120; //Update every 1 second
-            gamestate = GameStates.Menu;
-            //gamestate = GameStates.Running;
+            millisecondsPerFrame =120; //Update every 1 second
+            //gamestate = GameStates.Menu;
+            gamestate = GameStates.Running;
             base.Initialize();
         }
 
@@ -114,16 +129,32 @@ namespace Snake_Game
             spriteBatch = new SpriteBatch(GraphicsDevice);
             snakeDraw.Batch = spriteBatch;
             foodDraw.Batch = spriteBatch;
+            infoDraw.Batch = spriteBatch;
+            radarDraw.Batch = spriteBatch;
+            barrierDraw.Batch = spriteBatch;
             Content.RootDirectory = "Content";//Content
             //Snake Game\Snake GameContent\Arial.spritefont";
             text = Content.Load<SpriteFont>("Font\\Arial");
             font = Content.Load<SpriteFont>("Font\\Fontas");
             stageDraw.Font = font;
+            infoDraw.Font = Content.Load<SpriteFont>("Font\\bigerFont");//font;
             LoadMeniuContent();
             LoadGameStageContent();
+            LoadInfoWindowContent();
 
             kvad = Content.Load<Texture2D>("Texture\\Game\\Snake\\kvadratas");
             // TODO: use this.Content to load your game content here
+        }
+
+        private void LoadInfoWindowContent(){
+            infoWindTexture.BSign = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\sign");
+            infoWindTexture.LLostLive = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\lostLive");
+            infoWindTexture.GSnakeHead = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\head");
+            infoWindTexture.LPlayerPoint = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\playerPoints");
+            infoWindTexture.LPlayerTime = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\playerTime");
+            infoWindTexture.LGameOver = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\lostAllLives");
+
+            infoWindTexture.BDarkLayer = Content.Load<Texture2D>("Texture\\Game\\Pauze\\bigDarkLayer");
         }
 
         /// <summary>
@@ -134,6 +165,8 @@ namespace Snake_Game
             LoadStageBackgroundContent();
             LoadSnakeContent();
             LoadFoodContent();
+            LoadRadarContent();
+            LoadBarrierContent();
         }
 
         private void LoadFoodContent()
@@ -220,13 +253,27 @@ namespace Snake_Game
             stageTexture.Background = Content.Load<Texture2D>("Texture\\Game\\Background\\background");
             stageTexture.LifeIcon = Content.Load<Texture2D>("Texture\\Game\\Background\\lifeIcon");
             stageTexture.Panel = Content.Load<Texture2D>("Texture\\Game\\Background\\panel");
-            stageTexture.Radar = Content.Load<Texture2D>("Texture\\Game\\Background\\radar");
-            stageTexture.RadarBackg = Content.Load<Texture2D>("Texture\\Game\\Background\\radarBackground");
             stageTexture.TLife = Content.Load<Texture2D>("Texture\\Game\\Background\\life");
             stageTexture.TPoints = Content.Load<Texture2D>("Texture\\Game\\Background\\points");
             stageTexture.TTIme = Content.Load<Texture2D>("Texture\\Game\\Background\\time");
             stageTexture.Wall1 = Content.Load<Texture2D>("Texture\\Game\\Background\\bushWall");
             stageTexture.Wall2 = Content.Load<Texture2D>("Texture\\Game\\Background\\logWall");
+        }
+
+        private void LoadRadarContent()
+        {
+            radarTexture.Radar = Content.Load<Texture2D>("Texture\\Game\\Radar\\radar");
+            radarTexture.RadarBackg = Content.Load<Texture2D>("Texture\\Game\\Radar\\radarBackground");
+            radarTexture.FoodMark = Content.Load<Texture2D>("Texture\\Game\\Radar\\foodMark");
+        }
+
+        private void LoadBarrierContent()
+        {
+            barrierTexture.Bush1 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\bush1");
+            barrierTexture.Bush2 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\bush2");
+            barrierTexture.Log1 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\log");
+            barrierTexture.Log2 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\logUp");
+            barrierTexture.Rock = Content.Load<Texture2D>("Texture\\Game\\Barriers\\rock");
         }
 
 
@@ -382,21 +429,25 @@ namespace Snake_Game
             {
                 levelTime += gameTime.ElapsedGameTime;
             }
-            KeyboardState key = Keyboard.GetState();             
+            //KeyboardState key = Keyboard.GetState();             
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (timeSinceLastUpdate >= millisecondsPerFrame)
             {
                 timeSinceLastUpdate = 0;
                 if (gamestate == GameStates.Running)
                 {                   
-                    GamePlay();
-                    
+                    GamePlay();                    
                 }
                 else if (gamestate == GameStates.Menu)
                 {
                     Meniu();
                 }
+                else if (gamestate == GameStates.Hit)
+                {
+                    InfoScreen();
+                }
             }
+            
             // TODO: Add your update logic here                        
             base.Update(gameTime);
         }
@@ -428,6 +479,8 @@ namespace Snake_Game
             {
                 if (up)
                 {
+                    System.Console.WriteLine("Up");
+
                     down = false;
                     direction.X = 1;
                     direction.Y = -1;
@@ -442,17 +495,31 @@ namespace Snake_Game
                     direction.Y = -1;
                 }
             }
-            if (key.IsKeyDown(Keys.Escape))
+            if (key.IsKeyDown(Keys.Escape) && oldKeyState.IsKeyUp(Keys.Escape))
             {
                 meniu.meniuState = MeniuState.Pause;
                 gamestate = GameStates.Menu;
             }
-            game.SetMovment((int)direction.X, (int)direction.Y);
+            //game.SetMovment((int)direction.X, (int)direction.Y);
+            GameStatus();
+            oldKeyState = key;
+        }
+
+        private void GameStatus()
+        {
+            if (!game.SnakeHit())
+            {
+                game.SetMovment((int)direction.X, (int)direction.Y);
+            }
+            else
+            {
+                gamestate = GameStates.Hit;
+            }
         }
 
         private void Meniu()
         {
-            millisecondsPerFrame = 70;
+            millisecondsPerFrame = 100;
             KeyboardState key = Keyboard.GetState();
             if (key.IsKeyDown(Keys.Down) || key.IsKeyDown(Keys.Right))
             {
@@ -462,7 +529,7 @@ namespace Snake_Game
             {
                 meniu.Iterator--;
             }
-            else if (key.IsKeyDown(Keys.Enter))
+            else if (key.IsKeyDown(Keys.Enter) && oldKeyState.IsKeyUp(Keys.Enter))
             {
                 if (meniu.meniuState == MeniuState.Pause && gamestate == GameStates.Menu)
                 {
@@ -485,14 +552,31 @@ namespace Snake_Game
 
             if (meniu.meniuState == MeniuState.Pause)
             {
-                if (key.IsKeyDown(Keys.Escape))
+                if (key.IsKeyDown(Keys.Escape) && oldKeyState.IsKeyUp(Keys.Escape))
                 {
+                    SetDifficult(meniu.Difficult);
                     gamestate = GameStates.Running;
                 }
             }
             if (meniu.meniuState == MeniuState.Quit)
             {
                 this.Exit();
+            }
+            oldKeyState = key;
+        }
+
+        private void InfoScreen()
+        {
+            KeyboardState key = Keyboard.GetState();
+            if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
+                || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
+            {                
+                direction.X = -1;
+                direction.Y = 1;
+                up = true;
+                down = true;
+                game.NewGame();
+                gamestate = GameStates.Running;
             }
         }
 
@@ -545,13 +629,13 @@ namespace Snake_Game
         {
             if (gamestate == GameStates.Running)
             {
-                GraphicsDevice.Clear(Color.CornflowerBlue);                
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+                int[,] matrix = game.GetGameStage();
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-               // DrawStage();
-                snakeDraw.DrawSnake(game.GetGameStage());
-                foodDraw.Draw(game.GetGameStage());
-                
-                //DrwaPlayerInfo();
+                radarDraw.DrawRadar(game.RadarData());
+                snakeDraw.DrawSnake(matrix);
+                foodDraw.Draw(matrix);
+                barrierDraw.DrawBarrier(matrix);
             }
             else if (gamestate == GameStates.Menu)
             {
@@ -562,9 +646,19 @@ namespace Snake_Game
                 }
                 meniu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
             }
-            else
+            else if (gamestate == GameStates.Hit)
             {
-
+                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
+                snakeDraw.DrawSnake(game.GetGameStage());
+                foodDraw.Draw(game.GetGameStage());
+                if (false)//(game.GetLives() > 0)
+                {
+                    infoDraw.DrawHitScreen(game.GetLives());
+                }
+                else
+                {
+                    infoDraw.DrawGameOver(game.GetPoints(), levelTime);
+                }
             }
             base.Draw(gameTime);
         }
@@ -583,18 +677,6 @@ namespace Snake_Game
             spriteBatch.End();
         }
 
-        private void DrwaPlayerInfo()
-        {
-           /* string point = game.GetPoints();
-            int lives = game.GetLives();
-            spriteBatch.Begin();            
-            spriteBatch.DrawString(text, "zaidejas", new Vector2(680, 50), Color.Black);
-            spriteBatch.DrawString(text, "Turimi taskai:", new Vector2(640, 80), Color.Black);
-            spriteBatch.DrawString(text, point, new Vector2(680, 100), Color.Black);
-            spriteBatch.DrawString(text, "Gyvybes:", new Vector2(640, 120), Color.Black);
-            spriteBatch.DrawString(text, lives, new Vector2(730, 120), Color.Black);
-            spriteBatch.End();*/
-        }
     }
 /*
     /// <summary>

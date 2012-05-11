@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake GameContent", "Snake 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.Service", "Snake Game.Service\Snake Game.Service.csproj", "{C8838FEE-13EE-433F-A627-B36D3DBAA494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Busines Logic", "Busines Logic\Busines Logic.csproj", "{E56FEE51-3887-4B4E-AC51-76A171969274}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake Game.ServiceContracts", "Snake Game.ServiceContracts\Snake Game.ServiceContracts.csproj", "{093A6E86-0767-4D3F-87A8-BF4305CC02B1}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Class", "..\..\ver 1\Snake Game\Class\Class.modelproj", "{353ADA2D-4AC6-40D6-AE63-1DFBCB7DFAB7}"
@@ -17,31 +15,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs19
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = ..\\..\\ver\u00201\\Snake\u0020Game\\Class\\Class.modelproj
 		SccProjectName1 = Class
 		SccLocalPath1 = ..\\..\\ver\u00201\\Snake\u0020Game\\Class
-		SccProjectUniqueName2 = Busines\u0020Logic\\Busines\u0020Logic.csproj
-		SccProjectName2 = Busines\u0020Logic
-		SccLocalPath2 = Busines\u0020Logic
-		SccProjectUniqueName3 = Snake\u0020Game.Service\\Snake\u0020Game.Service.csproj
-		SccProjectName3 = Snake\u0020Game.Service
-		SccLocalPath3 = Snake\u0020Game.Service
-		SccProjectUniqueName4 = Snake\u0020Game.ServiceContracts\\Snake\u0020Game.ServiceContracts.csproj
-		SccProjectName4 = Snake\u0020Game.ServiceContracts
-		SccLocalPath4 = Snake\u0020Game.ServiceContracts
-		SccProjectUniqueName5 = Snake\u0020Game\\Snake\u0020Game\\UI.csproj
-		SccProjectName5 = Snake\u0020Game/Snake\u0020Game
-		SccLocalPath5 = Snake\u0020Game\\Snake\u0020Game
-		SccProjectUniqueName6 = Snake\u0020Game\\Snake\u0020GameContent\\Snake\u0020GameContent.contentproj
-		SccProjectName6 = Snake\u0020Game/Snake\u0020GameContent
-		SccLocalPath6 = Snake\u0020Game\\Snake\u0020GameContent
-		SccProjectUniqueName7 = DataAccess\\DataAccess.csproj
-		SccProjectName7 = DataAccess
-		SccLocalPath7 = DataAccess
+		SccProjectUniqueName2 = Snake\u0020Game.Service\\Snake\u0020Game.Service.csproj
+		SccProjectName2 = Snake\u0020Game.Service
+		SccLocalPath2 = Snake\u0020Game.Service
+		SccProjectUniqueName3 = Snake\u0020Game.ServiceContracts\\Snake\u0020Game.ServiceContracts.csproj
+		SccProjectName3 = Snake\u0020Game.ServiceContracts
+		SccLocalPath3 = Snake\u0020Game.ServiceContracts
+		SccProjectUniqueName4 = Snake\u0020Game\\Snake\u0020Game\\UI.csproj
+		SccProjectName4 = Snake\u0020Game/Snake\u0020Game
+		SccLocalPath4 = Snake\u0020Game\\Snake\u0020Game
+		SccProjectUniqueName5 = Snake\u0020Game\\Snake\u0020GameContent\\Snake\u0020GameContent.contentproj
+		SccProjectName5 = Snake\u0020Game/Snake\u0020GameContent
+		SccLocalPath5 = Snake\u0020Game\\Snake\u0020GameContent
+		SccProjectUniqueName6 = DataAccess\\DataAccess.csproj
+		SccProjectName6 = DataAccess
+		SccLocalPath6 = DataAccess
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,16 +73,6 @@ Global
 		{C8838FEE-13EE-433F-A627-B36D3DBAA494}.Release|Mixed Platforms.Build.0 = Release|x86
 		{C8838FEE-13EE-433F-A627-B36D3DBAA494}.Release|x86.ActiveCfg = Release|x86
 		{C8838FEE-13EE-433F-A627-B36D3DBAA494}.Release|x86.Build.0 = Release|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Debug|x86.ActiveCfg = Debug|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Debug|x86.Build.0 = Debug|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Release|Any CPU.ActiveCfg = Release|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Release|Mixed Platforms.Build.0 = Release|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Release|x86.ActiveCfg = Release|x86
-		{E56FEE51-3887-4B4E-AC51-76A171969274}.Release|x86.Build.0 = Release|x86
 		{093A6E86-0767-4D3F-87A8-BF4305CC02B1}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{093A6E86-0767-4D3F-87A8-BF4305CC02B1}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{093A6E86-0767-4D3F-87A8-BF4305CC02B1}.Debug|Mixed Platforms.Build.0 = Debug|x86

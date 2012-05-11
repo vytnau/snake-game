@@ -516,12 +516,12 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Game\Background\radar.png">
+    <Compile Include="Texture\Game\Radar\radar.png">
       <Name>radar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Texture\Game\Background\radarBackground.png">
+    <Compile Include="Texture\Game\Radar\radarBackground.png">
       <Name>radarBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -785,6 +785,54 @@
     </Compile>
     <Compile Include="Texture\Game\Pauze\resumeMarked.png">
       <Name>resumeMarked</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Game\InfoWindow\head.png">
+      <Name>head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Game\InfoWindow\lostLive.png">
+      <Name>lostLive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Game\InfoWindow\sign.png">
+      <Name>sign</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Game\InfoWindow\lostAllLives.png">
+      <Name>lostAllLives</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Game\InfoWindow\playerPoints.png">
+      <Name>playerPoints</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Texture\Game\InfoWindow\playerTime.png">
+      <Name>playerTime</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Font\bigerFont.spritefont">
+      <Name>bigerFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Texture\Game\Radar\foodMark.png">
+      <Name>foodMark</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

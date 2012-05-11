@@ -12,8 +12,6 @@ namespace DataAccess
         public Texture2D Wall1 { set; get; }
         public Texture2D Wall2 { set; get; }
         public Texture2D Panel { set; get; }
-        public Texture2D Radar { set; get; }
-        public Texture2D RadarBackg { set; get; }
         public Texture2D LifeIcon { set; get; }
         public Texture2D TLife { set; get; }
         public Texture2D TPoints { set; get; }

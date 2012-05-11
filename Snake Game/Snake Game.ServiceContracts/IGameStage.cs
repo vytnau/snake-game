@@ -17,7 +17,7 @@ namespace Snake_Game.ServiceContracts
         /// <summary>
         /// Įrašo gyvatės maistą.
         /// </summary>
-        void SetSnakeFood(Vector2 coord);
+        void SetSnakeFood(Vector3 coord);
 
         /// <summary>
         /// Įrašoma gyvatės koordinatė į žaidimo lauko

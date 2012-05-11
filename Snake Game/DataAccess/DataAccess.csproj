@@ -56,14 +56,24 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="FoodTexture.cs" />
-    <Compile Include="GameStageTexture.cs" />
-    <Compile Include="MeniuTexture.cs" />
-    <Compile Include="SnakeTexture.cs" />
+    <Compile Include="Texture\BarrierTexture.cs" />
+    <Compile Include="Texture\FoodTexture.cs" />
+    <Compile Include="Texture\GameStageTexture.cs" />
+    <Compile Include="Texture\InfoTexture.cs" />
+    <Compile Include="Texture\MeniuTexture.cs" />
+    <Compile Include="Domain\PlayerInfo.cs" />
+    <Compile Include="Texture\RadarTexture.cs" />
+    <Compile Include="Texture\SnakeTexture.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>C:\Users\Vytas\Documents\Hibernate\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="NHibernate">
+      <HintPath>C:\Users\Vytas\Documents\Hibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +97,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Player.hbm.xml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

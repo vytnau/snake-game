@@ -25,9 +25,10 @@ namespace Snake_Game
             {
                 for (int j = 0; j < 13; j++)//40
                 {
-                    if (matrix[i, j] == 8)//maistas
+                    var value = matrix[i, j];
+                    if (value == 8 || value == -8)//maistas
                     {
-                        DrawFood(i, j);
+                        DrawFood(i, j, value);
                         // Batch.DrawString(font, "2", new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
                     }
 
@@ -42,9 +43,16 @@ namespace Snake_Game
         }
 
 
-        private void DrawFood(int i, int j)
+        private void DrawFood(int i, int j, int value)
         {
-            Batch.Draw(texture.Mushroom, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+            if (value == 8)
+            {
+                Batch.Draw(texture.Mushroom, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+            }
+            else
+            {
+                Batch.Draw(texture.Apple, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+            }
         }
     }
 
