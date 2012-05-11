@@ -23,9 +23,17 @@ namespace Snake_Game.Service
             return stageMatrix;
         }
 
-        public void SetSnakeFood(Vector2 coord)
+        public void SetSnakeFood(Vector3 coord)
         {
-            stageMatrix[(int)coord.X, (int)coord.Y] = 8;
+            switch ((int)coord.Z)
+            {
+                case 1:
+                    stageMatrix[(int)coord.X, (int)coord.Y] = 8;
+                    break;
+                case 2:
+                    stageMatrix[(int)coord.X, (int)coord.Y] = -8;
+                    break;
+            }
         }
 
         public void SetSnakeCoordinates(Vector3 coord)

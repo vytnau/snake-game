@@ -12,19 +12,19 @@ namespace Snake_Game.ServiceContracts
         /// 
         /// </summary>
         /// <param name="coord"></param>
-        void AddItem(Vector2 coord);
+        void AddItem(Vector3 coord);
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        Vector2 GetCoord();
+        Vector3 GetCoord();
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="coord"></param>
-        void RemoveItem(Vector2 coord);
+        void RemoveItem(Vector3 coord);
 
         int Size();
 
@@ -32,7 +32,9 @@ namespace Snake_Game.ServiceContracts
 
         void FirstItem();
 
-        LinkedList<Vector2> GetList();
+        LinkedList<Vector3> GetList();
+
+        LinkedList<Vector2> GetVector2List();
 
     }
 }

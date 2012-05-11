@@ -26,8 +26,7 @@ namespace Snake_Game
             DrawLiVes(batch, stageTexture, lives);
 
             batch.Draw(stageTexture.TTIme, new Vector2(300, 482), Color.White);
-            batch.Draw(stageTexture.RadarBackg, new Vector2(460, 467), Color.White);
-            batch.Draw(stageTexture.Radar, new Vector2(460, 467), Color.White);
+
             batch.Draw(stageTexture.TPoints, new Vector2(620, 475), Color.White);  
             batch.DrawString(Font, ConvertTime(levelTime), new Vector2(308, 510), Color.White);
             batch.DrawString(Font, points , new Vector2(650, 510), Color.White);

@@ -9,22 +9,24 @@ namespace Snake_Game.Service
 {
     class FoodService : IGameComponent
     {
-        private LinkedList<Vector2> coord = new LinkedList<Vector2>();
+        private LinkedList<Vector3> coord = new LinkedList<Vector3>();
         private int i = 0;
 
-        public void AddItem(Vector2 coord)
+        public void AddItem(Vector3 coord)
         {
             this.coord.AddLast(coord);
         }
 
-        public Vector2 GetCoord()
+        public Vector3 GetCoord()
         {
             return coord.ElementAt(i);
         }
 
-        public void RemoveItem(Vector2 coord)
+        public void RemoveItem(Vector3 coord)
         {
-            this.coord.Remove(coord);
+
+            this.coord.Remove(new Vector3(coord.X, coord.Y, 2));
+            this.coord.Remove(new Vector3(coord.X, coord.Y, 1));
         }
 
         public int Size()
@@ -45,9 +47,19 @@ namespace Snake_Game.Service
             i = 0;
         }
 
-        public LinkedList<Vector2> GetList()
+        public LinkedList<Vector3> GetList()
         {
             return coord;
+        }
+
+        public LinkedList<Vector2> GetVector2List()
+        {
+            LinkedList<Vector2> list = new LinkedList<Vector2>();
+            foreach (var a in coord)
+            {
+                list.AddLast(new Vector2(a.X, a.Y));
+            }
+            return list;
         }
     }
 }
