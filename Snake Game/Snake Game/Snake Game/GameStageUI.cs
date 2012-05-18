@@ -14,6 +14,7 @@ using Snake_Game.Service;
 using DataAccess;
 using DataAccess.Texture;
 using Snake_Game.DrawingService;
+using DomainModel;
 
 
 namespace Snake_Game
@@ -106,14 +107,14 @@ namespace Snake_Game
             //InitGraphicsMode(1280, 720, false);
 
             graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 575;//449;
+            graphics.PreferredBackBufferHeight = 449;// 575;//449;
            // graphics.PreparingDeviceSettings += new EventHandler<PreparingDeviceSettingsEventArgs>(graphics_PreparingDeviceSettings);
             //graphics.PreferMultiSampling = false;
             //this.graphics.IsFullScreen = true;
             graphics.ApplyChanges();
             millisecondsPerFrame =120; //Update every 1 second
-            //gamestate = GameStates.Menu;
-            gamestate = GameStates.Running;
+            gamestate = GameStates.Menu;
+            //gamestate = GameStates.Running;
             base.Initialize();
         }
 
@@ -544,10 +545,7 @@ namespace Snake_Game
             }
             if (meniu.meniuState == MeniuState.Play)
             {
-                ChangeScreenSize();
-                SetDifficult(meniu.Difficult);
-                gamestate = GameStates.Running;
-                snakeDraw.SnkateType = meniu.SnakeType;
+                PrepareNewGame();
             }
 
             if (meniu.meniuState == MeniuState.Pause)
@@ -563,6 +561,41 @@ namespace Snake_Game
                 this.Exit();
             }
             oldKeyState = key;
+        }
+
+        private void PrepareNewGame()
+        {
+            ChangeScreenSize();
+            SetDifficult(meniu.Difficult);
+            gamestate = GameStates.Running;
+            snakeDraw.SnkateType = meniu.SnakeType;
+            snakeDraw.Level = meniu.Arcade;
+            SetGameLevel(meniu.Arcade);
+        }
+
+        private void SetGameLevel(ArcadeLevel choosedlevel)
+        {
+            switch (choosedlevel)
+            {
+                case ArcadeLevel.Null:
+                    game.SetLevel(0);
+                    break;
+                case ArcadeLevel.FastSnake:
+                    game.SetLevel(1);
+                    break;
+                case ArcadeLevel.LongSnake:
+                    game.SetLevel(2);
+                    break;
+                case ArcadeLevel.SnakeandBugs:
+                    game.SetLevel(3);
+                    break;
+                case ArcadeLevel.SnakeInBarrier:
+                    game.SetLevel(4);
+                    break;
+                case ArcadeLevel.SnakeInFog:
+                    game.SetLevel(5);
+                    break;
+            }
         }
 
         private void InfoScreen()
@@ -584,7 +617,7 @@ namespace Snake_Game
         /// Metodas skirtas nustatyti žaidimo sudėtingumą, t.y. parinkti 
         /// gyvatės greitį bei skiriamų taškų kiekį už suvalgytą gyvatės maistą. 
         /// </summary>
-        /// <param name="level"></param>
+        /// <param name="Level"></param>
         private void SetDifficult(int level)
         {
             switch (level)
@@ -677,6 +710,18 @@ namespace Snake_Game
             spriteBatch.End();
         }
 
+
+        private void DataBase()
+        {
+            Console.WriteLine("testuoju duombaze");
+            var player = new PlayerStatisticService();
+            IList<PlayerStat> policeOfficers = player.GetPlayers();
+
+            foreach (var policeOfficer in policeOfficers)
+            {
+                Console.WriteLine(policeOfficer);
+            }
+        }
     }
 /*
     /// <summary>

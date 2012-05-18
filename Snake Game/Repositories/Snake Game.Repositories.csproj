@@ -11,7 +11,8 @@
     <RootNamespace>Repositories</RootNamespace>
     <AssemblyName>Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -40,6 +41,39 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataContrats\DataContrats.csproj">
+      <Project>{A5B8CE62-9934-4F5F-B51A-60DA0369036A}</Project>
+      <Name>DataContrats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\Snake Game.DomainModel.csproj">
+      <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
+      <Name>Snake Game.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext\SessionFactoryProvider.cs" />
+    <Compile Include="Mappings\PlayerMap.cs" />
+    <Compile Include="PlayerStatRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>C:\Users\Vytas\Documents\Hibernate\jagregory-fluent-nhibernate-9bdc9d3\src\FluentNHibernate\bin\Debug\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vytas\Documents\Hibernate\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Vytas\Documents\Hibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

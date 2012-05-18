@@ -8,20 +8,31 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Snake_Game
-{       
+{
     public enum MeniuState
-        {
-            Main,
-            GameType,
-            Difficulty,
-            ChooseSnake,
-            Highscores,
-            Level, 
-            Help,
-            Play,
-            Pause,
-            Quit
-        }
+    {
+        Main,
+        GameType,
+        Difficulty,
+        ChooseSnake,
+        Highscores,
+        Level,
+        Help,
+        Play,
+        Pause,
+        Quit
+    }
+
+    public enum ArcadeLevel
+    {
+        Null,
+        LongSnake,
+        SnakeInFog,
+        SnakeandBugs,
+        FastSnake,
+        SnakeInBarrier
+
+    }
     /// <summary>
     /// This is the main type for your game
     /// </summary>
@@ -43,6 +54,7 @@ namespace Snake_Game
         public string Title { get; set; }
         public int SnakeType { get; set; }
         public int Difficult { get; set; }
+        public ArcadeLevel Arcade { set; get; }
         
 
         public int Iterator
@@ -64,6 +76,7 @@ namespace Snake_Game
             MenuItems = 4;
             meniuState = MeniuState.Main;
             highScore = HighScoresType.Clasic;
+            Arcade = ArcadeLevel.Null;
             Title = "Meniu";
             Iterator = 0;
             InfoText = string.Empty;
@@ -621,26 +634,33 @@ namespace Snake_Game
                 case 1:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Arcade = ArcadeLevel.LongSnake;
                     break;
                 case 2:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Arcade = ArcadeLevel.FastSnake;
                     break;
                 case 3:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Arcade = ArcadeLevel.SnakeandBugs;
                     break;
                 case 4:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Arcade = ArcadeLevel.SnakeInFog;
                     break;
                 case 5:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    Arcade = ArcadeLevel.SnakeInBarrier;
                     break;
                 case 6:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
+                    //reikia lygio cia
+                    Arcade = ArcadeLevel.Null;
                     break;
                 case 7:
                     meniuState = MeniuState.GameType;
@@ -725,6 +745,7 @@ namespace Snake_Game
                     meniuState = MeniuState.ChooseSnake;
                     Iterator = 1;
                     MenuItems = 4;
+                    Arcade = ArcadeLevel.Null;
                     break;
                 case 2:
                     meniuState = MeniuState.Level;

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Snake_Game.ServiceContracts;
-
 namespace Snake_Game.Service
 {
     public class GameService : IGameService
@@ -18,6 +17,7 @@ namespace Snake_Game.Service
         private readonly IPlayerService player;
         private readonly IBugService bug;
         private bool snakeHit = false;
+        private int level;
 
         //private bool orent;
         public GameService()
@@ -29,11 +29,9 @@ namespace Snake_Game.Service
             food = new FoodService();
             player = new PlayerService();
 
-            food.AddItem(new Vector3(10, 10,1));
+            food.AddItem(new Vector3(10, 10, 1));
             //orent = true;
         }
-
-
 
         public int[,] GetGameStage()
         {
@@ -307,6 +305,40 @@ namespace Snake_Game.Service
                 }
             }
             return radarData;
+        }
+
+
+        public void SetLevel(int level)
+        {
+            this.level = level;
+            ConfigurateGame();
+        }
+
+        private void ConfigurateGame()
+        {
+            switch (level)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+            }
+        }
+
+        private void ClasicGame()
+        {
+            snake = new SnakeService();
+            food = new FoodService();
+            player = new PlayerService();
+            food.AddItem(new Vector3(10, 10, 1));
         }
     }
 }

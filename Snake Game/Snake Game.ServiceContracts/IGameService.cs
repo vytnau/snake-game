@@ -39,5 +39,8 @@ namespace Snake_Game.ServiceContracts
         void NewGame();
 
         int[,] RadarData();
+
+        void SetLevel(int level);
+
     }
 }

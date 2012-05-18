@@ -159,11 +159,14 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="HighScores.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DataAccess\DataAccess.csproj">
-      <Project>{46EE5C4E-AC8C-4AF9-BDB0-3A4D21B91929}</Project>
-      <Name>DataAccess</Name>
+    <ProjectReference Include="..\..\DomainModel\Snake Game.DomainModel.csproj">
+      <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
+      <Name>Snake Game.DomainModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Snake Game.ServiceContracts\Snake Game.ServiceContracts.csproj">
       <Project>{093A6E86-0767-4D3F-87A8-BF4305CC02B1}</Project>
@@ -208,6 +211,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="UI_TemporaryKey.pfx" />
   </ItemGroup>
