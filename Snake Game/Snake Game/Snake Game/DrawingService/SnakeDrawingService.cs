@@ -13,6 +13,7 @@ namespace Snake_Game
         readonly SnakeTexture[] snakeTexture;
         public SpriteBatch Batch { set; get; }
         public int SnkateType {set; get;}
+        public ArcadeLevel Level { set; get; }
 
         public SnakeDrawingService(int type, SnakeTexture[] snakeTexture)
         {

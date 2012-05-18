@@ -38,5 +38,9 @@ namespace Snake_Game.ServiceContracts
         Vector3 GetSnakeTail();
 
         void SetNewSnake();
+
+        void SetNewSnakeClassic();
+
+        void SetNewSnakeLongSnake();
     }
 }

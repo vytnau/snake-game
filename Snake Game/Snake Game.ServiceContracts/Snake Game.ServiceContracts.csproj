@@ -46,11 +46,18 @@
     <Compile Include="IGameService.cs" />
     <Compile Include="IGameStage.cs" />
     <Compile Include="IPlayerService.cs" />
+    <Compile Include="IPlayerStatisticService.cs" />
     <Compile Include="ISnakeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainModel\Snake Game.DomainModel.csproj">
+      <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
+      <Name>Snake Game.DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C8838FEE-13EE-433F-A627-B36D3DBAA494}</ProjectGuid>
+    <ProjectGuid>{A5B8CE62-9934-4F5F-B51A-60DA0369036A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Snake_Game.Service</RootNamespace>
-    <AssemblyName>Snake Game.Service</AssemblyName>
+    <RootNamespace>DataContrats</RootNamespace>
+    <AssemblyName>DataContrats</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -41,39 +41,23 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BarrierService.cs" />
-    <Compile Include="BugService.cs" />
-    <Compile Include="FoodService.cs" />
-    <Compile Include="GameService.cs" />
-    <Compile Include="GameStageService.cs" />
-    <Compile Include="PlayerService.cs" />
-    <Compile Include="PlayerStatisticService.cs" />
-    <Compile Include="SnakeService.cs" />
+    <Compile Include="IPlayerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="NHibernate">
+      <HintPath>C:\Users\Vytas\Documents\Hibernate\new\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataContrats\DataContrats.csproj">
-      <Project>{A5B8CE62-9934-4F5F-B51A-60DA0369036A}</Project>
-      <Name>DataContrats</Name>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{46EE5C4E-AC8C-4AF9-BDB0-3A4D21B91929}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DomainModel\Snake Game.DomainModel.csproj">
       <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
       <Name>Snake Game.DomainModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositories\Snake Game.Repositories.csproj">
-      <Project>{2C26111A-436B-4EA1-B851-C76B916160D0}</Project>
-      <Name>Snake Game.Repositories</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Snake Game.ServiceContracts\Snake Game.ServiceContracts.csproj">
-      <Project>{093A6E86-0767-4D3F-87A8-BF4305CC02B1}</Project>
-      <Name>Snake Game.ServiceContracts</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
