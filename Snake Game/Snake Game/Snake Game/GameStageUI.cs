@@ -30,6 +30,7 @@ namespace Snake_Game
             Running,
             Pause,
             Hit,
+            GameOver,
             End
         }
 
@@ -447,6 +448,10 @@ namespace Snake_Game
                 {
                     InfoScreen();
                 }
+                else if (gamestate == GameStates.GameOver)
+                {
+                    GamoOverScreen();
+                }
             }
             
             // TODO: Add your update logic here                        
@@ -582,9 +587,11 @@ namespace Snake_Game
                     break;
                 case ArcadeLevel.FastSnake:
                     game.SetLevel(1);
+                    millisecondsPerFrame = 70;
                     break;
                 case ArcadeLevel.LongSnake:
                     game.SetLevel(2);
+                    millisecondsPerFrame = 70;
                     break;
                 case ArcadeLevel.SnakeandBugs:
                     game.SetLevel(3);
@@ -610,6 +617,22 @@ namespace Snake_Game
                 down = true;
                 game.NewGame();
                 gamestate = GameStates.Running;
+            }
+        }
+
+        private void GamoOverScreen()
+        {
+            KeyboardState key = Keyboard.GetState();
+            if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
+                || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
+            {
+                direction.X = -1;
+                direction.Y = 1;
+                up = true;
+                down = true;
+                gamestate = GameStates.Menu;
+                meniu.meniuState = MeniuState.Main;
+                ChangeScreenSizeToMeniu();
             }
         }
 
@@ -684,14 +707,22 @@ namespace Snake_Game
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
                 snakeDraw.DrawSnake(game.GetGameStage());
                 foodDraw.Draw(game.GetGameStage());
-                if (false)//(game.GetLives() > 0)
+                if (game.GetLives() > 0)
                 {
                     infoDraw.DrawHitScreen(game.GetLives());
                 }
                 else
                 {
                     infoDraw.DrawGameOver(game.GetPoints(), levelTime);
+                    gamestate = GameStates.GameOver;
                 }
+            }
+            else if (gamestate == GameStates.GameOver)
+            {
+                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
+                snakeDraw.DrawSnake(game.GetGameStage());
+                foodDraw.Draw(game.GetGameStage());
+                infoDraw.DrawGameOver(game.GetPoints(), levelTime);
             }
             base.Draw(gameTime);
         }

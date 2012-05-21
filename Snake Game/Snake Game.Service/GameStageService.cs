@@ -59,7 +59,6 @@ namespace Snake_Game.Service
             stageMatrix[(int)coordCuren.X, (int)coordCuren.Y] = 6;
         }
 
-
         public void SetBugCoord(Vector2 bugCoord)
         {
             stageMatrix[(int)bugCoord.X, (int)bugCoord.Y] = 3;
@@ -179,6 +178,12 @@ namespace Snake_Game.Service
                 }
             }
             SetSnakeCoordinates(coord);
+        }
+
+
+        public void SetBarrierCoord(Vector3 coord)
+        {
+            stageMatrix[(int)coord.X, (int)coord.Y] = (int)coord.Z;
         }
     }
 }
