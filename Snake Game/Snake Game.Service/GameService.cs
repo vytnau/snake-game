@@ -15,6 +15,7 @@ namespace Snake_Game.Service
         private readonly ISnakeService snake;
         private readonly IGameComponent food;
         private readonly IPlayerService player;
+        private readonly BarrierService barrier;
         private readonly IBugService bug;
         private bool snakeHit = false;
         private int level;
@@ -28,8 +29,9 @@ namespace Snake_Game.Service
             snake = new SnakeService();
             food = new FoodService();
             player = new PlayerService();
+            barrier = new BarrierService();
 
-            food.AddItem(new Vector3(10, 10, 1));
+            //food.AddItem(new Vector3(10, 10, 1));
             //orent = true;
         }
 
@@ -215,12 +217,19 @@ namespace Snake_Game.Service
         {
             FillSnakeCoord(snake.GetSnakeCoordinates());
             FillFoodCoord(food.GetList());
+            FillBarrierCoord(barrier.GetList());
            // FillBugCoord();
         }
 
         private void RemoveBug(Vector2 bugCoor)
         {
             stage.RemoveBugCoord(bug.GetCoord());
+        }
+
+        private void FillBarrierCoord(LinkedList<Vector3> list)
+        {
+            foreach (Vector3 a in list)
+                stage.SetBarrierCoord(a);
         }
 
         private void FillSnakeCoord(LinkedList<Vector3> list)
@@ -319,10 +328,13 @@ namespace Snake_Game.Service
             switch (level)
             {
                 case 0:
+                    ClasicGame();
                     break;
                 case 1:
+                    SurvivalGame();
                     break;
                 case 2:
+                    SurvivalGame();
                     break;
                 case 3:
                     break;
@@ -335,10 +347,15 @@ namespace Snake_Game.Service
 
         private void ClasicGame()
         {
-            snake = new SnakeService();
-            food = new FoodService();
-            player = new PlayerService();
+            snake.SetNewSnakeClassic();           
             food.AddItem(new Vector3(10, 10, 1));
+        }
+
+        private void SurvivalGame()
+        {
+            snake.SetNewSnakeLongSnake();
+            barrier.SurvivalMode();
+            
         }
     }
 }

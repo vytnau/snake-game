@@ -276,11 +276,11 @@ namespace Snake_Game
 
             if (Iterator == 1)
             {
-                batch.Draw(texture.BDownMarked, new Vector2(65, 360), Color.White);
+         //       batch.Draw(texture.BDownMarked, new Vector2(65, 360), Color.White);
             }
             else
             {
-                batch.Draw(texture.BDown, new Vector2(65, 360), Color.White);
+           //     batch.Draw(texture.BDown, new Vector2(65, 360), Color.White);
             }
             if (Iterator == 2)
             {
