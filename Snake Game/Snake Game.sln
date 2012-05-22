@@ -23,9 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{6E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BussnesLogic", "BussnesLogic", "{E34C01EC-0448-461B-A0B7-0676FFC415A6}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Install", "Install\Install.vdproj", "{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 10
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs19
 		SccLocalPath0 = .
@@ -56,6 +58,9 @@ Global
 		SccProjectTopLevelParentUniqueName8 = Snake\u0020Game.sln
 		SccProjectName8 = Repositories
 		SccLocalPath8 = Repositories
+		SccProjectUniqueName9 = Install\\Install.vdproj
+		SccProjectName9 = Install
+		SccLocalPath9 = Install
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -142,6 +147,12 @@ Global
 		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|x86.ActiveCfg = Release|x86
 		{2C26111A-436B-4EA1-B851-C76B916160D0}.Release|x86.Build.0 = Release|x86
+		{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}.Debug|Any CPU.ActiveCfg = Debug
+		{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}.Debug|x86.ActiveCfg = Debug
+		{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}.Release|Any CPU.ActiveCfg = Release
+		{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}.Release|Mixed Platforms.ActiveCfg = Release
+		{9DCDEDB5-7CB5-4A13-AF56-A12F65197599}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
