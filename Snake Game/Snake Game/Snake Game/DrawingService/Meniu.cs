@@ -559,7 +559,7 @@ namespace Snake_Game
                     SelectPause();
                     break;
                 case MeniuState.Help:
-                    SelectPause();
+                    SelectHelp();
                     break;
             }
         }
