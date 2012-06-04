@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="EntityBase.cs" />
     <Compile Include="PlayerStat.cs" />
+    <Compile Include="Sound\MeniuSound.cs" />
     <Compile Include="Texture\BarrierTexture.cs" />
     <Compile Include="Texture\FoodTexture.cs" />
     <Compile Include="Texture\GameStageTexture.cs" />
