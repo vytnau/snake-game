@@ -149,6 +149,7 @@
     <Compile Include="DrawingService\FoodDrawingService.cs" />
     <Compile Include="DrawingService\InfoDrawService.cs" />
     <Compile Include="DrawingService\Meniu.cs" />
+    <Compile Include="MeniuSoundService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="GameStageUI.cs" />

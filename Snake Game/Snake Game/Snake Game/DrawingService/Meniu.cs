@@ -6,6 +6,7 @@ using DataAccess;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using DomainModel.Sound;
 
 namespace Snake_Game
 {
@@ -55,7 +56,7 @@ namespace Snake_Game
         public int SnakeType { get; set; }
         public int Difficult { get; set; }
         public ArcadeLevel Arcade { set; get; }
-        
+        MeniuSound sound;
 
         public int Iterator
         {
@@ -66,6 +67,7 @@ namespace Snake_Game
             set
             {
                 iterator = value;
+                if(sound != null) sound.Play();
                 if (iterator > MenuItems) iterator = MenuItems;
                 if (iterator < 1) iterator = 1;
             }
@@ -80,6 +82,11 @@ namespace Snake_Game
             Title = "Meniu";
             Iterator = 0;
             InfoText = string.Empty;
+        }
+
+        public void SetSound(MeniuSound sound)
+        {
+            this.sound = sound;
         }
 
         /// <summary>

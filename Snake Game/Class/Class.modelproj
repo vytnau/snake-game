@@ -21,6 +21,13 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
+    <Content Include="DrawMeniu.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DrawMeniu.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DrawMeniu.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLGyvatesjudejimas2.sequencediagram">
       <SubType>Content</SubType>
     </Content>

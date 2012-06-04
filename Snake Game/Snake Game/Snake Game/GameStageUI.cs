@@ -15,6 +15,7 @@ using DataAccess;
 using DataAccess.Texture;
 using Snake_Game.DrawingService;
 using DomainModel;
+using DomainModel.Sound;
 
 
 namespace Snake_Game
@@ -47,6 +48,7 @@ namespace Snake_Game
         FoodTexture foodTexture;
         InfoTexture infoWindTexture;
         RadarTexture radarTexture;
+        MeniuSound meniuSound;
         BarrierTexture barrierTexture;
         SnakeDrawingService snakeDraw;
         StageDrawingService stageDraw;
@@ -88,6 +90,7 @@ namespace Snake_Game
             infoDraw = new InfoDrawService(infoWindTexture);
             radarDraw = new RadarDrawingService(radarTexture);
             barrierDraw = new BarrierDrawingService(barrierTexture);
+            meniuSound = new MeniuSound();
             direction.X = -1;
             direction.Y = 1;
             up = true;
@@ -138,6 +141,9 @@ namespace Snake_Game
             //Snake Game\Snake GameContent\Arial.spritefont";
             text = Content.Load<SpriteFont>("Font\\Arial");
             font = Content.Load<SpriteFont>("Font\\Fontas");
+            meniuSound.SoundArrowCrackle = Content.Load<SoundEffect>("Sound\\Meniu\\wood-cracking-1");
+            meniuSound.Creat();
+            meniu.SetSound(meniuSound);
             stageDraw.Font = font;
             infoDraw.Font = Content.Load<SpriteFont>("Font\\bigerFont");//font;
             LoadMeniuContent();
@@ -707,6 +713,7 @@ namespace Snake_Game
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
                 snakeDraw.DrawSnake(game.GetGameStage());
                 foodDraw.Draw(game.GetGameStage());
+                radarDraw.DrawRadar(game.RadarData());
                 if (game.GetLives() > 0)
                 {
                     infoDraw.DrawHitScreen(game.GetLives());
@@ -722,6 +729,7 @@ namespace Snake_Game
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
                 snakeDraw.DrawSnake(game.GetGameStage());
                 foodDraw.Draw(game.GetGameStage());
+                radarDraw.DrawRadar(game.RadarData());
                 infoDraw.DrawGameOver(game.GetPoints(), levelTime);
             }
             base.Draw(gameTime);
