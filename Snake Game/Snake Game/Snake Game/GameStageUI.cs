@@ -120,6 +120,8 @@ namespace Snake_Game
             gamestate = GameStates.Menu;
             //gamestate = GameStates.Running;
             base.Initialize();
+            
+            DataBase();
         }
 
 
@@ -758,7 +760,7 @@ namespace Snake_Game
 
             foreach (var policeOfficer in policeOfficers)
             {
-                Console.WriteLine(policeOfficer);
+                Console.WriteLine(policeOfficer.Name);
             }
         }
     }
