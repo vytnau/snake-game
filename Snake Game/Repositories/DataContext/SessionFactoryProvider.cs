@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NHibernate;
-using FluentNHibernate.Cfg;
 using Snake_Game.Repositories.Mappings;
-using FluentNHibernate.Cfg.Db;
-using FluentNHibernate.Data;
-using NHibernate.Cfg;
-using NHibernate.Dialect;
+
 using System.Data.SqlClient;
+using System.Collections;
+using System.Reflection;
+using System.Data;
+using System.Data.SqlServerCe;
+using NHibernate;
+using NHibernate.Cache;
+using NHibernate.Tool.hbm2ddl;
+using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Cfg;
+
 
 namespace Repositories.DataContext
 {
@@ -17,6 +22,12 @@ namespace Repositories.DataContext
     {
         private readonly static object lockObject = new object();
         private volatile static ISessionFactory sessionFactory;
+        public static string ConnectionString = "Data Source=E:\\Failai\\4 semestras\\Programingo praktika\\Snake game\\ver 2\\Snake Game\\DomainModel\\DataBase\\HighScores.sdf";
+
+
+
+      
+     
 
         public static ISessionFactory SessionFactory
         {
@@ -29,21 +40,6 @@ namespace Repositories.DataContext
                     {
                         if (sessionFactory == null)
                         {
-                          /*  var cfg = new Configuration();
-                            cfg.SessionFactory()
-                               .Proxy.Through<ByteCode.LinFu.ProxyFactoryFactory>()
-                               .Integrate
-                                   .Using<MsSql2005Dialect>()
-                                   .Connected
-                                       .Using(new SqlConnectionStringBuilder
-                                       {
-                                           DataSource = "(local)",
-                                           InitialCatalog = "nhibernate",
-                                           IntegratedSecurity = true
-                                       });*/
-                            var configuration = MsSqlConfiguration.MsSql2008.
-                                ConnectionString("Data Source=E:\\Failai\\4 semestras\\Programingo praktika\\Snake game\\ver 2\\Snake Game\\DomainModel\\DataBase\\HighScores.sdf")
-                                .ShowSql().ConfigureProperties(new Configuration());
                             sessionFactory = CreateSessionFactory();
                         }
                     }
@@ -60,10 +56,21 @@ namespace Repositories.DataContext
 
         private static ISessionFactory CreateSessionFactory()
         {
-            return Fluently.Configure()
-                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<PlayerMap>())
-                 .BuildConfiguration()
-                 .BuildSessionFactory();
+            MsSqlCeConfiguration sqlconfig = MsSqlCeConfiguration.Standard.ConnectionString(ConnectionString);
+            FluentConfiguration fc = Fluently.Configure();
+            fc = fc.Database(sqlconfig);
+            ISessionFactory sessionFactory = fc.Cache(c => c
+               .UseQueryCache()
+               .ProviderClass<HashtableCacheProvider>())
+               .Mappings(m => m
+               .FluentMappings.AddFromAssemblyOf<PlayerMap>())
+               .ExposeConfiguration((NHibernate.Cfg.Configuration config) => new SchemaUpdate(config)
+               .Execute(false, true))
+               .BuildSessionFactory();
+            return sessionFactory;
         }
+
     }
+
+
 }

@@ -140,7 +140,6 @@ namespace Snake_Game
             batch.Draw(texture.Background, Vector2.Zero, Color.White);
             batch.Draw(texture.GameTypeTitle, new Vector2(380, 30), Color.White);
             batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
-            System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
                 batch.Draw(texture.SClassical_marked, new Vector2(555, 190), Color.White);
@@ -182,7 +181,6 @@ namespace Snake_Game
             batch.Draw(texture.Background, Vector2.Zero, Color.White);
             batch.Draw(texture.GameTitle, new Vector2(500, 10), Color.White);
             batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
-            System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
                 batch.Draw(texture.SNew_game_marked, new Vector2(555, 190), Color.White);
@@ -228,7 +226,6 @@ namespace Snake_Game
             batch.Draw(texture.Background, Vector2.Zero, Color.White);
             batch.Draw(texture.ChooseSnakeTitle, new Vector2(500, 10), Color.White);
             batch.Draw(texture.SignPole, new Vector2(620, 180), Color.White);
-            System.Console.WriteLine(Iterator.ToString());
             if (Iterator == 1)
             {
                 batch.Draw(texture.SSnake1_marked, new Vector2(555, 190), Color.White);
