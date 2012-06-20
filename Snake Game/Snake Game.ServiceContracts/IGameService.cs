@@ -42,5 +42,7 @@ namespace Snake_Game.ServiceContracts
 
         void SetLevel(int level);
 
+        String GetGameType();
+
     }
 }

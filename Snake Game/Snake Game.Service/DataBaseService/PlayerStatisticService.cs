@@ -16,13 +16,13 @@ namespace Snake_Game.Service
         {
             playerRepostiroy = new PlayerStatRepository();
         }
-        public IList<DomainModel.PlayerStat> GetPlayerByName(string name)
+        public IList<DomainModel.PlayerStat> GetPlayerByType(string type)
         {
             IQueryable<PlayerStat> query = playerRepostiroy.AllQuery();
 
-            if (!string.IsNullOrEmpty(name))
+            if (!string.IsNullOrEmpty(type))
             {
-                query = query.Where(x => x.Name == name);
+                query = query.Where(x => x.Type == type);
             }
 
             return query.ToList();

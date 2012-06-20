@@ -66,6 +66,7 @@ namespace Repositories.DataContext
                .FluentMappings.AddFromAssemblyOf<PlayerMap>())
                .ExposeConfiguration((NHibernate.Cfg.Configuration config) => new SchemaUpdate(config)
                .Execute(false, true))
+               .BuildConfiguration()
                .BuildSessionFactory();
             return sessionFactory;
         }

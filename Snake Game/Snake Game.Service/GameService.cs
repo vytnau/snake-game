@@ -357,5 +357,33 @@ namespace Snake_Game.Service
             barrier.SurvivalMode();
             
         }
+
+
+        public string GetGameType()
+        {
+            string value = "ee";
+            switch (level)
+            {
+                case 0:
+                    value = "cl";
+                    break;
+                case 1:
+                    value = "ar1";
+                    break;
+                case 2:
+                    value = "ar2";
+                    break;
+                case 3:
+                    value = "ar3";
+                    break;
+                case 4:
+                    value = "ar4";
+                    break;
+                case 5:
+                    value = "ar5";
+                    break;
+            }
+            return value;
+        }
     }
 }
