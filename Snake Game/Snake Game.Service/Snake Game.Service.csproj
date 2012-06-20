@@ -43,11 +43,12 @@
   <ItemGroup>
     <Compile Include="BarrierService.cs" />
     <Compile Include="BugService.cs" />
+    <Compile Include="DataBaseService\HighScoresService.cs" />
     <Compile Include="FoodService.cs" />
     <Compile Include="GameService.cs" />
     <Compile Include="GameStageService.cs" />
     <Compile Include="PlayerService.cs" />
-    <Compile Include="PlayerStatisticService.cs" />
+    <Compile Include="DataBaseService\PlayerStatisticService.cs" />
     <Compile Include="SnakeService.cs" />
   </ItemGroup>
   <ItemGroup>

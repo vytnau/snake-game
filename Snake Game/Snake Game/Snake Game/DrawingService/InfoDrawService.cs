@@ -26,7 +26,10 @@ namespace Snake_Game
                 DrawHitScreen(lives);
             }
         }
-
+        /// <summary>
+        /// Piešiamas informacinis langas apie gyvatės atsimušimą.
+        /// </summary>
+        /// <param name="lives">Parametras nuskantis kiek gyvybių žaidėjas dar turi.</param>
         public void DrawHitScreen(int lives)
         {
             Batch.Begin();
@@ -70,6 +73,13 @@ namespace Snake_Game
                 timeFormat += time.Seconds.ToString();
             }
             return timeFormat;
+        }
+
+        public void DrawNewRecordWindow()
+        {
+            //TODO:
+            //Suprogramuoti sio lango piesima, t.y. pranesti apie pasiekta rekorda ir paprasyt
+            //ivesti vartotojo varda.
         }
     }
 }

@@ -7,6 +7,8 @@ using DataAccess;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using DomainModel.Sound;
+using Snake_Game.ServiceContracts.DataBaseInterface;
+using DomainModel;
 
 namespace Snake_Game
 {
@@ -43,12 +45,22 @@ namespace Snake_Game
         public enum HighScoresType
         {
             Clasic,
+            Cl0,
+            Cl1,
+            Cl2,
+            Ar1,
+            Ar2,
+            Ar3,
+            Ar4,
+            Ar5,
+            Ar6,
             Arcade
         }
 
 
         private int MenuItems;
         private int iterator;
+        private IHighScores highScoresData;
         private HighScoresType highScore;
         public MeniuState meniuState {set; get;}
         public string InfoText { get; set; }
@@ -56,6 +68,7 @@ namespace Snake_Game
         public int SnakeType { get; set; }
         public int Difficult { get; set; }
         public ArcadeLevel Arcade { set; get; }
+        public SpriteFont Font { set; get; }
         MeniuSound sound;
 
         public int Iterator
@@ -73,11 +86,12 @@ namespace Snake_Game
             }
         }
 
-        public Meniu()
+        public Meniu(IHighScores highScores)
         {
+            highScoresData = highScores;
             MenuItems = 4;
             meniuState = MeniuState.Main;
-            highScore = HighScoresType.Clasic;
+            highScore = HighScoresType.Cl0;
             Arcade = ArcadeLevel.Null;
             Title = "Meniu";
             Iterator = 0;
@@ -309,23 +323,16 @@ namespace Snake_Game
             batch.Draw(texture.Background, Vector2.Zero, Color.White);
             batch.Draw(texture.GameTitle, new Vector2(500, 10), Color.White);
             batch.Draw(texture.DarkLayer, Vector2.Zero, Color.White);
-            if (highScore == HighScoresType.Clasic)
-            {
-                batch.Draw(texture.HighScoresCla, new Vector2(115, 0), Color.White);
-            }
-            else
-            {
-                batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
-            }
+            DrawHighScoresBackground(batch, texture);
             batch.Draw(texture.DarkSignPole, new Vector2(680, 380), Color.White);
 
             if (Iterator == 1)
             {
-                batch.Draw(texture.BNextMarked, new Vector2(620, 335), Color.White);
+                batch.Draw(texture.BNextMarked, new Vector2(620, 285), Color.White);
             }
             else
             {
-                batch.Draw(texture.BNext, new Vector2(620, 335), Color.White);
+                batch.Draw(texture.BNext, new Vector2(620, 285), Color.White);
             }
             if (Iterator == 2)
             {
@@ -335,23 +342,194 @@ namespace Snake_Game
             {
                 batch.Draw(texture.SBack2, new Vector2(620, 380), Color.White);
             }
-            if (Iterator == 3)
-            {
-               // Batch.Draw(texture.SHelp_marked, new Vector2(555, 320), Color.White);
-            }
-            else
-            {
-               // Batch.Draw(texture.SHelp, new Vector2(555, 320), Color.White);
-            }
-            if (Iterator == 4)
-            {
-              //  Batch.Draw(texture.SQuit_marked, new Vector2(555, 380), Color.White);
-            }
-            else
-            {
-               // Batch.Draw(texture.SQuit, new Vector2(555, 380), Color.White);
-            }
+            PlayerHighScores(batch);
             batch.End();
+        }
+
+        /// <summary>
+        /// Piešiamas pasiekimų lango lenta bei prierašas, kokio tipo pasieikimai rodomi.
+        /// </summary>
+        /// <param name="batch">Piešimo objektas.</param>
+        /// <param name="texture">Objektas, kuriame saugomos visos tekstūros</param>
+        private void DrawHighScoresBackground(SpriteBatch batch, MeniuTexture texture)
+        {
+            switch (highScore)
+            {
+                case HighScoresType.Ar1: batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.L1, new Vector2(580, 142), Color.White);
+                    break;
+                case HighScoresType.Ar2: batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.L2, new Vector2(580, 142), Color.White);
+                    break;
+                case HighScoresType.Ar3: batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.L3, new Vector2(580, 142), Color.White);
+                    break;
+                case HighScoresType.Ar4: batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.L4, new Vector2(580, 142), Color.White);
+                    break;
+                case HighScoresType.Ar5: batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.L5, new Vector2(580, 142), Color.White);
+                    break;
+                case HighScoresType.Ar6: batch.Draw(texture.HighScoresArc, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.L6, new Vector2(580, 142), Color.White);
+                    break;
+                case HighScoresType.Cl0: batch.Draw(texture.HighScoresCla, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.LEasy, new Vector2(545, 142), Color.White);
+                    break;
+                case HighScoresType.Cl1: batch.Draw(texture.HighScoresCla, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.LMedium, new Vector2(545, 142), Color.White);
+                    break;
+                case HighScoresType.Cl2: batch.Draw(texture.HighScoresCla, new Vector2(115, 0), Color.White);
+                    batch.Draw(texture.LHard, new Vector2(545, 142), Color.White);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Aptinkama kokią statistiką norima peržiūrėti, ir pagal tai parenkamas raktinis trumpinys.
+        /// </summary>
+        /// <returns>Gražinamas raktinis trumpinys.</returns>
+        private String GetGameType()
+        {
+            string value = "ee";
+            switch (highScore)
+            {
+                case HighScoresType.Ar1: value = "ar1";
+                    break;
+                case HighScoresType.Ar2: value = "ar2";
+                    break;
+                case HighScoresType.Ar3: value = "ar3";
+                    break;
+                case HighScoresType.Ar4: value = "ar4";
+                    break;
+                case HighScoresType.Ar5: value = "ar5";
+                    break;
+                case HighScoresType.Ar6: value = "ar6";
+                    break;
+                case HighScoresType.Cl0: value = "cl0";
+                    break;
+                case HighScoresType.Cl1: value = "cl1";
+                    break;
+                case HighScoresType.Cl2: value = "cl2";
+                    break;
+            }
+            return value;
+        }
+
+        /// <summary>
+        /// Metodas paruošia sąrašą pasiekimų lentelei. Sąrašas parenkamas pagal tai, kokia pasiekimų lentelė peržiūrima.
+        /// </summary>
+        /// <returns>Gražinamas mažėjimo tvarak surikuotas pasiekimų sąrašas</returns>
+        private IList<PlayerStat> PrepareList()
+        {
+            IEnumerable<PlayerStat> sortedEnum = highScoresData.GetHighScores(GetGameType()).OrderByDescending(f => f.Point);
+            return sortedEnum.ToList();
+        }
+
+        private void PlayerHighScores(SpriteBatch batch)
+        {
+            IList<PlayerStat> players = PrepareList();
+            for(int i = 0; i < 10; i++){
+                PlayerStat stat =  GetPlayerStat(i, players);
+                DrawHighScoreListNumber(i, batch);
+                batch.DrawString(Font, stat.Name, new Vector2(280, 20 * i + 210), Color.White);
+                PlayerTime(batch, stat.Time, i);
+                DrawPlayerPoints(stat.Point.ToString(), batch, i);
+            }
+        }
+
+        /// <summary>
+        /// Metodas kuris pasiekimų lentelėje piešia laikus. Suskaidomas laikas į minutęs ir sekundęs.
+        /// </summary>
+        /// <param name="batch">Piešimo objektas.</param>
+        /// <param name="time">Laikas, kiek truko žaidimas.</param>
+        /// <param name="i">Indeksas nusakantis kuri eilutė yra spausdinama.</param>
+        private void PlayerTime(SpriteBatch batch, TimeSpan time, int i)
+        {
+            if (time.Minutes < 10)
+            {
+                batch.DrawString(Font, "0" + time.Minutes.ToString(), new Vector2(415, 20 * i + 210), Color.White);
+            }
+            else
+            {
+                batch.DrawString(Font, time.Minutes.ToString(), new Vector2(415, 20 * i + 210), Color.White);
+            }
+            if (time.Seconds < 10)
+            {
+                batch.DrawString(Font, ":0" + time.Seconds.ToString(), new Vector2(435, 20 * i + 210), Color.White);
+            }
+            else
+            {
+                batch.DrawString(Font, ":" + time.Seconds.ToString(), new Vector2(435, 20 * i + 210), Color.White);
+            }
+        }
+
+        /// <summary>
+        /// Metodas spausdinantis eilutės numerius. Tikrinimas reikalingas tik tam, kad būtų išligiotas tekstas.
+        /// </summary>
+        /// <param name="i">Indeksas i, nusakantis kuri eilutė bus spausdinama.</param>
+        /// <param name="batch">Piešimo objektas.</param>
+        private void DrawHighScoreListNumber(int i, SpriteBatch batch)
+        {
+            if (i == 9)
+                batch.DrawString(Font, (i + 1).ToString() + ".", new Vector2(203, 20 * i + 210), Color.White);
+            else 
+                batch.DrawString(Font, (i + 1).ToString() + ".", new Vector2(210, 20 * i + 210), Color.White);
+        }
+
+
+        /// <summary>
+        /// Metodas kuris gražina iš sąrašo elementus. Tikrina, ar indekso numeris nedidesnis, nei sąraše yra elementų.
+        /// </summary>
+        /// <param name="i">Masyvo indeksas, kuris nurodo kuri vieta iš top 10 bus spausdinama.</param>
+        /// <param name="list">Žaidėjo pasiekimų sąrašas.</param>
+        /// <returns>Gražinama žaidėjo statisktika, jei tokios nėra, tai gražinama tusčia informacija.</returns>
+        private PlayerStat GetPlayerStat(int i, IList<PlayerStat> list)
+        {
+            if (i < list.Count)
+            {
+                return list[i];
+            }
+            else
+            {
+                return new PlayerStat()
+                {
+                    Name = "--------",
+                    Time = TimeSpan.Zero,
+                    Point = 0
+                
+                };
+            }
+        }
+
+        /// <summary>
+        /// Metodas piešiantis žaidėjo sukauptus taškus į pasiekimų lentelę. Taškai išligiuojami pagal dešinį kraštą.
+        /// </summary>
+        /// <param name="point">Žaidėjo taškai.</param>
+        /// <param name="batch">Piešimo objektas.</param>
+        /// <param name="i">Indeksas nurodantis kuri eilutė piešiama.</param>
+        private void DrawPlayerPoints(String point, SpriteBatch batch, int i)
+        {
+            if (point.Length == 1)
+            {
+                batch.DrawString(Font, point, new Vector2(580, 20 * i + 210), Color.White);
+            }
+            else if (point.Length == 2)
+            {
+                batch.DrawString(Font, point, new Vector2(570, 20 * i + 210), Color.White);
+            }
+            else if (point.Length == 3)
+            {
+                batch.DrawString(Font, point, new Vector2(560, 20 * i + 210), Color.White);
+            }
+            else if (point.Length == 4)
+            {
+                batch.DrawString(Font, point, new Vector2(550, 20 * i + 210), Color.White);
+            }
+            else
+            {
+                batch.DrawString(Font, point, new Vector2(540, 20 * i + 210), Color.White);
+            }
         }
 
         /// <summary>
@@ -607,14 +785,7 @@ namespace Snake_Game
             switch (Iterator)
             {
                 case 1:
-                    if (highScore == HighScoresType.Arcade)
-                    {
-                        highScore = HighScoresType.Clasic;
-                    }
-                    else
-                    {
-                        highScore = HighScoresType.Arcade;
-                    }
+                    ChangeHihgScores();
                     Iterator = 1;
                     MenuItems = 2;
                     break;
@@ -624,6 +795,34 @@ namespace Snake_Game
                     MenuItems = 4;
                     break;
                 
+            }
+        }
+
+        /// <summary>
+        /// Metodas pakeičiantis highScore reikšmę. Tai duoda, kad atveriamas naujas pasiekimų langas su naujais duomenimis.
+        /// </summary>
+        private void ChangeHihgScores()
+        {
+            switch (highScore)
+            {
+                case HighScoresType.Ar1: highScore = HighScoresType.Ar2;
+                    break;
+                case HighScoresType.Ar2: highScore = HighScoresType.Ar3;
+                    break;
+                case HighScoresType.Ar3: highScore = HighScoresType.Ar4;
+                    break;
+                case HighScoresType.Ar4: highScore = HighScoresType.Ar5;
+                    break;
+                case HighScoresType.Ar5: highScore = HighScoresType.Ar6;
+                    break;
+                case HighScoresType.Ar6: highScore = HighScoresType.Cl0;
+                    break;
+                case HighScoresType.Cl0: highScore = HighScoresType.Cl1;
+                    break;
+                case HighScoresType.Cl1: highScore = HighScoresType.Cl2;
+                    break;
+                case HighScoresType.Cl2: highScore = HighScoresType.Ar1;
+                    break;
             }
         }
 

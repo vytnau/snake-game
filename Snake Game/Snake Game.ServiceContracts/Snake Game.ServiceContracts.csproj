@@ -41,12 +41,13 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataBaseInterface\IHighScores.cs" />
     <Compile Include="IBugService.cs" />
     <Compile Include="IGameComponent.cs" />
     <Compile Include="IGameService.cs" />
     <Compile Include="IGameStage.cs" />
     <Compile Include="IPlayerService.cs" />
-    <Compile Include="IPlayerStatisticService.cs" />
+    <Compile Include="DataBaseInterface\IPlayerStatisticService.cs" />
     <Compile Include="ISnakeService.cs" />
   </ItemGroup>
   <ItemGroup>

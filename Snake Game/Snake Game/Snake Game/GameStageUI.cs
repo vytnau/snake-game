@@ -16,6 +16,8 @@ using DataAccess.Texture;
 using Snake_Game.DrawingService;
 using DomainModel;
 using DomainModel.Sound;
+using Snake_Game.ServiceContracts.DataBaseInterface;
+using Snake_Game.Service.DataBaseService;
 
 
 namespace Snake_Game
@@ -58,7 +60,7 @@ namespace Snake_Game
         BarrierDrawingService barrierDraw;
         TimeSpan levelTime; 
         KeyboardState oldKeyState;
-
+        IHighScores highScores;
         Texture2D kvad;
 
 
@@ -73,7 +75,8 @@ namespace Snake_Game
         public GameStageUI()
         {
             game = new GameService();
-            meniu = new Meniu();
+            highScores = new HighScoresService();
+            meniu = new Meniu(highScores);            
             meniuTexture = new MeniuTexture();
             stageTexture = new GameStageTexture();
             snakeTexture[0] = new SnakeTexture();
@@ -121,7 +124,7 @@ namespace Snake_Game
             //gamestate = GameStates.Running;
             base.Initialize();
             
-            DataBase();
+           // DataBase();
         }
 
 
@@ -143,6 +146,7 @@ namespace Snake_Game
             //Snake Game\Snake GameContent\Arial.spritefont";
             text = Content.Load<SpriteFont>("Font\\Arial");
             font = Content.Load<SpriteFont>("Font\\Fontas");
+            meniu.Font = Content.Load<SpriteFont>("Font\\HighScoresFont"); ;
             meniuSound.SoundArrowCrackle = Content.Load<SoundEffect>("Sound\\Meniu\\wood-cracking-1");
             meniuSound.Creat();
             meniu.SetSound(meniuSound);
@@ -408,6 +412,16 @@ namespace Snake_Game
             meniuTexture.HighScoresCla = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresClas");
             meniuTexture.BNext = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\next");
             meniuTexture.BNextMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\nextMarked");
+            meniuTexture.L1 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\1");
+            meniuTexture.L2 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\2");
+            meniuTexture.L3 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\3");
+            meniuTexture.L4 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\4");
+            meniuTexture.L5 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\5");
+            meniuTexture.L6 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\6");
+            meniuTexture.LEasy = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\TEasy");
+            meniuTexture.LMedium = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\TMedium");
+            meniuTexture.LHard = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\THard");
+
         }
         /// <summary>
         /// Įkraunamos pagalbos lango tekstūros.
@@ -478,8 +492,7 @@ namespace Snake_Game
                     up = true;
                     down = true;
                 }
-            }
-            if (key.IsKeyDown(Keys.Right))
+            } else if (key.IsKeyDown(Keys.Right))
             {
                 if (direction.Y != 1)
                 {
@@ -488,8 +501,7 @@ namespace Snake_Game
                     up = true;
                     down = true;
                 }
-            }
-            if (key.IsKeyDown(Keys.Up))
+            } else if (key.IsKeyDown(Keys.Up))
             {
                 if (up)
                 {
@@ -499,8 +511,7 @@ namespace Snake_Game
                     direction.X = 1;
                     direction.Y = -1;
                 }
-            }
-            if (key.IsKeyDown(Keys.Down))
+            } else if (key.IsKeyDown(Keys.Down))
             {
                 if (down)
                 {
@@ -618,7 +629,9 @@ namespace Snake_Game
             KeyboardState key = Keyboard.GetState();
             if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
                 || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
-            {                
+            {
+                //TODO:
+                //Reikia imesti kokia nors pauze, kad bent kokia sekunde nepasispaustu mygtukas
                 direction.X = -1;
                 direction.Y = 1;
                 up = true;
@@ -628,6 +641,10 @@ namespace Snake_Game
             }
         }
 
+        /// <summary>
+        /// Metodas fiksuojantis, kad žaidėjui nebeliko gyvybių. 
+        /// Gyvatės valdymo parametrai nustatomi į numatytusius
+        /// </summary>
         private void GamoOverScreen()
         {
             KeyboardState key = Keyboard.GetState();
@@ -638,10 +655,45 @@ namespace Snake_Game
                 direction.Y = 1;
                 up = true;
                 down = true;
-                gamestate = GameStates.Menu;
-                meniu.meniuState = MeniuState.Main;
-                ChangeScreenSizeToMeniu();
+                if (NewRecord())
+                {
+                    gamestate = GameStates.Menu;
+                    meniu.meniuState = MeniuState.Main;
+                    ChangeScreenSizeToMeniu();
+                    ///ToDO:
+                    ///Sukurti nauja langa kuris paprasytu ivesti vartotojo varda.
+                    PlayerStat playerHighScores = new PlayerStat()
+                    {
+                        Point = Convert.ToInt32(game.GetPoints()),
+                        Name = "Vytas",
+                        Type = game.GetGameType(),
+                        Time = levelTime
+                    };
+                    highScores.SaveHighScores(playerHighScores);
+                }
+                else
+                {
+                    gamestate = GameStates.Menu;
+                    meniu.meniuState = MeniuState.Main;
+                    ChangeScreenSizeToMeniu();
+                }
             }
+        }
+
+        /// <summary>
+        /// Metodas kuris patikrina duomenų bazėje ar yra pasiektas naujas rekordas.
+        /// </summary>
+        /// <returns>Gražinama true jei rekordas buvo pasiektas, false - jei ne</returns>
+        private bool NewRecord()
+        {
+            PlayerStat playerHighScores = new PlayerStat(){
+                Point = Convert.ToInt32(game.GetPoints()),
+                Name = "Vytas",
+                Type = game.GetGameType(),
+                Time = levelTime
+            };
+            if (highScores.NewRecord(playerHighScores)) return true;
+            return false;
         }
 
         /// <summary>
@@ -667,6 +719,7 @@ namespace Snake_Game
                     break;
             }
         }
+
 
         private void StartNewGame()
         {
@@ -756,60 +809,20 @@ namespace Snake_Game
         {
             Console.WriteLine("testuoju duombaze");
             var player = new PlayerStatisticService();
+            var gamer = new PlayerStat(){
+            Name = "Testas0",
+            Type = "cl",
+            Point = 60,
+            
+        };
+            player.AddPlayerRezult(gamer);
             IList<PlayerStat> policeOfficers = player.GetPlayers();
 
             foreach (var policeOfficer in policeOfficers)
             {
                 Console.WriteLine(policeOfficer.Name);
             }
+            player.Dispose();
         }
     }
-/*
-    /// <summary>
-        /// Attempt to set the display mode to the desired resolution.  Itterates through the display
-        /// capabilities of the default graphics adapter to determine if the graphics adapter supports the
-        /// requested resolution.  If so, the resolution is set and the function returns true.  If not,
-        /// no change is made and the function returns false.
-        /// </summary>
-        /// <param name="iWidth">Desired screen width.</param>
-        /// <param name="iHeight">Desired screen height.</param>
-        /// <param name="bFullScreen">True if you wish to go to Full Screen, false for Windowed Mode.</param>
-        private bool InitGraphicsMode(int iWidth, int iHeight, bool bFullScreen)
-        {
-            // If we aren't using a full screen mode, the height and width of the window can
-            // be set to anything equal to or smaller than the actual screen size.
-            if (bFullScreen == false)
-            {
-                if ((iWidth <= GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width)
-                    && (iHeight <= GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height))
-                {
-                    graphics.PreferredBackBufferWidth = iWidth;
-                    graphics.PreferredBackBufferHeight = iHeight;
-                    graphics.IsFullScreen = bFullScreen;
-                    graphics.ApplyChanges();
-                    return true;
-                }
-            }
-            else
-            {
-                // If we are using full screen mode, we should check to make sure that the display
-                // adapter can handle the video mode we are trying to set.  To do this, we will
-                // iterate thorugh the display modes supported by the adapter and check them against
-                // the mode we want to set.
-                foreach (DisplayMode dm in GraphicsAdapter.DefaultAdapter.SupportedDisplayModes)
-                {
-                    // Check the width and height of each mode against the passed values
-                    if ((dm.Width == iWidth) && (dm.Height == iHeight))
-                    {
-                        // The mode is supported, so set the buffer formats, apply changes and return
-                        graphics.PreferredBackBufferWidth = iWidth;
-                        graphics.PreferredBackBufferHeight = iHeight;
-                        graphics.IsFullScreen = bFullScreen;
-                        graphics.ApplyChanges();
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }*/
 }

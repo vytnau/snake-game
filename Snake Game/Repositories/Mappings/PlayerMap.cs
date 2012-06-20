@@ -9,11 +9,10 @@ namespace Snake_Game.Repositories.Mappings
         public PlayerMap()
         {
             Table("Classic");
-            Id(f => f.Id).GeneratedBy.Identity();
+            Id(f => f.Id).Column("Id").GeneratedBy.Increment();
             Map(f => f.Name);
             Map(f => f.Point);
             Map(f => f.Time);
-            Map(f => f.Level);
             Map(f => f.Type);
         }
     }

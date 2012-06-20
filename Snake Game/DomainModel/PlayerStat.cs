@@ -10,8 +10,7 @@ namespace DomainModel
     {
         public virtual string Name { set; get; }
         public virtual int Point { set; get; }
-        public virtual string Time { set; get; }
-        public virtual string Level { set; get; }
+        public virtual TimeSpan Time { set; get; }
         public virtual string Type { set; get; }
     }
 }

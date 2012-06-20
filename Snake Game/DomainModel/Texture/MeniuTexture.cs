@@ -90,6 +90,16 @@ namespace DataAccess
         public Texture2D BNextMarked { set; get; }
         public Texture2D SBack2 { set; get; }
         public Texture2D SBack2Marked { set; get; }
+        public Texture2D L1 { set; get; }
+        public Texture2D L2 { set; get; }
+        public Texture2D L3 { set; get; }
+        public Texture2D L4 { set; get; }
+        public Texture2D L5 { set; get; }
+        public Texture2D L6 { set; get; }
+        public Texture2D LEasy { set; get; }
+        public Texture2D LMedium { set; get; }
+        public Texture2D LHard { set; get; }
+
 
         /// <summary>
         /// Pagalbos lango tekstūros.

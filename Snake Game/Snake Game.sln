@@ -35,9 +35,11 @@ Global
 		SccProjectName1 = Class
 		SccLocalPath1 = ..\\..\\ver\u00201\\Snake\u0020Game\\Class
 		SccProjectUniqueName2 = Snake\u0020Game.Service\\Snake\u0020Game.Service.csproj
+		SccProjectTopLevelParentUniqueName2 = Snake\u0020Game.sln
 		SccProjectName2 = Snake\u0020Game.Service
 		SccLocalPath2 = Snake\u0020Game.Service
 		SccProjectUniqueName3 = Snake\u0020Game.ServiceContracts\\Snake\u0020Game.ServiceContracts.csproj
+		SccProjectTopLevelParentUniqueName3 = Snake\u0020Game.sln
 		SccProjectName3 = Snake\u0020Game.ServiceContracts
 		SccLocalPath3 = Snake\u0020Game.ServiceContracts
 		SccProjectUniqueName4 = Snake\u0020Game\\Snake\u0020Game\\UI.csproj
@@ -162,5 +164,7 @@ Global
 		{DF688D8E-C642-4A42-B1D5-93ECF294F09F} = {58EE4E14-391A-4680-9EF7-921285FBFF7B}
 		{A5B8CE62-9934-4F5F-B51A-60DA0369036A} = {58EE4E14-391A-4680-9EF7-921285FBFF7B}
 		{2C26111A-436B-4EA1-B851-C76B916160D0} = {58EE4E14-391A-4680-9EF7-921285FBFF7B}
+		{C8838FEE-13EE-433F-A627-B36D3DBAA494} = {E34C01EC-0448-461B-A0B7-0676FFC415A6}
+		{093A6E86-0767-4D3F-87A8-BF4305CC02B1} = {E34C01EC-0448-461B-A0B7-0676FFC415A6}
 	EndGlobalSection
 EndGlobal

@@ -8,7 +8,7 @@ namespace Snake_Game.ServiceContracts
 {
 public interface IPlayerStatisticService: IDisposable
     {
-        IList<PlayerStat> GetPlayerByName(string name);
+        IList<PlayerStat> GetPlayerByType(string type);
 
         void AddPlayerRezult(PlayerStat player);
 
