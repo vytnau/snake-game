@@ -34,6 +34,7 @@ namespace Snake_Game
             Pause,
             Hit,
             GameOver,
+            Record,
             End
         }
 
@@ -62,10 +63,12 @@ namespace Snake_Game
         KeyboardState oldKeyState;
         IHighScores highScores;
         Texture2D kvad;
+        KeyboardInput keyboard;
 
 
         bool up;
         bool down;
+        bool countPoints = true;
         int millisecondsPerFrame = 70; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private IGameService game;
@@ -98,6 +101,7 @@ namespace Snake_Game
             direction.Y = 1;
             up = true;
             down = true;
+            keyboard = new KeyboardInput();
             
             
         }
@@ -167,6 +171,7 @@ namespace Snake_Game
             infoWindTexture.LPlayerPoint = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\playerPoints");
             infoWindTexture.LPlayerTime = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\playerTime");
             infoWindTexture.LGameOver = Content.Load<Texture2D>("Texture\\Game\\InfoWindow\\lostAllLives");
+            infoWindTexture.InputName = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\newHighScores");
 
             infoWindTexture.BDarkLayer = Content.Load<Texture2D>("Texture\\Game\\Pauze\\bigDarkLayer");
         }
@@ -452,6 +457,7 @@ namespace Snake_Game
             if (gamestate == GameStates.Running)
             {
                 levelTime += gameTime.ElapsedGameTime;
+                CountPoints();
             }
             //KeyboardState key = Keyboard.GetState();             
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -474,10 +480,32 @@ namespace Snake_Game
                 {
                     GamoOverScreen();
                 }
+                else if (gamestate == GameStates.Record)
+                {
+                    RecordScreen();
+                }
             }
             
             // TODO: Add your update logic here                        
             base.Update(gameTime);
+        }
+
+        private void CountPoints()
+        {
+            if (ArcadeLevel.LongSnake == meniu.Arcade && levelTime.Seconds > 0)
+            {
+                int mod = levelTime.Seconds % 5;
+                if (mod == 0 && countPoints)
+                {
+                    countPoints = false;
+                    ///ToDo:
+                    ///Sutvarkyt kad taskai nebutu skaiciuojami visa laika
+                    game.CountPointByTime();
+                    game.GrowSnake();
+                }
+                else if (mod != 0) countPoints = true; 
+
+            }
         }
 
         private void GamePlay()
@@ -604,13 +632,14 @@ namespace Snake_Game
                 case ArcadeLevel.Null:
                     game.SetLevel(0);
                     break;
-                case ArcadeLevel.FastSnake:
-                    game.SetLevel(1);
-                    millisecondsPerFrame = 70;
-                    break;
+                    //survival mode
                 case ArcadeLevel.LongSnake:
+                    game.SetLevel(1);
+                    millisecondsPerFrame = 115;
+                    break;
+                case ArcadeLevel.FastSnake:
                     game.SetLevel(2);
-                    millisecondsPerFrame = 70;
+                    millisecondsPerFrame = 220;
                     break;
                 case ArcadeLevel.SnakeandBugs:
                     game.SetLevel(3);
@@ -657,19 +686,10 @@ namespace Snake_Game
                 down = true;
                 if (NewRecord())
                 {
-                    gamestate = GameStates.Menu;
+                    gamestate = GameStates.Record;
+                    millisecondsPerFrame = 50;
+                    keyboard.Clean();
                     meniu.meniuState = MeniuState.Main;
-                    ChangeScreenSizeToMeniu();
-                    ///ToDO:
-                    ///Sukurti nauja langa kuris paprasytu ivesti vartotojo varda.
-                    PlayerStat playerHighScores = new PlayerStat()
-                    {
-                        Point = Convert.ToInt32(game.GetPoints()),
-                        Name = "Vytas",
-                        Type = game.GetGameType(),
-                        Time = levelTime
-                    };
-                    highScores.SaveHighScores(playerHighScores);
                 }
                 else
                 {
@@ -677,6 +697,31 @@ namespace Snake_Game
                     meniu.meniuState = MeniuState.Main;
                     ChangeScreenSizeToMeniu();
                 }
+            }
+        }
+
+        private void RecordScreen()
+        {
+            KeyboardState key = Keyboard.GetState();
+            keyboard.PressKey(key);                        
+                    
+                    ///ToDO:
+                    ///Sukurti nauja langa kuris paprasytu ivesti vartotojo varda.
+                   
+            
+            if (key.IsKeyDown(Keys.Enter))
+            {
+                gamestate = GameStates.Menu;
+                PlayerStat playerHighScores = new PlayerStat()
+                {
+                    Point = Convert.ToInt32(game.GetPoints()),
+                    Name = keyboard.GetText(),
+                    Type = game.GetGameType(),
+                    Time = levelTime
+                };
+                highScores.SaveHighScores(playerHighScores);
+                ChangeScreenSizeToMeniu();
+                millisecondsPerFrame = 100;
             }
         }
 
@@ -688,7 +733,7 @@ namespace Snake_Game
         {
             PlayerStat playerHighScores = new PlayerStat(){
                 Point = Convert.ToInt32(game.GetPoints()),
-                Name = "Vytas",
+                Name = "Gyvatėlė",
                 Type = game.GetGameType(),
                 Time = levelTime
             };
@@ -746,8 +791,9 @@ namespace Snake_Game
         {
             if (gamestate == GameStates.Running)
             {
-                GraphicsDevice.Clear(Color.CornflowerBlue);
                 int[,] matrix = game.GetGameStage();
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+                //int[,] matrix = game.GetGameStage();
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
                 radarDraw.DrawRadar(game.RadarData());
                 snakeDraw.DrawSnake(matrix);
@@ -765,9 +811,11 @@ namespace Snake_Game
             }
             else if (gamestate == GameStates.Hit)
             {
+                int[,] matrix = game.GetGameStage();
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                snakeDraw.DrawSnake(game.GetGameStage());
-                foodDraw.Draw(game.GetGameStage());
+                barrierDraw.DrawBarrier(matrix);
+                snakeDraw.DrawSnake(matrix);
+                foodDraw.Draw(matrix);
                 radarDraw.DrawRadar(game.RadarData());
                 if (game.GetLives() > 0)
                 {
@@ -781,11 +829,23 @@ namespace Snake_Game
             }
             else if (gamestate == GameStates.GameOver)
             {
+                int[,] matrix = game.GetGameStage();
                 stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                snakeDraw.DrawSnake(game.GetGameStage());
-                foodDraw.Draw(game.GetGameStage());
+                snakeDraw.DrawSnake(matrix);
+                barrierDraw.DrawBarrier(matrix);
+                foodDraw.Draw(matrix);
                 radarDraw.DrawRadar(game.RadarData());
                 infoDraw.DrawGameOver(game.GetPoints(), levelTime);
+            }
+            else if (gamestate == GameStates.Record)
+            {
+                int[,] matrix = game.GetGameStage();
+                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
+                snakeDraw.DrawSnake(matrix);
+                barrierDraw.DrawBarrier(matrix);
+                foodDraw.Draw(matrix);
+                radarDraw.DrawRadar(game.RadarData());
+                infoDraw.DrawNewRecordWindow(keyboard.GetText());
             }
             base.Draw(gameTime);
         }

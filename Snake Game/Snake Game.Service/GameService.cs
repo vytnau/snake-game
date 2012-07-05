@@ -55,23 +55,29 @@ namespace Snake_Game.Service
         private bool MoveX(int x)
         {
             LinkedList<Vector3> coord = snake.GetSnakeCoordinates();
+            LinkedList<Vector3> barr = barrier.GetList();
             Vector3 head = snake.GetSnakeHead();
             if (x >= 0 &&  x < STAGE_WIDTH)
             {
-                return EmtyCoord(coord, new Vector2(x, head.Y));
+                if (!EmtyCoord(coord, new Vector2(x, head.Y))) return false;
+                if (!EmtyCoord(barr, new Vector2(x, head.Y))) return false;
             }
-            return false;
+            else return false;
+            return true;
         }
 
         private bool MoveY(int y)
         {
             LinkedList<Vector3> coord = snake.GetSnakeCoordinates();
+            LinkedList<Vector3> barr = barrier.GetList();
             Vector3 head = snake.GetSnakeHead();
             if (y >= 0 && y < STAGE_HEIGTH)
             {
-                return EmtyCoord(coord, new Vector2(head.X, y));
+                if (!EmtyCoord(coord, new Vector2(head.X, y))) return false;
+                if (!EmtyCoord(barr, new Vector2(head.X, y))) return false;
             }
-            return false;
+            else return false;
+            return true;
         }
 
         /// ToDO 
@@ -289,7 +295,8 @@ namespace Snake_Game.Service
         public void NewGame()
         {
             RemoveSnakeCoord(snake.GetSnakeCoordinates());
-            snake.SetNewSnake();
+            ConfigurateGame();
+            //snake.SetNewSnake();
             snakeHit = false;
         }
 
@@ -365,7 +372,7 @@ namespace Snake_Game.Service
             switch (level)
             {
                 case 0:
-                    value = "cl";
+                    value = Difficult();
                     break;
                 case 1:
                     value = "ar1";
@@ -382,8 +389,37 @@ namespace Snake_Game.Service
                 case 5:
                     value = "ar5";
                     break;
+                case 6:
+                    value = "ar6";
+                    break;
             }
             return value;
+        }
+
+        private string Difficult()
+        {
+            switch (POINT)
+            {
+                case 25: 
+                    return "cl2";
+                case 10:
+                    return "cl1";
+                case 5:
+                    return "cl0";
+                default:
+                    return "ee";
+            }
+        }
+
+
+        public void CountPointByTime()
+        {
+            player.AddPoint(10);
+        }
+
+        public void GrowSnake()
+        {
+            snake.GrowSnake(snake.GetSnakeTail());
         }
     }
 }

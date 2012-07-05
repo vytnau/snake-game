@@ -14,6 +14,7 @@ using NHibernate.Cache;
 using NHibernate.Tool.hbm2ddl;
 using FluentNHibernate.Cfg.Db;
 using FluentNHibernate.Cfg;
+using NHibernate.Dialect;
 
 
 namespace Repositories.DataContext
@@ -21,9 +22,9 @@ namespace Repositories.DataContext
     public class SessionFactoryProvider
     {
         private readonly static object lockObject = new object();
-        private volatile static ISessionFactory sessionFactory;
-        public static string ConnectionString = "Data Source=E:\\Failai\\4 semestras\\Programingo praktika\\Snake game\\ver 2\\Snake Game\\DomainModel\\DataBase\\HighScores.sdf";
-
+        private volatile static ISessionFactory sessionFactory;//E:\\Failai\\4 semestras\\Programingo praktika\\Snake game\\ver 2\\Snake Game\\DomainModel\\DataBase\\HighScores.sdf"
+        public static string ConnectionString = "Data Source=DataBase\\HighScores.sdf";
+        //problema su conection String
 
 
       
@@ -56,7 +57,8 @@ namespace Repositories.DataContext
 
         private static ISessionFactory CreateSessionFactory()
         {
-            MsSqlCeConfiguration sqlconfig = MsSqlCeConfiguration.Standard.ConnectionString(ConnectionString);
+            MsSqlCeConfiguration sqlconfig = MsSqlCeConfiguration.Standard.
+                Dialect<MsSql2000Dialect>().ConnectionString(ConnectionString);
             FluentConfiguration fc = Fluently.Configure();
             fc = fc.Database(sqlconfig);
             ISessionFactory sessionFactory = fc.Cache(c => c

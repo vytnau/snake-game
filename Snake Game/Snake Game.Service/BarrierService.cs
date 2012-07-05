@@ -47,10 +47,14 @@ namespace Snake_Game.Service
             list = new LinkedList<Vector3>();
             list.AddLast(new Vector3(17,0, 20));
             list.AddLast(new Vector3(24, 1, 20));
-            list.AddLast(new Vector3(4, 4, 21));
-            list.AddLast(new Vector3(1, 11, 22));
+            list.AddLast(new Vector3(4, 5, 21));
+            list.AddLast(new Vector3(1, 12, 22));
+            for (int j = 4; j < 10; j++)
+            {
+                list.AddLast(new Vector3(1, j, 23));
+            }
 
-            for (int j = 2; j < 9; j++)
+            for (int j = 1; j < 9; j++)
             {
                 list.AddLast(new Vector3(j, 1, 23));
             }
@@ -62,10 +66,51 @@ namespace Snake_Game.Service
             list.AddLast(new Vector3(5, 6, 20));
             list.AddLast(new Vector3(6, 5, 20));
             list.AddLast(new Vector3(6, 6, 22));
-            for (int i = 4; i < 8; i++)
+            for (int i = 4; i < 7; i++)
             {
-                list.AddLast(new Vector3(i, 9, 21));
+                list.AddLast(new Vector3(i, 8, 21));
             }
+            for (int i = 3; i < 10; i++)
+            {
+                list.AddLast(new Vector3(8, i, 20));
+            }
+            for (int i = 2; i < 10; i++)
+            {
+                list.AddLast(new Vector3(10, i, 20));
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                list.AddLast(new Vector3(12, i, 21));
+            }
+            for (int i = 15; i < 21; i++)
+            {
+                list.AddLast(new Vector3(i, 4, 21));
+            }
+            for (int i = 17; i < 21; i++)
+            {
+                list.AddLast(new Vector3(i, 5, 23));
+            }
+            for (int i = 14; i < 21; i++)
+            {
+                list.AddLast(new Vector3(i, 8, 21));
+            }
+            for (int i = 16; i < 20; i++)
+            {
+                list.AddLast(new Vector3(i, 10, 20));
+            }
+            for (int i = 4; i < 21; i++)
+            {
+                list.AddLast(new Vector3(i, 12, 23));
+            }
+            list.AddLast(new Vector3(14, 8, 20));
+            list.AddLast(new Vector3(14, 9, 20));
+            for (int i = 8; i < 11; i++)
+            {
+                list.AddLast(new Vector3(22, i, 20));
+            }
+            //x9
+            //y3
+            //y10
 
 
         }

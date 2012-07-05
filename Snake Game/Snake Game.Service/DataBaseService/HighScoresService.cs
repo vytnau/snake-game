@@ -14,6 +14,7 @@ namespace Snake_Game.Service.DataBaseService
         public bool NewRecord(DomainModel.PlayerStat player)
         {
             IList<PlayerStat> players = database.GetPlayerByType(player.Type);
+            if (players.Count < 10) return true;
             foreach(var a in players){
                 if (player.Point > a.Point)
                 {
@@ -34,6 +35,11 @@ namespace Snake_Game.Service.DataBaseService
             ///parasyt si saugojimo metoda kad iterpinetu ne daugiau nei man reikia, tarkim
             ///top 10 ir i ji kaip nors irasytu
             //IList<PlayerStat> players = database.GetPlayerByType(player.Type);
+            IList<PlayerStat> list = database.GetPlayerByType(player.Type);
+            if (list.Count == 10){
+                IEnumerable<PlayerStat> sortedEnum = list.OrderByDescending(f => f.Point);
+                database.RemovePlayerRezultByID(sortedEnum.ElementAt(9).Id);      
+            }
             database.AddPlayerRezult(player);
         }
 
