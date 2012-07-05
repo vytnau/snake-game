@@ -33,17 +33,12 @@ namespace Snake_Game.Service
             playerRepostiroy.Save(player);
         }
 
-        public void RemovePlayerRezultByName(string name)
+        public void RemovePlayerRezultByID(int id)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                throw new ArgumentException("Argument lastName must have value.");
-            }
-
             IQueryable<PlayerStat> query = playerRepostiroy.AllQuery();
-            query = query.Where(x => x.Name == name);
+            query = query.Where(x => x.Id == id);
 
-            PlayerStat playerToRemove = query.FirstOrDefault();
+            PlayerStat playerToRemove = query.First();
 
             if (playerToRemove != null)
             {

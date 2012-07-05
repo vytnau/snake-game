@@ -44,5 +44,9 @@ namespace Snake_Game.ServiceContracts
 
         String GetGameType();
 
+        void CountPointByTime();
+
+        void GrowSnake();
+
     }
 }

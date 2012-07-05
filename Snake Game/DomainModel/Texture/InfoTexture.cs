@@ -15,5 +15,6 @@ namespace DataAccess
         public Texture2D LPlayerPoint { set; get; }
         public Texture2D LGameOver { set; get; }
         public Texture2D LPlayerTime { set; get; }
+        public Texture2D InputName { set; get; }
     }
 }

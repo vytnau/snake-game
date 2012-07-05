@@ -12,7 +12,7 @@ public interface IPlayerStatisticService: IDisposable
 
         void AddPlayerRezult(PlayerStat player);
 
-        void RemovePlayerRezultByName(string name);
+        void RemovePlayerRezultByID(int id);
 
 
         IList<PlayerStat> GetPlayers();
