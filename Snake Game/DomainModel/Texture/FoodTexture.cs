@@ -10,5 +10,9 @@ namespace DataAccess
     {
         public Texture2D Apple { set; get; }
         public Texture2D Mushroom { set; get; }
+        public Texture2D BugU { set; get; }
+        public Texture2D BugD { set; get; }
+        public Texture2D BugL { set; get; }
+        public Texture2D BugR { set; get; }
     }
 }

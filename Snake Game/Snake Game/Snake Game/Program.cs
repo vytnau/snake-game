@@ -10,15 +10,27 @@ namespace Snake_Game
         /// </summary>
         static void Main(string[] args)
         {
-            using (GameStageUI game = new GameStageUI())
-            //using (Meniu game = new Meniu())
-            {
-               
+           // try
+          //  {
+                using (GameStageUI game = new GameStageUI())
+                //using (Meniu game = new Meniu())
+                {
+
                     // The old contents of Main go here
                     //game.Run();
-                game.Run();
-                
-            }
+                    game.Run();
+                }
+         //   }
+       //     catch (Exception e)
+       //     {
+       /*         string lines = e.Message;
+
+                // Write the string to a file.
+                System.IO.StreamWriter file = new System.IO.StreamWriter("log.txt");
+                file.WriteLine(lines);
+
+                file.Close();*/
+         //   }
         }
     }
 #endif

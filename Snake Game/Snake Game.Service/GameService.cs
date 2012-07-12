@@ -4,24 +4,30 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Snake_Game.ServiceContracts;
+using DomainModel.Sound;
+using Snake_Game.ServiceContracts.SoundsInterface;
+using Snake_Game.Service.SoundsService;
 namespace Snake_Game.Service
 {
     public class GameService : IGameService
     {
         private readonly int STAGE_HEIGTH = 13;
         private readonly int STAGE_WIDTH = 25;
+        private const int BUG_POINT = 1000;
         public int POINT {set; get;}
         private readonly IGameStage stage;
         private readonly ISnakeService snake;
         private readonly IGameComponent food;
         private readonly IPlayerService player;
         private readonly BarrierService barrier;
-        private readonly IBugService bug;
+        private IBugService bug;
+        private readonly ISnakeSoundsService snakeSound;
+        private readonly IGameBackgroundSoundsService backgroundSound;
         private bool snakeHit = false;
         private int level;
 
         //private bool orent;
-        public GameService()
+        public GameService(SnakeSounds sound)
         {
             POINT = 15;
             stage = new GameStageService(STAGE_WIDTH, STAGE_HEIGTH);
@@ -30,9 +36,8 @@ namespace Snake_Game.Service
             food = new FoodService();
             player = new PlayerService();
             barrier = new BarrierService();
-
-            //food.AddItem(new Vector3(10, 10, 1));
-            //orent = true;
+            snakeSound = new SnakeSoundsService(sound.SnakeSound);
+            backgroundSound = new GameBackgroundSoundsService(sound.BackgroundSound);
         }
 
         public int[,] GetGameStage()
@@ -90,7 +95,9 @@ namespace Snake_Game.Service
             Vector3 head = snake.GetSnakeHead();
             Vector3 tail = snake.GetSnakeTail();
             //RemoveBug(bug.GetCoord());
-
+            RemoveBug(bug.GetCoord());
+            
+            
             if (x == 1) //x as fiksuotas
             {
                 if (y == 1)
@@ -100,11 +107,12 @@ namespace Snake_Game.Service
                         head.X += 1;
                         head.Z = 1;
                         snake.Move(head);
-                        //bug.SetDirection(head);
+                        
                     }
                     else
                     {
                         //gyvate atsimuse
+                        snakeSound.PlaySnakeHit();
                         SnakeHit();
                     }
                 }
@@ -115,11 +123,11 @@ namespace Snake_Game.Service
                         head.Y -= 1;
                         head.Z = 2;
                         snake.Move(head);
-                        //bug.SetDirection(head);
                     }
                     else
                     {
                         //gyvate atsimuse
+                        snakeSound.PlaySnakeHit();
                         SnakeHit();
                     }
                 }
@@ -133,11 +141,11 @@ namespace Snake_Game.Service
                         head.Z = -1;
                         head.X -= 1;
                         snake.Move(head);
-                        //bug.SetDirection(head);
                     }
                     else
                     {
                         //gyvate atsimuse
+                        snakeSound.PlaySnakeHit();
                         SnakeHit();
                     }
                 }
@@ -148,11 +156,11 @@ namespace Snake_Game.Service
                         head.Z = -2;
                         head.Y += 1;
                         snake.Move(head);
-                       // bug.SetDirection(head);
                     }
                     else
                     {
                         //gyvate atsimuse
+                        snakeSound.PlaySnakeHit();
                         SnakeHit();
                     }
                 }
@@ -163,10 +171,19 @@ namespace Snake_Game.Service
             }
             else
             {
+                snakeSound.PlayeSnakeEat();
                 snake.GrowSnake(tail);
             }
+           /* if (level == 3)
+                EatBug(head);*/
+            //bug.SetDirection(head);
             StageUpdate();
-
+            bug.SetDirection(snake.GetSnakeHead(), stage.GetStageCoord());
+            if (level == 3)
+            {
+                EatBug(head);
+                FillBugCoord();
+            }
         }
 
         /// <summary>
@@ -176,8 +193,9 @@ namespace Snake_Game.Service
         {
             snakeHit = true;
             player.DecreseLive();
-            /*RemoveSnakeCoord(snake.GetSnakeCoordinates());
-            snake.SetNewSnake();*/
+            backgroundSound.StopPlaySounds();
+            /*if (player.GetLive() == 0)
+                backgroundSound.StopPlaySounds();*/
         }
 
         private bool EatFood(Vector3 snakeHead)
@@ -191,6 +209,19 @@ namespace Snake_Game.Service
                 return true;
             }
             return false;
+        }
+
+        private void EatBug(Vector3 snakeHead)
+        {
+            Vector2 bugCoord = bug.BugCoord();
+            if (bugCoord.X == snakeHead.X && bugCoord.Y == snakeHead.Y)
+            {
+                snakeSound.PlayeSnakeEat();
+                snake.GrowSnake(snake.GetSnakeTail());
+                bug = new BugService(STAGE_WIDTH, STAGE_HEIGTH);
+                player.AddPoint(BUG_POINT);
+                
+            }
         }
 
         private void CreateFood()
@@ -224,10 +255,10 @@ namespace Snake_Game.Service
             FillSnakeCoord(snake.GetSnakeCoordinates());
             FillFoodCoord(food.GetList());
             FillBarrierCoord(barrier.GetList());
-           // FillBugCoord();
+            
         }
 
-        private void RemoveBug(Vector2 bugCoor)
+        private void RemoveBug(Vector3 bugCoor)
         {
             stage.RemoveBugCoord(bug.GetCoord());
         }
@@ -341,30 +372,78 @@ namespace Snake_Game.Service
                     SurvivalGame();
                     break;
                 case 2:
-                    SurvivalGame();
+                    SnakeInFog();
                     break;
                 case 3:
+                    SnakeAndBugs();
                     break;
                 case 4:
+                    FastSnake();
                     break;
                 case 5:
+                    SnakeInBarrier();
+                    break;
+                case 6:
+                    SnakeInBarrier1();
                     break;
             }
         }
 
         private void ClasicGame()
         {
-            snake.SetNewSnakeClassic();           
-            food.AddItem(new Vector3(10, 10, 1));
+            backgroundSound.PlayBirdsSound();
+            backgroundSound.PlayMusic();
+            snake.SetNewSnakeClassic();
+            if(food.Size() == 0)
+                food.AddItem(new Vector3(10, 10, 1));
         }
 
         private void SurvivalGame()
         {
-            snake.SetNewSnakeLongSnake();
-            barrier.SurvivalMode();
-            
+            snake.SetNewSnakeLongSnake(player.GetPoints());
+            barrier.SurvivalMode();            
         }
 
+        private void SnakeInFog()
+        {
+            backgroundSound.NightSound();
+            barrier.SnakeInNight();
+            snake.SetNewSnakeInNight();
+            if (food.Size() == 0)
+                food.AddItem(new Vector3(9, 3, 1));
+        }
+
+        private void SnakeAndBugs()
+        {
+            barrier.SnakeAndBugs();
+            snake.SetNewSnakeAndBugs();
+            
+            if (food.Size() == 0)
+                food.AddItem(new Vector3(9, 3, 1));
+        }
+
+        private void FastSnake()
+        {
+            snake.SetNewSnakeClassic();
+            if (food.Size() == 0)
+                food.AddItem(new Vector3(9, 3, 1));
+        }
+
+        private void SnakeInBarrier()
+        {
+            snake.SetNewSnakeInBarriers();
+            barrier.SnakeInBarrier();
+            if (food.Size() == 0)
+                food.AddItem(new Vector3(8, 6, 1));
+        }
+
+        private void SnakeInBarrier1()
+        {
+            snake.SetNewSnakeInBarriers1();
+            barrier.SnakeInBarrier1();
+            if (food.Size() == 0)
+                food.AddItem(new Vector3(2, 6, 2));
+        }
 
         public string GetGameType()
         {
@@ -420,6 +499,54 @@ namespace Snake_Game.Service
         public void GrowSnake()
         {
             snake.GrowSnake(snake.GetSnakeTail());
+        }
+
+
+        public LinkedList<Vector2> GetSnakeHead()
+        {
+            LinkedList<Vector2> corners = new LinkedList<Vector2>();
+            Vector3 head = snake.GetSnakeHead(); 
+            Vector2 leftUpCorner;
+            Vector2 rightDownCorner;
+            switch ((int)head.Z)
+            {
+                case -2:
+                    leftUpCorner = new Vector2(head.X - 3, head.Y - 1);
+                    rightDownCorner = new Vector2(head.X + 3, head.Y + 6);
+                    //zemyn
+                    break;
+                case -1:
+                    leftUpCorner = new Vector2(head.X - 6, head.Y - 3);
+                    rightDownCorner = new Vector2(head.X + 3, head.Y + 3);
+                    //kairen
+                    break;
+                case 1:
+                    leftUpCorner = new Vector2(head.X - 1, head.Y - 3);
+                    rightDownCorner = new Vector2(head.X + 6, head.Y + 3);
+                    //desinen
+                    break;
+                case 2:
+                    leftUpCorner = new Vector2(head.X - 3, head.Y - 5);
+                    rightDownCorner = new Vector2(head.X + 3, head.Y + 4);
+                    //aukstyn
+                    break;
+                default:
+                    leftUpCorner.X = 0;
+                    leftUpCorner.Y = 0;
+                    rightDownCorner.X = 25;
+                    rightDownCorner.Y = 13;
+                    break;
+
+            }
+            if ((int)leftUpCorner.X > 25) leftUpCorner.X = 25;
+            if ((int)leftUpCorner.Y > 13) leftUpCorner.Y = 13;
+            if ((int)rightDownCorner.X < 0) rightDownCorner.X = 0;
+            if ((int)rightDownCorner.X > 25) rightDownCorner.X = 25;
+            if ((int)rightDownCorner.Y < 0) rightDownCorner.Y = 0;
+            if ((int)rightDownCorner.Y > 13) rightDownCorner.Y = 13;
+            corners.AddFirst(rightDownCorner);
+            corners.AddFirst(leftUpCorner);
+            return corners;
         }
     }
 }

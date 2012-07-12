@@ -45,9 +45,9 @@ namespace Snake_Game.ServiceContracts
         /// <param name="y">y</param>
         void RemoveSnakeCoordinate(Vector3 coord);
 
-        void SetBugCoord(Vector2 bugCoord);
+        void SetBugCoord(Vector3 bugCoord);
 
-        void RemoveBugCoord(Vector2 bugCoord);
+        void RemoveBugCoord(Vector3 bugCoord);
 
         void SetBarrierCoord(Vector3 coord);
     }

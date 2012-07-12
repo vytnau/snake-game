@@ -13,6 +13,7 @@ using Snake_Game.ServiceContracts;
 using Snake_Game.Service;
 using DataAccess;
 using DataAccess.Texture;
+//using DataAccess.Sound;
 using Snake_Game.DrawingService;
 using DomainModel;
 using DomainModel.Sound;
@@ -38,7 +39,7 @@ namespace Snake_Game
             End
         }
 
-
+        
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -64,11 +65,15 @@ namespace Snake_Game
         IHighScores highScores;
         Texture2D kvad;
         KeyboardInput keyboard;
-
+        SnakeSound snakeSound = new SnakeSound();
+        GameSound gameSound = new GameSound();
+        SnakeSounds snakeAllSounds = new SnakeSounds();
 
         bool up;
         bool down;
+        bool keyCanPress = false;
         bool countPoints = true;
+        bool speedChange = true;
         int millisecondsPerFrame = 70; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private IGameService game;
@@ -77,7 +82,9 @@ namespace Snake_Game
 
         public GameStageUI()
         {
-            game = new GameService();
+            snakeAllSounds.BackgroundSound = gameSound;
+            snakeAllSounds.SnakeSound = snakeSound;
+            game = new GameService(snakeAllSounds);
             highScores = new HighScoresService();
             meniu = new Meniu(highScores);            
             meniuTexture = new MeniuTexture();
@@ -89,8 +96,8 @@ namespace Snake_Game
             infoWindTexture = new InfoTexture();
             radarTexture = new RadarTexture();
             barrierTexture = new BarrierTexture();
-            graphics = new GraphicsDeviceManager(this);           
-            stageDraw = new StageDrawingService();
+            graphics = new GraphicsDeviceManager(this);
+            stageDraw = new StageDrawingService(stageTexture);
             snakeDraw = new SnakeDrawingService(0, snakeTexture);
             foodDraw = new FoodDrawingService(foodTexture);
             infoDraw = new InfoDrawService(infoWindTexture);
@@ -139,29 +146,73 @@ namespace Snake_Game
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            snakeDraw.Batch = spriteBatch;
-            foodDraw.Batch = spriteBatch;
-            infoDraw.Batch = spriteBatch;
-            radarDraw.Batch = spriteBatch;
-            barrierDraw.Batch = spriteBatch;
-            Content.RootDirectory = "Content";//Content
-            //Snake Game\Snake GameContent\Arial.spritefont";
-            text = Content.Load<SpriteFont>("Font\\Arial");
-            font = Content.Load<SpriteFont>("Font\\Fontas");
-            meniu.Font = Content.Load<SpriteFont>("Font\\HighScoresFont"); ;
-            meniuSound.SoundArrowCrackle = Content.Load<SoundEffect>("Sound\\Meniu\\wood-cracking-1");
-            meniuSound.Creat();
-            meniu.SetSound(meniuSound);
-            stageDraw.Font = font;
-            infoDraw.Font = Content.Load<SpriteFont>("Font\\bigerFont");//font;
-            LoadMeniuContent();
-            LoadGameStageContent();
-            LoadInfoWindowContent();
+            try
+            {
+                // Create a new SpriteBatch, which can be used to draw textures.
+                spriteBatch = new SpriteBatch(GraphicsDevice);
+                snakeDraw.Batch = spriteBatch;
+                foodDraw.Batch = spriteBatch;
+                infoDraw.Batch = spriteBatch;
+                radarDraw.Batch = spriteBatch;
+                barrierDraw.Batch = spriteBatch;
+                stageDraw.Batch = spriteBatch;
+                stageDraw.GraphicsDevice = GraphicsDevice;
+                Content.RootDirectory = "Content";//Content
+                //Snake Game\Snake GameContent\Arial.spritefont";
+                text = Content.Load<SpriteFont>("Font\\Arial");
+                font = Content.Load<SpriteFont>("Font\\Fontas");
+                meniu.Font = Content.Load<SpriteFont>("Font\\HighScoresFont"); ;
+                meniuSound.SoundArrowCrackle = Content.Load<SoundEffect>("Sound\\Meniu\\wood-cracking-1");
+                meniuSound.Creat();
+                meniu.SetSound(meniuSound);
+                stageDraw.Font = font;
+                infoDraw.Font = Content.Load<SpriteFont>("Font\\bigerFont");//font;
+                LoadMeniuContent();
+                LoadGameStageContent();
+                LoadInfoWindowContent();
+                LoadSounds();
 
-            kvad = Content.Load<Texture2D>("Texture\\Game\\Snake\\kvadratas");
+                kvad = Content.Load<Texture2D>("Texture\\Game\\Snake\\kvadratas");
+            }
+            catch (Exception e)
+            {
+                GotException(e);
+            }
             // TODO: use this.Content to load your game content here
+        }
+
+        private void GotException(Exception e)
+        {
+            ///ToDo:
+            ///padaryt kad darasytu i log faila.
+            // Compose a string that consists of three lines.
+            string lines = e.Message;
+
+            // Write the string to a file.
+            System.IO.StreamWriter file = new System.IO.StreamWriter("log.txt");
+            file.WriteLine(lines);
+
+            file.Close();
+        }
+
+        private void LoadSounds()
+        {
+            LoadSnakeSounds();
+            LoadGameBackgroundSounds();
+        }
+
+        private void LoadSnakeSounds()
+        {
+            snakeSound.Eat = Content.Load<SoundEffect>("Sound\\Game\\Snake\\eat");
+            snakeSound.Hit = Content.Load<SoundEffect>("Sound\\Game\\Snake\\hitToSnake");
+        }
+
+        private void LoadGameBackgroundSounds()
+        {
+            gameSound.BirdsSound = Content.Load<SoundEffect>("Sound\\Game\\Background\\birdsSounds");
+            gameSound.Music = Content.Load<SoundEffect>("Sound\\Game\\Background\\Accordion edit");
+            gameSound.OwlSound = Content.Load<SoundEffect>("Sound\\Game\\Background\\owl");
+            gameSound.Wind = Content.Load<SoundEffect>("Sound\\Game\\Background\\wind");
         }
 
         private void LoadInfoWindowContent(){
@@ -192,6 +243,10 @@ namespace Snake_Game
         {
             foodTexture.Apple = Content.Load<Texture2D>("Texture\\Game\\Food\\apple");
             foodTexture.Mushroom = Content.Load<Texture2D>("Texture\\Game\\Food\\mushroom");
+            foodTexture.BugU = Content.Load<Texture2D>("Texture\\Game\\Food\\bug1U");
+            foodTexture.BugD = Content.Load<Texture2D>("Texture\\Game\\Food\\bug1D");
+            foodTexture.BugL = Content.Load<Texture2D>("Texture\\Game\\Food\\bug1L");
+            foodTexture.BugR = Content.Load<Texture2D>("Texture\\Game\\Food\\bug1R");
         }
 
 
@@ -277,6 +332,10 @@ namespace Snake_Game
             stageTexture.TTIme = Content.Load<Texture2D>("Texture\\Game\\Background\\time");
             stageTexture.Wall1 = Content.Load<Texture2D>("Texture\\Game\\Background\\bushWall");
             stageTexture.Wall2 = Content.Load<Texture2D>("Texture\\Game\\Background\\logWall");
+            stageTexture.NightBackground = Content.Load<Texture2D>("Texture\\Game\\Night\\night");//night backgroundFog
+            stageTexture.NightSquare = Content.Load<Texture2D>("Texture\\Game\\Night\\nightSquare");
+            stageTexture.LightEffect = Content.Load<Effect>("Texture\\Game\\Effects\\lighting");
+            stageTexture.PanelLayer = Content.Load<Texture2D>("Texture\\Game\\Night\\panelLayer");
         }
 
         private void LoadRadarContent()
@@ -288,13 +347,13 @@ namespace Snake_Game
 
         private void LoadBarrierContent()
         {
+
             barrierTexture.Bush1 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\bush1");
             barrierTexture.Bush2 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\bush2");
             barrierTexture.Log1 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\log");
             barrierTexture.Log2 = Content.Load<Texture2D>("Texture\\Game\\Barriers\\logUp");
             barrierTexture.Rock = Content.Load<Texture2D>("Texture\\Game\\Barriers\\rock");
         }
-
 
         /// <summary>
         /// Iškviečiami metodai įkrauti reikalingas Meniu tekstūras.
@@ -458,13 +517,40 @@ namespace Snake_Game
             {
                 levelTime += gameTime.ElapsedGameTime;
                 CountPoints();
+                if (ArcadeLevel.FastSnake == meniu.Arcade)
+                    IncreaseSnakeSpeed();
+            }
+            if (keyCanPress)
+            {
+                if (gamestate == GameStates.Running)
+                {
+                    GamePlay();
+                }
+                else if (gamestate == GameStates.Menu)
+                {
+                    Meniu();
+                }
+                else if (gamestate == GameStates.Hit)
+                {
+                    InfoScreen();
+                }
+                else if (gamestate == GameStates.GameOver)
+                {
+                    GamoOverScreen();
+                }
+                else if (gamestate == GameStates.Record)
+                {
+                    RecordScreen();
+                }
+                keyCanPress = false;
             }
             //KeyboardState key = Keyboard.GetState();             
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (timeSinceLastUpdate >= millisecondsPerFrame)
             {
+                keyCanPress = true;
                 timeSinceLastUpdate = 0;
-                if (gamestate == GameStates.Running)
+            /*    if (gamestate == GameStates.Running)
                 {                   
                     GamePlay();                    
                 }
@@ -483,7 +569,7 @@ namespace Snake_Game
                 else if (gamestate == GameStates.Record)
                 {
                     RecordScreen();
-                }
+                }*/
             }
             
             // TODO: Add your update logic here                        
@@ -504,7 +590,28 @@ namespace Snake_Game
                     game.GrowSnake();
                 }
                 else if (mod != 0) countPoints = true; 
+            }
+        }
 
+        private void IncreaseSnakeSpeed()
+        {
+            if ((int)levelTime.TotalSeconds > 0)
+            {
+                int mod = levelTime.Seconds % 15;
+                if (mod == 0 && speedChange)
+                {
+                    if (millisecondsPerFrame > 35)
+                        if (millisecondsPerFrame > 70)
+                            millisecondsPerFrame -= 20;
+                        else if (millisecondsPerFrame > 45)
+                            millisecondsPerFrame -= 5;
+                        else
+                            millisecondsPerFrame -= 1;
+                    speedChange = false;
+                    System.Console.WriteLine(millisecondsPerFrame.ToString());
+                }
+                else if(mod != 0)
+                    speedChange = true;
             }
         }
 
@@ -533,8 +640,6 @@ namespace Snake_Game
             {
                 if (up)
                 {
-                    System.Console.WriteLine("Up");
-
                     down = false;
                     direction.X = 1;
                     direction.Y = -1;
@@ -637,18 +742,27 @@ namespace Snake_Game
                     game.SetLevel(1);
                     millisecondsPerFrame = 115;
                     break;
-                case ArcadeLevel.FastSnake:
+                case ArcadeLevel.SnakeInNight:
                     game.SetLevel(2);
-                    millisecondsPerFrame = 220;
+                    millisecondsPerFrame = 120;
                     break;
                 case ArcadeLevel.SnakeandBugs:
                     game.SetLevel(3);
+                    millisecondsPerFrame = 100;
+                    break;
+                case ArcadeLevel.FastSnake:
+                    game.SetLevel(4);
+                    millisecondsPerFrame = 150;
                     break;
                 case ArcadeLevel.SnakeInBarrier:
-                    game.SetLevel(4);
-                    break;
-                case ArcadeLevel.SnakeInFog:
+                    game.SetPoints(20);
                     game.SetLevel(5);
+                    millisecondsPerFrame = 90;
+                    break;
+                case ArcadeLevel.SnakeInBarrier1:
+                    game.SetPoints(20);
+                    game.SetLevel(6);
+                    millisecondsPerFrame = 90;
                     break;
             }
         }
@@ -768,7 +882,7 @@ namespace Snake_Game
 
         private void StartNewGame()
         {
-            game = new GameService();
+            game = new GameService(snakeAllSounds);
         }
 
         private void ChangeScreenSizeToMeniu()
@@ -783,6 +897,30 @@ namespace Snake_Game
             graphics.ApplyChanges();
         }
 
+
+        private void DrawSnakeInNight()
+        {
+            int[,] matrix = game.GetGameStage();
+            LinkedList<Vector2> head = game.GetSnakeHead();
+            stageDraw.DrawFog();
+            snakeDraw.DrawSnake(matrix);
+            foodDraw.Draw(matrix);
+            barrierDraw.DrawBarrier(matrix);
+            stageDraw.DrawStageInFogSquare(head, levelTime, game.GetPoints(), game.GetLives());
+            radarDraw.DrawRadar(game.RadarData());
+            stageDraw.DrawPlayerPanelInFog();
+        }
+
+        private void DrawNormalSnake()
+        {
+            int[,] matrix = game.GetGameStage();
+            stageDraw.DrawStage(levelTime, game.GetPoints(), game.GetLives());
+            snakeDraw.DrawSnake(matrix);
+            foodDraw.Draw(matrix);
+            barrierDraw.DrawBarrier(matrix);
+            radarDraw.DrawRadar(game.RadarData());
+        }
+
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -791,32 +929,32 @@ namespace Snake_Game
         {
             if (gamestate == GameStates.Running)
             {
-                int[,] matrix = game.GetGameStage();
                 GraphicsDevice.Clear(Color.CornflowerBlue);
-                //int[,] matrix = game.GetGameStage();
-                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                radarDraw.DrawRadar(game.RadarData());
-                snakeDraw.DrawSnake(matrix);
-                foodDraw.Draw(matrix);
-                barrierDraw.DrawBarrier(matrix);
+                if (meniu.Arcade == ArcadeLevel.SnakeInNight)
+                    DrawSnakeInNight();
+                else
+                    DrawNormalSnake();         
             }
             else if (gamestate == GameStates.Menu)
             {
                 if (meniu.meniuState == MeniuState.Pause)
                 {
-                    stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                    snakeDraw.DrawSnake(game.GetGameStage());
+                    if (meniu.Arcade == ArcadeLevel.SnakeInNight)
+                        DrawSnakeInNight();
+                    else                    
+                        DrawNormalSnake();                 
                 }
                 meniu.DrawMenu(this.spriteBatch, 700, this.font, this.meniuTexture);
             }
             else if (gamestate == GameStates.Hit)
             {
                 int[,] matrix = game.GetGameStage();
-                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                barrierDraw.DrawBarrier(matrix);
-                snakeDraw.DrawSnake(matrix);
-                foodDraw.Draw(matrix);
-                radarDraw.DrawRadar(game.RadarData());
+                if (meniu.Arcade == ArcadeLevel.SnakeInNight)
+                {
+                    DrawSnakeInNight();
+                }
+                else
+                    DrawNormalSnake();
                 if (game.GetLives() > 0)
                 {
                     infoDraw.DrawHitScreen(game.GetLives());
@@ -829,22 +967,18 @@ namespace Snake_Game
             }
             else if (gamestate == GameStates.GameOver)
             {
-                int[,] matrix = game.GetGameStage();
-                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                snakeDraw.DrawSnake(matrix);
-                barrierDraw.DrawBarrier(matrix);
-                foodDraw.Draw(matrix);
-                radarDraw.DrawRadar(game.RadarData());
+                if (meniu.Arcade == ArcadeLevel.SnakeInNight)
+                    DrawSnakeInNight();
+                else
+                    DrawNormalSnake();
                 infoDraw.DrawGameOver(game.GetPoints(), levelTime);
             }
             else if (gamestate == GameStates.Record)
             {
-                int[,] matrix = game.GetGameStage();
-                stageDraw.DrawStage(spriteBatch, stageTexture, levelTime, game.GetPoints(), game.GetLives());
-                snakeDraw.DrawSnake(matrix);
-                barrierDraw.DrawBarrier(matrix);
-                foodDraw.Draw(matrix);
-                radarDraw.DrawRadar(game.RadarData());
+                if (meniu.Arcade == ArcadeLevel.SnakeInNight)
+                    DrawSnakeInNight();
+                else
+                    DrawNormalSnake();
                 infoDraw.DrawNewRecordWindow(keyboard.GetText());
             }
             base.Draw(gameTime);

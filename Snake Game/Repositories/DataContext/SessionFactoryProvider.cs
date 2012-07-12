@@ -24,7 +24,7 @@ namespace Repositories.DataContext
         private readonly static object lockObject = new object();
         private volatile static ISessionFactory sessionFactory;//E:\\Failai\\4 semestras\\Programingo praktika\\Snake game\\ver 2\\Snake Game\\DomainModel\\DataBase\\HighScores.sdf"
         public static string ConnectionString = "Data Source=DataBase\\HighScores.sdf";
-        //problema su conection String
+
 
 
       

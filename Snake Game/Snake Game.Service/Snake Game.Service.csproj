@@ -51,9 +51,14 @@
     <Compile Include="PlayerService.cs" />
     <Compile Include="DataBaseService\PlayerStatisticService.cs" />
     <Compile Include="SnakeService.cs" />
+    <Compile Include="SoundsService\GameBackgroundSoaundsService.cs" />
+    <Compile Include="SoundsService\SnakeSoundsService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Snake Game\Snake Game\Package\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
