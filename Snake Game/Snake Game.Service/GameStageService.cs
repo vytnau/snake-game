@@ -59,13 +59,29 @@ namespace Snake_Game.Service
             stageMatrix[(int)coordCuren.X, (int)coordCuren.Y] = 6;
         }
 
-        public void SetBugCoord(Vector2 bugCoord)
+        public void SetBugCoord(Vector3 bugCoord)
         {
-            stageMatrix[(int)bugCoord.X, (int)bugCoord.Y] = 3;
+            int value = 40;
+            switch ((int)bugCoord.Z)
+            {
+                case 1: //desinen
+                    value = 40;
+                    break;
+                case -1: //kairen
+                    value = 42;
+                    break;
+                case 2: //ausktyn
+                    value = 41;
+                    break;
+                case -2: //zemyn
+                    value = 43;
+                    break;
+            }
+            stageMatrix[(int)bugCoord.X, (int)bugCoord.Y] = value;
         }
 
 
-        public void RemoveBugCoord(Vector2 bugCoord)
+        public void RemoveBugCoord(Vector3 bugCoord)
         {
             stageMatrix[(int)bugCoord.X, (int)bugCoord.Y] = 0;
         }

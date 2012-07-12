@@ -30,11 +30,11 @@ namespace Snake_Game
     {
         Null,
         LongSnake,
-        SnakeInFog,
+        SnakeInNight,
         SnakeandBugs,
         FastSnake,
-        SnakeInBarrier
-
+        SnakeInBarrier,
+        SnakeInBarrier1
     }
     /// <summary>
     /// This is the main type for your game
@@ -842,7 +842,7 @@ namespace Snake_Game
                 case 2:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
-                    Arcade = ArcadeLevel.FastSnake;
+                    Arcade = ArcadeLevel.SnakeInNight;
                     break;
                 case 3:
                     meniuState = MeniuState.Play;
@@ -852,7 +852,7 @@ namespace Snake_Game
                 case 4:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
-                    Arcade = ArcadeLevel.SnakeInFog;
+                    Arcade = ArcadeLevel.FastSnake;
                     break;
                 case 5:
                     meniuState = MeniuState.Play;
@@ -862,8 +862,7 @@ namespace Snake_Game
                 case 6:
                     meniuState = MeniuState.Play;
                     Iterator = 1;
-                    //reikia lygio cia
-                    Arcade = ArcadeLevel.Null;
+                    Arcade = ArcadeLevel.SnakeInBarrier1;
                     break;
                 case 7:
                     meniuState = MeniuState.GameType;

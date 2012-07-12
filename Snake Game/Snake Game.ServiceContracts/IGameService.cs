@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace Snake_Game.ServiceContracts
 {
@@ -47,6 +48,8 @@ namespace Snake_Game.ServiceContracts
         void CountPointByTime();
 
         void GrowSnake();
+
+        LinkedList<Vector2> GetSnakeHead();
 
     }
 }

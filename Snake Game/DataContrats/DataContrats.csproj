@@ -44,8 +44,9 @@
     <Compile Include="IPlayerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="NHibernate">
-      <HintPath>C:\Users\Vytas\Documents\Hibernate\new\Required_Bins\NHibernate.dll</HintPath>
+    <Reference Include="NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Snake Game\Snake Game\Package\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -58,6 +59,9 @@
       <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
       <Name>Snake Game.DomainModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

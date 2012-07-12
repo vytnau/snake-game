@@ -33,10 +33,9 @@ namespace Snake_Game
                     }
 
                     //vabzdys
-                    if (matrix[i, j] == 3)
-                    {
-                        // Batch.DrawString(font, "3", new Vector2(i * 10, j * 10), Color.Black);
-                    }
+                    if (value >= 40 && value < 44)
+                        DrawBug(i, j, value);
+                    
                 }
             }
             Batch.End();
@@ -46,14 +45,23 @@ namespace Snake_Game
         private void DrawFood(int i, int j, int value)
         {
             if (value == 8)
-            {
-                Batch.Draw(texture.Mushroom, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
-            }
+                Batch.Draw(texture.Mushroom, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);                
             else
-            {
                 Batch.Draw(texture.Apple, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
-            }
         }
+
+        private void DrawBug(int i, int j, int value)
+        {
+            if (value == 40)
+                Batch.Draw(texture.BugR, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+            else if (value == 41)
+                Batch.Draw(texture.BugU, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+            else if (value == 42)
+                Batch.Draw(texture.BugL, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+            else
+                Batch.Draw(texture.BugD, new Vector2(i * 30 + 30, j * 30 + 30), Color.White);
+        }
+
     }
 
 }

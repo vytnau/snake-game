@@ -16,7 +16,10 @@ namespace DataAccess
         public Texture2D TLife { set; get; }
         public Texture2D TPoints { set; get; }
         public Texture2D TTIme { set; get; }
-
-
+        public Texture2D NightBackground { set; get; }
+        public Texture2D NightSquare { set; get; }
+        public Texture2D FogGrass { set; get; }
+        public Effect LightEffect { set; get; }
+        public Texture2D PanelLayer { set; get; }
     }
 }

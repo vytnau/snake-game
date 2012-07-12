@@ -60,7 +60,7 @@ namespace Snake_Game.Service
             SetNewSnake();
         }
 
-        public void SetNewSnakeLongSnake()
+        public void SetNewSnakeLongSnake(int point)
         {
             snake = new LinkedList<Vector3>();
             //uodega
@@ -87,6 +87,52 @@ namespace Snake_Game.Service
             for (int i = 22; i > 13; i--)
             {
                 snake.AddFirst(new Vector3(i, 7, -1));
+            }
+        }
+
+
+        public void SetNewSnakeInNight()
+        {
+            snake = new LinkedList<Vector3>();
+            //zemyn
+            for (int j = 2; j < 7; j++)
+            {
+                snake.AddFirst(new Vector3(17, j, -2));
+            }
+            snake.AddFirst(new Vector3(16, 6, -1));
+        }
+
+
+        public void SetNewSnakeAndBugs()
+        {
+            snake = new LinkedList<Vector3>();
+            for (int j = 22; j > 15; j--)
+            {
+                snake.AddFirst(new Vector3(j, 6, -1));
+            }
+        }
+
+
+        public void SetNewSnakeInBarriers()
+        {
+            snake = new LinkedList<Vector3>();
+            //kairen
+            for (int j = 19; j > 15; j--)
+            {
+                snake.AddFirst(new Vector3(j, 1, -1));
+            }
+            snake.AddFirst(new Vector3(16, 2, -2));
+            snake.AddFirst(new Vector3(16, 3, -2));
+        }
+
+
+        public void SetNewSnakeInBarriers1()
+        {
+            snake = new LinkedList<Vector3>();
+            //kairen
+            for (int j = 14; j < 19; j++)
+            {
+                snake.AddLast(new Vector3(j, 6, -1));
             }
         }
     }

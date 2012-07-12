@@ -12,15 +12,17 @@ namespace Snake_Game.ServiceContracts
         /// nustatoma vabalo judejimo kryptis
         /// </summary>
         /// <param name="snakeHead"></param>
-        void SetDirection(Vector2 snakeHead);
+        void SetDirection(Vector3 snakeHead, int[,] stage);
 
         /// <summary>
         /// Grazinama vabalo koordintaes
         /// </summary>
         /// <returns>vabalo naujas koordinates</returns>
-        Vector2 GetCoord();
+        Vector3 GetCoord();
         
         void Move();
+
+        Vector2 BugCoord();
 
 
     }
