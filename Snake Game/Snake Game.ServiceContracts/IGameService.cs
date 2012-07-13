@@ -51,5 +51,6 @@ namespace Snake_Game.ServiceContracts
 
         LinkedList<Vector2> GetSnakeHead();
 
+        void StopSounds();
     }
 }

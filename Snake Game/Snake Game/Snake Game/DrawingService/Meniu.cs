@@ -328,13 +328,21 @@ namespace Snake_Game
 
             if (Iterator == 1)
             {
+                batch.Draw(texture.BPreviousMarked, new Vector2(155, 285), Color.White);
+            }
+            else
+            {
+                batch.Draw(texture.BPrevious, new Vector2(155, 285), Color.White);
+            }
+            if (Iterator == 2)
+            {
                 batch.Draw(texture.BNextMarked, new Vector2(620, 285), Color.White);
             }
             else
             {
                 batch.Draw(texture.BNext, new Vector2(620, 285), Color.White);
             }
-            if (Iterator == 2)
+            if (Iterator == 3)
             {
                 batch.Draw(texture.SBack2Marked, new Vector2(620, 380), Color.White);
             }
@@ -785,11 +793,16 @@ namespace Snake_Game
             switch (Iterator)
             {
                 case 1:
-                    ChangeHihgScores();
+                    ChangeHihgScoresBack();
                     Iterator = 1;
-                    MenuItems = 2;
+                    MenuItems = 3;
                     break;
                 case 2:
+                    ChangeHihgScores();
+                    Iterator = 1;
+                    MenuItems = 3;
+                    break;
+                case 3:
                     meniuState = MeniuState.Main;
                     Iterator = 1;
                     MenuItems = 4;
@@ -822,6 +835,31 @@ namespace Snake_Game
                 case HighScoresType.Cl1: highScore = HighScoresType.Cl2;
                     break;
                 case HighScoresType.Cl2: highScore = HighScoresType.Ar1;
+                    break;
+            }
+        }
+
+        private void ChangeHihgScoresBack()
+        {
+            switch (highScore)
+            {
+                case HighScoresType.Ar1: highScore = HighScoresType.Cl2;
+                    break;
+                case HighScoresType.Ar2: highScore = HighScoresType.Ar1;
+                    break;
+                case HighScoresType.Ar3: highScore = HighScoresType.Ar2;
+                    break;
+                case HighScoresType.Ar4: highScore = HighScoresType.Ar3;
+                    break;
+                case HighScoresType.Ar5: highScore = HighScoresType.Ar4;
+                    break;
+                case HighScoresType.Ar6: highScore = HighScoresType.Ar5;
+                    break;
+                case HighScoresType.Cl0: highScore = HighScoresType.Ar6;
+                    break;
+                case HighScoresType.Cl1: highScore = HighScoresType.Cl0;
+                    break;
+                case HighScoresType.Cl2: highScore = HighScoresType.Cl1;
                     break;
             }
         }
@@ -975,7 +1013,8 @@ namespace Snake_Game
                     break;
                 case 2:
                     meniuState = MeniuState.Highscores;
-                    MenuItems = 2;
+                    highScore = HighScoresType.Cl0;
+                    MenuItems = 3;
                     Iterator = 1;
                     break;
                 case 3:

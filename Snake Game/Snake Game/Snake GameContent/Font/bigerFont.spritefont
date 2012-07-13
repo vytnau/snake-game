@@ -28,7 +28,7 @@ with.
     <!--
     UseKerning controls the layout of the font. If this value is true, kerning information
     will be used when placing characters.
-    -->
+    --> 
     <UseKerning>true</UseKerning>
 
     <!--
