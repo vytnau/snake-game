@@ -37,8 +37,8 @@ namespace Snake_Game.Service
             }
             if (newKey.IsKeyUp(Keys.Back) && oldKey.IsKeyDown(Keys.Back))
             {
-                if (length > 0)
-                    text = text.Remove(length - 1);
+                if (length > 0)                
+                    text = text.Remove(length - 1);                  
             }
             shift = ShiftCase(newKey, oldKey);
             capsLock = CapsLockCase(newKey, oldKey);
@@ -53,6 +53,7 @@ namespace Snake_Game.Service
                 if (newKey.IsKeyUp(Keys.B) && oldKey.IsKeyDown(Keys.B))
                 {
                     text += UpCaseLetters('b', capsLock, shift);
+
                 }
                 if (newKey.IsKeyUp(Keys.C) && oldKey.IsKeyDown(Keys.C))
                 {

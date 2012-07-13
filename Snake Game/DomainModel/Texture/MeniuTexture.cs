@@ -89,6 +89,8 @@ namespace DataAccess
         public Texture2D BNext { set; get; }
         public Texture2D BNextMarked { set; get; }
         public Texture2D SBack2 { set; get; }
+        public Texture2D BPrevious { set; get; }
+        public Texture2D BPreviousMarked { set; get; }
         public Texture2D SBack2Marked { set; get; }
         public Texture2D L1 { set; get; }
         public Texture2D L2 { set; get; }

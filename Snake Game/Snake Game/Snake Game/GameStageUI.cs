@@ -74,6 +74,9 @@ namespace Snake_Game
         bool keyCanPress = false;
         bool countPoints = true;
         bool speedChange = true;
+        bool isPause = false;
+        const int PAUSE_TIME = 20;
+        int pause = 0;
         int millisecondsPerFrame = 70; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private IGameService game;
@@ -476,6 +479,8 @@ namespace Snake_Game
             meniuTexture.HighScoresCla = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\highscoresClas");
             meniuTexture.BNext = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\next");
             meniuTexture.BNextMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\nextMarked");
+            meniuTexture.BPrevious = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\previous");
+            meniuTexture.BPreviousMarked = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\previousMarked");
             meniuTexture.L1 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\1");
             meniuTexture.L2 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\2");
             meniuTexture.L3 = Content.Load<Texture2D>("Texture\\Meniu\\HighScores\\3");
@@ -543,36 +548,13 @@ namespace Snake_Game
                     RecordScreen();
                 }
                 keyCanPress = false;
-            }
-            //KeyboardState key = Keyboard.GetState();             
+            }           
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (timeSinceLastUpdate >= millisecondsPerFrame)
             {
                 keyCanPress = true;
-                timeSinceLastUpdate = 0;
-            /*    if (gamestate == GameStates.Running)
-                {                   
-                    GamePlay();                    
-                }
-                else if (gamestate == GameStates.Menu)
-                {
-                    Meniu();
-                }
-                else if (gamestate == GameStates.Hit)
-                {
-                    InfoScreen();
-                }
-                else if (gamestate == GameStates.GameOver)
-                {
-                    GamoOverScreen();
-                }
-                else if (gamestate == GameStates.Record)
-                {
-                    RecordScreen();
-                }*/
-            }
-            
-            // TODO: Add your update logic here                        
+                timeSinceLastUpdate = 0;         
+            }                   
             base.Update(gameTime);
         }
 
@@ -584,8 +566,6 @@ namespace Snake_Game
                 if (mod == 0 && countPoints)
                 {
                     countPoints = false;
-                    ///ToDo:
-                    ///Sutvarkyt kad taskai nebutu skaiciuojami visa laika
                     game.CountPointByTime();
                     game.GrowSnake();
                 }
@@ -656,6 +636,7 @@ namespace Snake_Game
             if (key.IsKeyDown(Keys.Escape) && oldKeyState.IsKeyUp(Keys.Escape))
             {
                 meniu.meniuState = MeniuState.Pause;
+                isPause = true;
                 gamestate = GameStates.Menu;
             }
             //game.SetMovment((int)direction.X, (int)direction.Y);
@@ -691,7 +672,16 @@ namespace Snake_Game
             {
                 if (meniu.meniuState == MeniuState.Pause && gamestate == GameStates.Menu)
                 {
-                    ChangeScreenSizeToMeniu();//grazinama meniu rezoliucija
+                    if (meniu.Iterator == 2)
+                    {
+                        ChangeScreenSizeToMeniu();//grazinama meniu rezoliucija
+                        game.StopSounds();
+                        isPause = false;
+                        direction.X = -1;
+                        direction.Y = 1;
+                    }
+                    else
+                        ResumeGame();
                 }
                 meniu.Enter();
             }
@@ -700,24 +690,36 @@ namespace Snake_Game
                 StartNewGame();
                 levelTime = TimeSpan.Zero; 
             }
-            if (meniu.meniuState == MeniuState.Play)
-            {
-                PrepareNewGame();
-            }
-
             if (meniu.meniuState == MeniuState.Pause)
             {
                 if (key.IsKeyDown(Keys.Escape) && oldKeyState.IsKeyUp(Keys.Escape))
+                    meniu.meniuState = MeniuState.Play;                
+            }
+
+            if (meniu.meniuState == MeniuState.Play)
+            {
+                if (!isPause)
+                    PrepareNewGame();
+                else
                 {
-                    SetDifficult(meniu.Difficult);
-                    gamestate = GameStates.Running;
+                    ResumeGame();
+                    isPause = false;
                 }
             }
+
+            
             if (meniu.meniuState == MeniuState.Quit)
             {
                 this.Exit();
             }
             oldKeyState = key;
+        }
+
+        private void ResumeGame()
+        {
+            if (meniu.Arcade.Equals(ArcadeLevel.Null))
+                SetDifficult(meniu.Difficult);
+            gamestate = GameStates.Running;
         }
 
         private void PrepareNewGame()
@@ -740,28 +742,34 @@ namespace Snake_Game
                     //survival mode
                 case ArcadeLevel.LongSnake:
                     game.SetLevel(1);
+                    snakeDraw.SnkateType = 0;
                     millisecondsPerFrame = 115;
                     break;
                 case ArcadeLevel.SnakeInNight:
                     game.SetLevel(2);
+                    snakeDraw.SnkateType = 1;
                     millisecondsPerFrame = 120;
                     break;
                 case ArcadeLevel.SnakeandBugs:
                     game.SetLevel(3);
+                    snakeDraw.SnkateType = 1;
                     millisecondsPerFrame = 100;
                     break;
                 case ArcadeLevel.FastSnake:
                     game.SetLevel(4);
+                    snakeDraw.SnkateType = 0;
                     millisecondsPerFrame = 150;
                     break;
                 case ArcadeLevel.SnakeInBarrier:
                     game.SetPoints(20);
                     game.SetLevel(5);
+                    snakeDraw.SnkateType = 2;
                     millisecondsPerFrame = 90;
                     break;
                 case ArcadeLevel.SnakeInBarrier1:
                     game.SetPoints(20);
                     game.SetLevel(6);
+                    snakeDraw.SnkateType = 2;
                     millisecondsPerFrame = 90;
                     break;
             }
@@ -769,19 +777,22 @@ namespace Snake_Game
 
         private void InfoScreen()
         {
-            KeyboardState key = Keyboard.GetState();
-            if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
-                || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
-            {
-                //TODO:
-                //Reikia imesti kokia nors pauze, kad bent kokia sekunde nepasispaustu mygtukas
-                direction.X = -1;
-                direction.Y = 1;
-                up = true;
-                down = true;
-                game.NewGame();
-                gamestate = GameStates.Running;
+            if (pause == PAUSE_TIME){                
+                KeyboardState key = Keyboard.GetState();
+                if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
+                    || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
+                {
+                    pause = 0;
+                    direction.X = -1;
+                    direction.Y = 1;
+                    up = true;
+                    down = true;
+                    game.NewGame();
+                    gamestate = GameStates.Running;
+                }
             }
+            else
+                pause++;
         }
 
         /// <summary>
@@ -790,39 +801,40 @@ namespace Snake_Game
         /// </summary>
         private void GamoOverScreen()
         {
-            KeyboardState key = Keyboard.GetState();
-            if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
-                || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
+            if (pause == PAUSE_TIME)
             {
-                direction.X = -1;
-                direction.Y = 1;
-                up = true;
-                down = true;
-                if (NewRecord())
+                KeyboardState key = Keyboard.GetState();
+                if (key.IsKeyDown(Keys.Left) || key.IsKeyDown(Keys.Right) || key.IsKeyDown(Keys.Up) || key.IsKeyDown(Keys.Down)
+                    || key.IsKeyDown(Keys.Enter) || key.IsKeyDown(Keys.Escape))
                 {
-                    gamestate = GameStates.Record;
-                    millisecondsPerFrame = 50;
-                    keyboard.Clean();
-                    meniu.meniuState = MeniuState.Main;
-                }
-                else
-                {
-                    gamestate = GameStates.Menu;
-                    meniu.meniuState = MeniuState.Main;
-                    ChangeScreenSizeToMeniu();
+                    direction.X = -1;
+                    direction.Y = 1;
+                    pause = 0;
+                    up = true;
+                    down = true;
+                    if (NewRecord())
+                    {
+                        gamestate = GameStates.Record;
+                        millisecondsPerFrame = 20;
+                        keyboard.Clean();
+                        meniu.meniuState = MeniuState.Main;
+                    }
+                    else
+                    {
+                        gamestate = GameStates.Menu;
+                        meniu.meniuState = MeniuState.Main;
+                        ChangeScreenSizeToMeniu();
+                    }
                 }
             }
+            else
+                pause++;
         }
 
         private void RecordScreen()
         {
             KeyboardState key = Keyboard.GetState();
-            keyboard.PressKey(key);                        
-                    
-                    ///ToDO:
-                    ///Sukurti nauja langa kuris paprasytu ivesti vartotojo varda.
-                   
-            
+            keyboard.PressKey(key);                    
             if (key.IsKeyDown(Keys.Enter))
             {
                 gamestate = GameStates.Menu;

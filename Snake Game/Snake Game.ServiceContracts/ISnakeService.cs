@@ -50,5 +50,8 @@ namespace Snake_Game.ServiceContracts
         void SetNewSnakeInBarriers();
 
         void SetNewSnakeInBarriers1();
+
+        int SnakeLenght();
+
     }
 }

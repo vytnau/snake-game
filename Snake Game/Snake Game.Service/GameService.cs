@@ -174,9 +174,11 @@ namespace Snake_Game.Service
                 snakeSound.PlayeSnakeEat();
                 snake.GrowSnake(tail);
             }
-           /* if (level == 3)
-                EatBug(head);*/
-            //bug.SetDirection(head);
+            if (level == 1)
+            {
+                if (snake.SnakeLenght() < 70)
+                    snake.GrowSnake(tail);
+            }
             StageUpdate();
             bug.SetDirection(snake.GetSnakeHead(), stage.GetStageCoord());
             if (level == 3)
@@ -547,6 +549,12 @@ namespace Snake_Game.Service
             corners.AddFirst(rightDownCorner);
             corners.AddFirst(leftUpCorner);
             return corners;
+        }
+
+
+        public void StopSounds()
+        {
+            backgroundSound.StopPlaySounds();
         }
     }
 }

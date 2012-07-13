@@ -63,6 +63,9 @@ namespace Snake_Game.Service
         public void SetNewSnakeLongSnake(int point)
         {
             snake = new LinkedList<Vector3>();
+            snake.AddFirst(new Vector3(24, 6, -1));
+            snake.AddFirst(new Vector3(23, 6, -1));
+            /*
             //uodega
             for (int i = 9; i > 2; i--)
             {
@@ -87,7 +90,7 @@ namespace Snake_Game.Service
             for (int i = 22; i > 13; i--)
             {
                 snake.AddFirst(new Vector3(i, 7, -1));
-            }
+            }*/
         }
 
 
@@ -134,6 +137,11 @@ namespace Snake_Game.Service
             {
                 snake.AddLast(new Vector3(j, 6, -1));
             }
+        }
+
+        public int SnakeLenght()
+        {
+            return snake.Count;
         }
     }
 }

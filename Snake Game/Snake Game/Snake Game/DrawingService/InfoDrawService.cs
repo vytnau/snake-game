@@ -81,25 +81,21 @@ namespace Snake_Game
 
         public void DrawNewRecordWindow(string name)
         {
-            //TODO:
-            //Suprogramuoti sio lango piesima, t.y. pranesti apie pasiekta rekorda ir paprasyt
-            //ivesti vartotojo varda.
+            Vector2 textSize = Font.MeasureString(name);
+            Vector2 textCenter = new Vector2(800 / 2, 293);
+
             Batch.Begin();
             Batch.Draw(texture.BDarkLayer, Vector2.Zero, Color.White);
-            Batch.Draw(texture.InputName, new Vector2(180, 100), Color.White);
-            Batch.DrawString(Font, name, new Vector2(CalculatePos(name), 273), Color.Black);//260
-            DrawSlash(name);
+            Batch.Draw(texture.InputName, new Vector2(170, 100), Color.White);
+            Batch.DrawString(Font, name, textCenter - (textSize / 2), Color.Black);
+            DrawSlash(textSize, textCenter);
             Batch.End();
         }
 
-        private int CalculatePos(string text)
+        private void DrawSlash(Vector2 size, Vector2 center)
         {
-            int length = text.Length;
-            return 400 - (length)*5; 
-        }
-
-        private void DrawSlash(string text)
-        {
+            Vector2 pos = center + (size / 2);
+            pos.Y = 270;
             time++;
             if (time == POINTER_TIME)
             {
@@ -109,16 +105,8 @@ namespace Snake_Game
                 else
                     drawSlash = true;
             }
-            if (drawSlash)
-            {
-                Batch.DrawString(Font, "|", new Vector2(Slash(text), 271), Color.Black);//260
-            }
-        }
-
-        private int Slash(string text)
-        {
-            int length = text.Length;
-            return 400 + (length) * 9; 
+            if (drawSlash)            
+                Batch.DrawString(Font, "|", pos , Color.Black);//260 Slash(text)            
         }
     }
 }
