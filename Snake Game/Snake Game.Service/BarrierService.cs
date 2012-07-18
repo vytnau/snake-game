@@ -50,7 +50,7 @@ namespace Snake_Game.Service
                 list.AddLast(new Vector3(10, j, 20));
                 list.AddLast(new Vector3(11, j, 20));
                 list.AddLast(new Vector3(10, 11+j, 20));
-                list.AddLast(new Vector3(10, 11+j, 20));
+                list.AddLast(new Vector3(11, 11+j, 20));
             }
 
             for (int j = 2; j < 11; j++)

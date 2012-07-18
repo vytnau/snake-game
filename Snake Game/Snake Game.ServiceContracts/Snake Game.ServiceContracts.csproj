@@ -49,6 +49,7 @@
     <Compile Include="IPlayerService.cs" />
     <Compile Include="DataBaseInterface\IPlayerStatisticService.cs" />
     <Compile Include="ISnakeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoundsInterface\IGameBackgroundSoundsService.cs" />
     <Compile Include="SoundsInterface\ISnakeSoundsService.cs" />
   </ItemGroup>

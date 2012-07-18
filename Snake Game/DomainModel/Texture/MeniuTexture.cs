@@ -80,6 +80,12 @@ namespace DataAccess
         public Texture2D SBackS { set; get; }
         public Texture2D SBackSMarked { set; get; }
         public Texture2D DarkSignPole { set; get; }
+        public Texture2D AFastSnake { set; get; }
+        public Texture2D ASurvival { set; get; }
+        public Texture2D ANight { set; get; }
+        public Texture2D ABugs { set; get; }
+        public Texture2D ABarrier { set; get; }
+
 
         /// <summary>
         /// Pasiekimų lentos tekstūros.
@@ -109,6 +115,9 @@ namespace DataAccess
         public Texture2D Help { set; get; }
         public Texture2D BDown { set; get; }
         public Texture2D BDownMarked { set; get; }
+        public Texture2D LBarrierHelp { set; get; }
+        public Texture2D LFoodHelp { set; get; }
+        public Texture2D LControlHelp { set; get; }
 
         /// <summary>
         /// Pauzės lango tekstūros.

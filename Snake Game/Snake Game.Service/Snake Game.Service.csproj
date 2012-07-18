@@ -50,6 +50,7 @@
     <Compile Include="KeyboardInput.cs" />
     <Compile Include="PlayerService.cs" />
     <Compile Include="DataBaseService\PlayerStatisticService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SnakeService.cs" />
     <Compile Include="SoundsService\GameBackgroundSoaundsService.cs" />
     <Compile Include="SoundsService\SnakeSoundsService.cs" />

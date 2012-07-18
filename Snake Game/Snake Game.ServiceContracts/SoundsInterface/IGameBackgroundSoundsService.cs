@@ -11,5 +11,8 @@ namespace Snake_Game.ServiceContracts.SoundsInterface
         void StopPlaySounds();
         void PlayMusic();
         void NightSound();
+        void SurvivalMusic();
+        void PlayOwl();
+        void CatchBugsMusic();
     }
 }

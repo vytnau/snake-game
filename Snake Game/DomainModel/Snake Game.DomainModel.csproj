@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="EntityBase.cs" />
     <Compile Include="PlayerStat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sound\GameSound.cs" />
     <Compile Include="Sound\MeniuSound.cs" />
     <Compile Include="Sound\SnakeSound.cs" />

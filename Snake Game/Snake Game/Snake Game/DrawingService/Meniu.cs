@@ -69,7 +69,8 @@ namespace Snake_Game
         public int Difficult { get; set; }
         public ArcadeLevel Arcade { set; get; }
         public SpriteFont Font { set; get; }
-        MeniuSound sound;
+        private MeniuSound sound;
+        private int helpPage;
 
         public int Iterator
         {
@@ -96,6 +97,7 @@ namespace Snake_Game
             Title = "Meniu";
             Iterator = 0;
             InfoText = string.Empty;
+            helpPage = 1;
         }
 
         public void SetSound(MeniuSound sound)
@@ -292,13 +294,25 @@ namespace Snake_Game
             batch.Draw(texture.Help, new Vector2(8, 0), Color.White);
             batch.Draw(texture.DarkSignPole, new Vector2(680, 380), Color.White);
 
+            switch (helpPage)
+            {
+                case 1:
+                    batch.Draw(texture.LControlHelp, new Vector2(100, 130), Color.White);
+                    break;
+                case 2 :
+                    batch.Draw(texture.LFoodHelp, new Vector2(100, 130), Color.White);
+                    break;
+                default:
+                    batch.Draw(texture.LBarrierHelp, new Vector2(130, 130), Color.White);
+                    break;
+            }
             if (Iterator == 1)
             {
-         //       batch.Draw(texture.BDownMarked, new Vector2(65, 360), Color.White);
+                batch.Draw(texture.BNextMarked, new Vector2(720, 340), Color.White);
             }
             else
             {
-           //     batch.Draw(texture.BDown, new Vector2(65, 360), Color.White);
+                batch.Draw(texture.BNext, new Vector2(720, 340), Color.White);
             }
             if (Iterator == 2)
             {
@@ -608,6 +622,13 @@ namespace Snake_Game
             {
                 batch.Draw(texture.SBackS, new Vector2(660, 380), Color.White);
             }
+            batch.Draw(texture.ASurvival, new Vector2(36, 290), Color.White);
+            batch.Draw(texture.ANight, new Vector2(105, 52), Color.White);
+            batch.Draw(texture.ABugs, new Vector2(295, 205), Color.White);
+            batch.Draw(texture.AFastSnake, new Vector2(468, 324), Color.White);
+            batch.Draw(texture.ABarrier, new Vector2(619, 207), Color.White);
+            batch.Draw(texture.ABarrier, new Vector2(669, 51), Color.White);
+
             batch.End();
         }
 
@@ -778,6 +799,10 @@ namespace Snake_Game
                 case 1:
                     Iterator = 1;
                     MenuItems = 2;
+                    if (helpPage < 3)
+                        helpPage++;
+                    else
+                        helpPage = 1;
                     break;
                 case 2:
                     meniuState = MeniuState.Main;

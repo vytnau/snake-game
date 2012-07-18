@@ -15,10 +15,15 @@ namespace Snake_Game.Service
         private bool lShift = false;
         private bool rShift = false;
         private bool shift = false;
+        private bool pressed = false;
 
         public KeyboardInput()
         {
             text = "";
+        }
+
+        public bool IsKeyPress(){
+            return pressed;
         }
 
         public void Clean()
@@ -28,15 +33,18 @@ namespace Snake_Game.Service
 
         public string PressKey(KeyboardState newKey)
         {
+            pressed = false;
             int length = text.Length;
             //Remove last letter.
             if (newKey.IsKeyUp(Keys.Delete) && oldKey.IsKeyDown(Keys.Delete))
             {
+                pressed = true;
                 if (length > 0)
                     text = text.Remove(length - 1);
             }
             if (newKey.IsKeyUp(Keys.Back) && oldKey.IsKeyDown(Keys.Back))
             {
+                pressed = true;
                 if (length > 0)                
                     text = text.Remove(length - 1);                  
             }
@@ -173,6 +181,7 @@ namespace Snake_Game.Service
 
         private char UpCaseLetters(char letter, bool capsLock, bool shift)
         {
+            pressed = true;
             if(capsLock || shift)
                 return Char.ToUpper(letter);
             else

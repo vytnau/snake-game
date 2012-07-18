@@ -55,6 +55,7 @@
     <Compile Include="DataContext\SessionFactoryProvider.cs" />
     <Compile Include="Mappings\PlayerMap.cs" />
     <Compile Include="PlayerStatRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FluentNHibernate, Version=1.3.0.717, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">

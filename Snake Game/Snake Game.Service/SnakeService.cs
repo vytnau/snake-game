@@ -48,10 +48,8 @@ namespace Snake_Game.Service
         public void SetNewSnake()
         {
             snake = new LinkedList<Vector3>();
-            for (int i = 0; i < 6; i++)
-            {
-                snake.AddLast(new Vector3(13 + i, 10, -1));
-            }
+            for (int i = 0; i < 6; i++)            
+                snake.AddLast(new Vector3(14 + i, 6, -1));            
         }
 
 
@@ -60,37 +58,11 @@ namespace Snake_Game.Service
             SetNewSnake();
         }
 
-        public void SetNewSnakeLongSnake(int point)
+        public void SetNewSnakeLongSnake()
         {
             snake = new LinkedList<Vector3>();
             snake.AddFirst(new Vector3(24, 6, -1));
             snake.AddFirst(new Vector3(23, 6, -1));
-            /*
-            //uodega
-            for (int i = 9; i > 2; i--)
-            {
-                snake.AddFirst(new Vector3(i, 3, -1));
-            }
-            //zemyn
-            for (int j = 3; j <12 ; j++)
-            {
-                snake.AddFirst(new Vector3(3, j, -2));
-            }
-            //i desine
-            for (int i = 3; i < 24; i++)
-            {
-                snake.AddFirst(new Vector3(i, 11, 1));
-            }
-            //i virsu
-            for (int i = 11; i > 6; i--)
-            {
-                snake.AddFirst(new Vector3(23, i, 2));
-            }
-            //i kaire
-            for (int i = 22; i > 13; i--)
-            {
-                snake.AddFirst(new Vector3(i, 7, -1));
-            }*/
         }
 
 
