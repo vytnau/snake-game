@@ -16,7 +16,7 @@
     <XnaProfile>Reach</XnaProfile>
     <XnaCrossPlatformGroupID>dddb66e6-a3ca-4830-ab08-f1141acb6324</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <SccProjectName>SAK</SccProjectName>
@@ -167,8 +167,8 @@
     <Compile Include="DrawingService\StageDrawingService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="icon.ico" />
     <Content Include="Package\FluentNHibernate.dll" />
     <Content Include="Package\Iesi.Collections.dll" />
     <Content Include="Package\Microsoft.Xna.Framework.Avatar.dll" />
