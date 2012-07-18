@@ -41,7 +41,7 @@ namespace Snake_Game.ServiceContracts
 
         void SetNewSnakeClassic();
 
-        void SetNewSnakeLongSnake(int point);
+        void SetNewSnakeLongSnake();
 
         void SetNewSnakeInNight();
 

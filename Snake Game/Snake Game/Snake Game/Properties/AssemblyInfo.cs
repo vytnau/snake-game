@@ -8,8 +8,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Snake Game")]
 [assembly: AssemblyProduct("Snake Game")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Vyto Namai")]
-[assembly: AssemblyCopyright("Copyright © Vyto Namai 2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("Copyright © Vytautas Naudžius 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -174,6 +174,8 @@ namespace Snake_Game.Service
                 snakeSound.PlayeSnakeEat();
                 snake.GrowSnake(tail);
             }
+            if (level == 2)
+                backgroundSound.PlayOwl();
             if (level == 1)
             {
                 if (snake.SnakeLenght() < 70)
@@ -374,7 +376,7 @@ namespace Snake_Game.Service
                     SurvivalGame();
                     break;
                 case 2:
-                    SnakeInFog();
+                    SnakeInNight();
                     break;
                 case 3:
                     SnakeAndBugs();
@@ -402,11 +404,12 @@ namespace Snake_Game.Service
 
         private void SurvivalGame()
         {
-            snake.SetNewSnakeLongSnake(player.GetPoints());
+            backgroundSound.SurvivalMusic();
+            snake.SetNewSnakeLongSnake();
             barrier.SurvivalMode();            
         }
 
-        private void SnakeInFog()
+        private void SnakeInNight()
         {
             backgroundSound.NightSound();
             barrier.SnakeInNight();
@@ -417,15 +420,17 @@ namespace Snake_Game.Service
 
         private void SnakeAndBugs()
         {
+            backgroundSound.CatchBugsMusic();
             barrier.SnakeAndBugs();
-            snake.SetNewSnakeAndBugs();
-            
+            snake.SetNewSnakeAndBugs();            
             if (food.Size() == 0)
                 food.AddItem(new Vector3(9, 3, 1));
         }
 
         private void FastSnake()
         {
+            backgroundSound.PlayBirdsSound();
+            backgroundSound.PlayMusic();
             snake.SetNewSnakeClassic();
             if (food.Size() == 0)
                 food.AddItem(new Vector3(9, 3, 1));
@@ -433,6 +438,8 @@ namespace Snake_Game.Service
 
         private void SnakeInBarrier()
         {
+            backgroundSound.PlayBirdsSound();
+            backgroundSound.PlayMusic();
             snake.SetNewSnakeInBarriers();
             barrier.SnakeInBarrier();
             if (food.Size() == 0)
@@ -441,6 +448,8 @@ namespace Snake_Game.Service
 
         private void SnakeInBarrier1()
         {
+            backgroundSound.PlayBirdsSound();
+            backgroundSound.PlayMusic();
             snake.SetNewSnakeInBarriers1();
             barrier.SnakeInBarrier1();
             if (food.Size() == 0)
@@ -500,7 +509,8 @@ namespace Snake_Game.Service
 
         public void GrowSnake()
         {
-            snake.GrowSnake(snake.GetSnakeTail());
+            if(snake.SnakeLenght() < 105)
+                snake.GrowSnake(snake.GetSnakeTail());
         }
 
 

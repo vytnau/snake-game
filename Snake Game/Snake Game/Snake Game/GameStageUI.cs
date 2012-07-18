@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -13,12 +12,13 @@ using Snake_Game.ServiceContracts;
 using Snake_Game.Service;
 using DataAccess;
 using DataAccess.Texture;
-//using DataAccess.Sound;
 using Snake_Game.DrawingService;
 using DomainModel;
 using DomainModel.Sound;
 using Snake_Game.ServiceContracts.DataBaseInterface;
 using Snake_Game.Service.DataBaseService;
+using Snake_Game.Service.SoundsService;
+using System.IO;
 
 
 namespace Snake_Game
@@ -39,49 +39,46 @@ namespace Snake_Game
             End
         }
 
-        
-
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-        SpriteFont font;
-        SpriteFont text;
-        Vector2 direction;
-        MeniuTexture meniuTexture;
-        GameStageTexture stageTexture;        
-        SnakeTexture[] snakeTexture = new SnakeTexture[3];
-        FoodTexture foodTexture;
-        InfoTexture infoWindTexture;
-        RadarTexture radarTexture;
-        MeniuSound meniuSound;
-        BarrierTexture barrierTexture;
-        SnakeDrawingService snakeDraw;
-        StageDrawingService stageDraw;
-        FoodDrawingService foodDraw;
-        InfoDrawService infoDraw;
-        RadarDrawingService radarDraw;
-        BarrierDrawingService barrierDraw;
-        TimeSpan levelTime; 
-        KeyboardState oldKeyState;
-        IHighScores highScores;
-        Texture2D kvad;
-        KeyboardInput keyboard;
-        SnakeSound snakeSound = new SnakeSound();
-        GameSound gameSound = new GameSound();
-        SnakeSounds snakeAllSounds = new SnakeSounds();
-
-        bool up;
-        bool down;
-        bool keyCanPress = false;
-        bool countPoints = true;
-        bool speedChange = true;
-        bool isPause = false;
-        const int PAUSE_TIME = 20;
-        int pause = 0;
-        int millisecondsPerFrame = 70; //Update every 1 second
-        int timeSinceLastUpdate = 0; //Accumulate the elapsed time
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private SpriteFont font;
+        private SpriteFont text;
+        private Vector2 direction;
+        private MeniuTexture meniuTexture;
+        private GameStageTexture stageTexture;
+        private SnakeTexture[] snakeTexture = new SnakeTexture[3];
+        private FoodTexture foodTexture;
+        private InfoTexture infoWindTexture;
+        private RadarTexture radarTexture;
+        private MeniuSound meniuSound;
+        private BarrierTexture barrierTexture;
+        private SnakeDrawingService snakeDraw;
+        private StageDrawingService stageDraw;
+        private FoodDrawingService foodDraw;
+        private InfoDrawService infoDraw;
+        private RadarDrawingService radarDraw;
+        private BarrierDrawingService barrierDraw;
+        private TimeSpan levelTime;
+        private KeyboardState oldKeyState;
+        private IHighScores highScores;
+        private KeyboardInput keyboard;
+        private SnakeSound snakeSound = new SnakeSound();
+        private GameSound gameSound = new GameSound();
+        private SnakeSounds snakeAllSounds = new SnakeSounds();
+        private bool up;
+        private bool down;
+        private bool keyCanPress = false;
+        private bool countPoints = true;
+        private bool speedChange = true;
+        private bool isPause = false;
+        private const int PAUSE_TIME = 15;
+        private int pause = 0;
+        private int millisecondsPerFrame = 70; //Update every 1 second
+        private int timeSinceLastUpdate = 0; //Accumulate the elapsed time
         private IGameService game;
         public static GameStates gamestate;
         private Meniu meniu;
+        private const string LOG_PATH = "log.txt";
 
         public GameStageUI()
         {
@@ -111,9 +108,7 @@ namespace Snake_Game
             direction.Y = 1;
             up = true;
             down = true;
-            keyboard = new KeyboardInput();
-            
-            
+            keyboard = new KeyboardInput();    
         }
 
         /// <summary>
@@ -124,21 +119,12 @@ namespace Snake_Game
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            //InitGraphicsMode(1280, 720, false);
-
             graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 449;// 575;//449;
-           // graphics.PreparingDeviceSettings += new EventHandler<PreparingDeviceSettingsEventArgs>(graphics_PreparingDeviceSettings);
-            //graphics.PreferMultiSampling = false;
-            //this.graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferHeight = 449;
             graphics.ApplyChanges();
             millisecondsPerFrame =120; //Update every 1 second
             gamestate = GameStates.Menu;
-            //gamestate = GameStates.Running;
             base.Initialize();
-            
-           // DataBase();
         }
 
 
@@ -151,7 +137,6 @@ namespace Snake_Game
         {
             try
             {
-                // Create a new SpriteBatch, which can be used to draw textures.
                 spriteBatch = new SpriteBatch(GraphicsDevice);
                 snakeDraw.Batch = spriteBatch;
                 foodDraw.Batch = spriteBatch;
@@ -160,48 +145,51 @@ namespace Snake_Game
                 barrierDraw.Batch = spriteBatch;
                 stageDraw.Batch = spriteBatch;
                 stageDraw.GraphicsDevice = GraphicsDevice;
-                Content.RootDirectory = "Content";//Content
-                //Snake Game\Snake GameContent\Arial.spritefont";
-                text = Content.Load<SpriteFont>("Font\\Arial");
-                font = Content.Load<SpriteFont>("Font\\Fontas");
-                meniu.Font = Content.Load<SpriteFont>("Font\\HighScoresFont"); ;
-                meniuSound.SoundArrowCrackle = Content.Load<SoundEffect>("Sound\\Meniu\\wood-cracking-1");
-                meniuSound.Creat();
+                Content.RootDirectory = "Content";
+                LoadFont();
                 meniu.SetSound(meniuSound);
-                stageDraw.Font = font;
-                infoDraw.Font = Content.Load<SpriteFont>("Font\\bigerFont");//font;
+                stageDraw.Font = font;                
                 LoadMeniuContent();
                 LoadGameStageContent();
                 LoadInfoWindowContent();
                 LoadSounds();
-
-                kvad = Content.Load<Texture2D>("Texture\\Game\\Snake\\kvadratas");
             }
             catch (Exception e)
             {
                 GotException(e);
             }
-            // TODO: use this.Content to load your game content here
+        }
+
+        private void LoadFont()
+        {
+            text = Content.Load<SpriteFont>("Font\\Arial");
+            font = Content.Load<SpriteFont>("Font\\Fontas");
+            meniu.Font = Content.Load<SpriteFont>("Font\\HighScoresFont");
+            infoDraw.Font = Content.Load<SpriteFont>("Font\\bigerFont");
         }
 
         private void GotException(Exception e)
         {
-            ///ToDo:
-            ///padaryt kad darasytu i log faila.
-            // Compose a string that consists of three lines.
             string lines = e.Message;
-
-            // Write the string to a file.
-            System.IO.StreamWriter file = new System.IO.StreamWriter("log.txt");
-            file.WriteLine(lines);
-
-            file.Close();
+            using (StreamWriter sw = File.AppendText(LOG_PATH))
+            {
+                sw.WriteLine(lines);
+                sw.Close();
+            }    
         }
 
         private void LoadSounds()
         {
             LoadSnakeSounds();
             LoadGameBackgroundSounds();
+            LoadMeniuSound();
+        }
+
+        private void LoadMeniuSound()
+        {
+            meniuSound.SoundArrowCrackle = Content.Load<SoundEffect>("Sound\\Meniu\\wood-cracking-1");
+            meniuSound.MeniuMusic = Content.Load<SoundEffect>("Sound\\Meniu\\Frost Waltz");
+            meniuSound.KeyPressed = Content.Load<SoundEffect>("Sound\\Meniu\\click");
         }
 
         private void LoadSnakeSounds()
@@ -213,9 +201,13 @@ namespace Snake_Game
         private void LoadGameBackgroundSounds()
         {
             gameSound.BirdsSound = Content.Load<SoundEffect>("Sound\\Game\\Background\\birdsSounds");
-            gameSound.Music = Content.Load<SoundEffect>("Sound\\Game\\Background\\Accordion edit");
+            gameSound.Music = Content.Load<SoundEffect>("Sound\\Game\\Background\\The Snow Queen");//The Snow Queen
             gameSound.OwlSound = Content.Load<SoundEffect>("Sound\\Game\\Background\\owl");
-            gameSound.Wind = Content.Load<SoundEffect>("Sound\\Game\\Background\\wind");
+            gameSound.Night = Content.Load<SoundEffect>("Sound\\Game\\Background\\Nightime");
+            gameSound.LongSnakeMusic = Content.Load<SoundEffect>("Sound\\Game\\LevelMusic\\destination");
+            gameSound.NightMusic = Content.Load<SoundEffect>("Sound\\Game\\LevelMusic\\barn-beat");
+            gameSound.CatchBugsMusic = Content.Load<SoundEffect>("Sound\\Game\\LevelMusic\\jungle-run");
+
         }
 
         private void LoadInfoWindowContent(){
@@ -467,6 +459,11 @@ namespace Snake_Game
             meniuTexture.SLevel5Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level5Marked");
             meniuTexture.SLevel6 = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6");
             meniuTexture.SLevel6Marked = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\level6Marked");
+            meniuTexture.ABarrier = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\snakeBarrier");
+            meniuTexture.ABugs = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\snakeBugs");
+            meniuTexture.AFastSnake = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\fastSnake");
+            meniuTexture.ANight = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\snakeNight");
+            meniuTexture.ASurvival = Content.Load<Texture2D>("Texture\\Meniu\\Arcade\\longSnake");
         }
         /// <summary>
         /// Įkraunamos pasiekimo lango tekstūros.
@@ -500,16 +497,11 @@ namespace Snake_Game
             meniuTexture.Help = Content.Load<Texture2D>("Texture\\Meniu\\Help\\help");
             meniuTexture.BDown = Content.Load<Texture2D>("Texture\\Meniu\\Help\\down");
             meniuTexture.BDownMarked = Content.Load<Texture2D>("Texture\\Meniu\\Help\\downMarked");
+            meniuTexture.LBarrierHelp = Content.Load<Texture2D>("Texture\\Meniu\\Help\\helpBarrier");
+            meniuTexture.LFoodHelp = Content.Load<Texture2D>("Texture\\Meniu\\Help\\helpFood");
+            meniuTexture.LControlHelp = Content.Load<Texture2D>("Texture\\Meniu\\Help\\helpControl");
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
-        protected override void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
-        }
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -529,10 +521,12 @@ namespace Snake_Game
             {
                 if (gamestate == GameStates.Running)
                 {
+                    meniuSound.StopMusic();
                     GamePlay();
                 }
                 else if (gamestate == GameStates.Menu)
                 {
+                    meniuSound.PlayMeniuMusic();
                     Meniu();
                 }
                 else if (gamestate == GameStates.Hit)
@@ -541,6 +535,7 @@ namespace Snake_Game
                 }
                 else if (gamestate == GameStates.GameOver)
                 {
+                    meniuSound.PlayMeniuMusic();
                     GamoOverScreen();
                 }
                 else if (gamestate == GameStates.Record)
@@ -562,7 +557,7 @@ namespace Snake_Game
         {
             if (ArcadeLevel.LongSnake == meniu.Arcade && levelTime.Seconds > 0)
             {
-                int mod = levelTime.Seconds % 5;
+                int mod = levelTime.Seconds % 15;
                 if (mod == 0 && countPoints)
                 {
                     countPoints = false;
@@ -588,7 +583,6 @@ namespace Snake_Game
                         else
                             millisecondsPerFrame -= 1;
                     speedChange = false;
-                    System.Console.WriteLine(millisecondsPerFrame.ToString());
                 }
                 else if(mod != 0)
                     speedChange = true;
@@ -639,7 +633,6 @@ namespace Snake_Game
                 isPause = true;
                 gamestate = GameStates.Menu;
             }
-            //game.SetMovment((int)direction.X, (int)direction.Y);
             GameStatus();
             oldKeyState = key;
         }
@@ -834,7 +827,9 @@ namespace Snake_Game
         private void RecordScreen()
         {
             KeyboardState key = Keyboard.GetState();
-            keyboard.PressKey(key);                    
+            keyboard.PressKey(key);
+            if (keyboard.IsKeyPress())
+                meniuSound.KeyPress();
             if (key.IsKeyDown(Keys.Enter))
             {
                 gamestate = GameStates.Menu;
@@ -994,41 +989,6 @@ namespace Snake_Game
                 infoDraw.DrawNewRecordWindow(keyboard.GetText());
             }
             base.Draw(gameTime);
-        }
-
-        private void DrawStage()
-        {
-            spriteBatch.Begin();
-            for (int i = 0; i < 25; i++)//60
-            {
-                for (int j = 0; j < 13; j++)//40
-                {
-                    spriteBatch.Draw(kvad, new Vector2(i * 30 + 40, j * 30 + 45), Color.White);
-                   
-                }
-            }
-            spriteBatch.End();
-        }
-
-
-        private void DataBase()
-        {
-            Console.WriteLine("testuoju duombaze");
-            var player = new PlayerStatisticService();
-            var gamer = new PlayerStat(){
-            Name = "Testas0",
-            Type = "cl",
-            Point = 60,
-            
-        };
-            player.AddPlayerRezult(gamer);
-            IList<PlayerStat> policeOfficers = player.GetPlayers();
-
-            foreach (var policeOfficer in policeOfficers)
-            {
-                Console.WriteLine(policeOfficer.Name);
-            }
-            player.Dispose();
         }
     }
 }
