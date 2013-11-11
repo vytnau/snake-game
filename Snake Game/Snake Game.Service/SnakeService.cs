@@ -13,7 +13,7 @@ namespace Snake_Game.Service
 
         public SnakeService()
         {
-       
+            SetNewSnake();
         }
 
         public void GrowSnake(Vector3 tail)
