@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NUnit.Runners.lite</id>
+    <version>2.6.3.20131019</version>
+    <title>NUnit.Runners.lite</title>
+    <authors>Charlie Poole</authors>
+    <owners>Charlie Poole</owners>
+    <licenseUrl>http://nunit.org/nuget/license.html</licenseUrl>
+    <projectUrl>http://nunit.org/</projectUrl>
+    <iconUrl>http://nunit.org/nuget/nunit_32x32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package provides just the NUnit (v2.6.3) console and gui runners (no x86) for .NET 4.
+	 It is a modification of the package NUnit.Runners.
+	 DO NOT INSTALL using Visual Studio package manager (not event the console).
+	 DO INSTALL with nuget command line: "nuget.exe install nunit.runners.lite -OutputDirectory tools".
+	 Complete the installation with a generic "NUnit" symbolic link by executing "add-link.cmd" from within latest version installed.</description>
+    <summary>NUnit is a unit-testing framework for all .Net languages with a strong TDD focus.</summary>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>test testing tdd runner</tags>
+  </metadata>
+</package>
