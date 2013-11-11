@@ -908,7 +908,7 @@ namespace Snake_Game
         private void DrawSnakeInNight()
         {
             int[,] matrix = game.GetGameStage();
-            LinkedList<Vector2> head = game.GetSnakeHead();
+            LinkedList<Vector2> head = game.GetFogCoordAroundSnakeHead();
             stageDraw.DrawFog();
             snakeDraw.DrawSnake(matrix);
             foodDraw.Draw(matrix);

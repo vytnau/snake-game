@@ -49,7 +49,7 @@ namespace Snake_Game.ServiceContracts
 
         void GrowSnake();
 
-        LinkedList<Vector2> GetSnakeHead();
+        LinkedList<Vector2> GetFogCoordAroundSnakeHead();
 
         void StopSounds();
     }

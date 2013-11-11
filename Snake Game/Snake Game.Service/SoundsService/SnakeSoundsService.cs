@@ -19,16 +19,22 @@ namespace Snake_Game.Service
 
         public void PlaySnakeHit()
         {
-            SoundEffectInstance soundEngineInstance = sound.Hit.CreateInstance();
-            soundEngineInstance.Volume = 0.75f;
-            soundEngineInstance.Play();
+            if (sound.Hit != null)
+            {
+                SoundEffectInstance soundEngineInstance = sound.Hit.CreateInstance();
+                soundEngineInstance.Volume = 0.75f;
+                soundEngineInstance.Play();
+            }
         }
 
         public void PlayeSnakeEat()
         {
-            SoundEffectInstance soundEngineInstance = sound.Eat.CreateInstance();
-            soundEngineInstance.Volume = 0.75f;
-            soundEngineInstance.Play();
+            if (sound.Eat != null)
+            {
+                SoundEffectInstance soundEngineInstance = sound.Eat.CreateInstance();
+                soundEngineInstance.Volume = 0.75f;
+                soundEngineInstance.Play();
+            }
         }
     }
 }

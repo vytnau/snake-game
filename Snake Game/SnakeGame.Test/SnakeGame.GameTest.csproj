@@ -16,6 +16,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,6 +40,7 @@
     <Reference Include="log4net">
       <HintPath>..\packages\NUnit.Runners.lite.2.6.3.20131019\lib\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="nunit-console-runner">
       <HintPath>..\packages\NUnit.Runners.lite.2.6.3.20131019\lib\nunit-console-runner.dll</HintPath>
     </Reference>
@@ -72,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameServiceTest.cs" />
     <Compile Include="PlayerServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +83,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataContrats\DataContrats.csproj">
+      <Project>{A5B8CE62-9934-4F5F-B51A-60DA0369036A}</Project>
+      <Name>DataContrats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\Snake Game.DomainModel.csproj">
+      <Project>{DF688D8E-C642-4A42-B1D5-93ECF294F09F}</Project>
+      <Name>Snake Game.DomainModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Snake Game.ServiceContracts\Snake Game.ServiceContracts.csproj">
       <Project>{093A6E86-0767-4D3F-87A8-BF4305CC02B1}</Project>
       <Name>Snake Game.ServiceContracts</Name>
@@ -86,6 +98,10 @@
     <ProjectReference Include="..\Snake Game.Service\Snake Game.Service.csproj">
       <Project>{C8838FEE-13EE-433F-A627-B36D3DBAA494}</Project>
       <Name>Snake Game.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Snake Game\Snake Game\UI.csproj">
+      <Project>{29ECD105-E10B-479B-B6DE-D8EB0826C0D3}</Project>
+      <Name>UI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

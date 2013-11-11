@@ -20,12 +20,16 @@ namespace Snake_Game.Service.SoundsService
         public GameBackgroundSoundsService(GameSound sounds){
             this.sounds = sounds; 
         }
+
         public void PlayBirdsSound()
         {
-            soundEngineInstance = sounds.BirdsSound.CreateInstance();
-            soundEngineInstance.Volume = 0.50f;
-            soundEngineInstance.IsLooped = true;
-            soundEngineInstance.Play();
+            if (sounds.BirdsSound != null)
+            {
+                soundEngineInstance = sounds.BirdsSound.CreateInstance();
+                soundEngineInstance.Volume = 0.50f;
+                soundEngineInstance.IsLooped = true;
+                soundEngineInstance.Play();
+            }
         }
 
         public void StartMusic()
@@ -45,14 +49,20 @@ namespace Snake_Game.Service.SoundsService
 
         public void PlayMusic()
         {
-            music = sounds.Music.CreateInstance();
-            music.Volume = 0.65f;
-            music.IsLooped = true;
-            music.Play();
+            if (sounds.Music != null)
+            {
+                music = sounds.Music.CreateInstance();
+                music.Volume = 0.65f;
+                music.IsLooped = true;
+                music.Play();
+            }
         }
 
         public void SurvivalMusic()
         {
+            if (sounds.BirdsSound != null && sounds.LongSnakeMusic != null)
+            {
+            
             soundEngineInstance = sounds.BirdsSound.CreateInstance();
             soundEngineInstance.Volume = 0.50f;
             soundEngineInstance.IsLooped = true;
@@ -63,20 +73,24 @@ namespace Snake_Game.Service.SoundsService
             music.IsLooped = true;
             music.Play();
         }
+    }
 
 
         public void NightSound()
         {
-            time = 0;
-            music = sounds.NightMusic.CreateInstance();
-            music.Volume = 0.65f;
-            music.IsLooped = true;
-            music.Play();
+            if (sounds.NightMusic != null && sounds.Night != null)
+            {
+                time = 0;
+                music = sounds.NightMusic.CreateInstance();
+                music.Volume = 0.65f;
+                music.IsLooped = true;
+                music.Play();
 
-            soundsEffect = sounds.Night.CreateInstance();
-            soundsEffect.Volume = 0.70f;
-            soundsEffect.IsLooped = true;
-            soundsEffect.Play();
+                soundsEffect = sounds.Night.CreateInstance();
+                soundsEffect.Volume = 0.70f;
+                soundsEffect.IsLooped = true;
+                soundsEffect.Play();
+            }
         }
 
 
@@ -84,10 +98,13 @@ namespace Snake_Game.Service.SoundsService
         {
             if (time == PAUSE_TIME)
             {
-                soundEngineInstance = sounds.OwlSound.CreateInstance();
-                soundEngineInstance.Volume = 0.50f;
-                soundEngineInstance.Play();
-                time = 0;
+                if (sounds.OwlSound != null)
+                {
+                    soundEngineInstance = sounds.OwlSound.CreateInstance();
+                    soundEngineInstance.Volume = 0.50f;
+                    soundEngineInstance.Play();
+                    time = 0;
+                }
             }
             else
                 time++;
@@ -96,15 +113,18 @@ namespace Snake_Game.Service.SoundsService
 
         public void CatchBugsMusic()
         {
-            soundEngineInstance = sounds.BirdsSound.CreateInstance();
-            soundEngineInstance.Volume = 0.50f;
-            soundEngineInstance.IsLooped = true;
-            soundEngineInstance.Play();
+            if (sounds.BirdsSound != null && sounds.CatchBugsMusic != null)
+            {
+                soundEngineInstance = sounds.BirdsSound.CreateInstance();
+                soundEngineInstance.Volume = 0.50f;
+                soundEngineInstance.IsLooped = true;
+                soundEngineInstance.Play();
 
-            music = sounds.CatchBugsMusic.CreateInstance();
-            music.Volume = 0.65f;
-            music.IsLooped = true;
-            music.Play();
+                music = sounds.CatchBugsMusic.CreateInstance();
+                music.Volume = 0.65f;
+                music.IsLooped = true;
+                music.Play();
+            }
         }
     }
 }
