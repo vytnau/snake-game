@@ -169,25 +169,6 @@
   <ItemGroup>
     <Content Include="GameThumbnail.png" />
     <Content Include="icon.ico" />
-    <Content Include="Package\FluentNHibernate.dll" />
-    <Content Include="Package\Iesi.Collections.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Avatar.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Game.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.GamerServices.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Graphics.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Net.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Storage.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Video.dll" />
-    <Content Include="Package\Microsoft.Xna.Framework.Xact.dll" />
-    <Content Include="Package\NHibernate.dll" />
-    <Content Include="Package\System.Data.SqlServerCe.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DomainModel\Snake Game.DomainModel.csproj">
