@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Snake_Game.ServiceContracts;
 using Snake_Game.Service;
 
-namespace SnakeGame.GameTest
+namespace SnakeGame.Test
 {
     [TestFixture]
     public class PlayerServiceTest
@@ -14,7 +10,7 @@ namespace SnakeGame.GameTest
         [Test]
         public void Add10Points()
         {
-            IPlayerService playerService = new PlayerService();
+            var playerService = new PlayerService();
             playerService.AddPoint(10);
             Assert.AreEqual(10, playerService.GetPoints());
         }
@@ -36,7 +32,7 @@ namespace SnakeGame.GameTest
         }
 
         [Test]
-        public void AddMinus4Live()
+        public void AddMinus4LiveToGet0()
         {
             IPlayerService playerService = new PlayerService();
             playerService.DecreseLive();

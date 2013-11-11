@@ -513,7 +513,7 @@ namespace Snake_Game.Service
         }
 
 
-        public LinkedList<Vector2> GetSnakeHead()
+        public LinkedList<Vector2> GetFogCoordAroundSnakeHead()
         {
             LinkedList<Vector2> corners = new LinkedList<Vector2>();
             Vector3 head = snake.GetSnakeHead(); 
@@ -558,6 +558,11 @@ namespace Snake_Game.Service
             corners.AddFirst(rightDownCorner);
             corners.AddFirst(leftUpCorner);
             return corners;
+        }
+
+        public Vector3 GetSnakeHead()
+        {
+            return snake.GetSnakeHead();
         }
 
 
