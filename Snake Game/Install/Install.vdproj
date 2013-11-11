@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0260B1BFD0AA4C49BBF147139C57929D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_02A57258213C4835985A8B9A0F14778D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -33,19 +27,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_04B1F69C613C46289E9C7607AAEA3975"
+        "MsmKey" = "8:_05809A8E1D58401E93150E5534A86782"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_05F7BA58AFE54EFD9762A9E3FB3E10FC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_075285A35640401ABF9331D7E929D5E7"
+        "MsmKey" = "8:_07458449DB7E428599C88AAA8DBCCD0A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -69,6 +57,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0BBCA3E3E9E24A01940998C3F3FD0C7E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0F4DF0FE97094E2DBD8D5863F68C465E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_13890F9398CE4DE5B16629221EA19B3C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -81,7 +81,37 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_147E5EE0AD6E43679E0BFCB396D27436"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_14D22230DADC410983F43F5499DA7E9F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_154A03F71F07422CBC297D6F9DE678AA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_15B27DFDED664A20B55C443ED053C652"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_163426F7B60E41A4B5780D11DA4AE46A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_180F9FDEDED34A7ABD4108AE42826A09"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -93,7 +123,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1ECF13B34EC345D79F661BBD3823F185"
+        "MsmKey" = "8:_1D0C6EE23C2B482188CC21B8CBFC951A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -105,19 +135,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_20275750D8C147DAB96F1C26E7430B92"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2101A07741FA4EDAA2E70791ACD10628"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_21CF4F0A29B0470497CD75863476508B"
+        "MsmKey" = "8:_25C8E03AF65F4F09B2244078CA466198"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -136,6 +160,12 @@
         "Entry"
         {
         "MsmKey" = "8:_28A8A61D8923430581006FDD77AF4CA3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_292C1B660ACA43C5BBA7406C33E58214"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -171,18 +201,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_32E93CCF35E84B6B89A79C884A86C84D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_332693F20DFA4F6484303364ED58B6BC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_3384F4B07620416D8A19D8D132E88AB3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -195,7 +213,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_35197C35762D4D7D841BFE758A04A1F2"
+        "MsmKey" = "8:_3491248409F74835BBECD32E32777032"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -237,7 +255,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_38154F47D7B5414BA47E1218661E0357"
+        "MsmKey" = "8:_38BD3AEB7F7F4679977718612394693D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3A2F7D9FBA8C498594CECF26B3DEBD0E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -279,7 +303,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_40229AB3CE0E491788F38103731809C6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_41603E3DEFDB46C0B05249C347EF83B7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_41B7547945F444719797AD4FA0735771"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_42178F2CE9884BCCA00BF52513434E41"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -303,13 +345,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_430FFEAB05A94BB697AF91FDAF40D631"
+        "MsmKey" = "8:_44CC39EB070740AAB3FA284A8C0A8906"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_44CC39EB070740AAB3FA284A8C0A8906"
+        "MsmKey" = "8:_44DB430D567E4D24AB3129F822F1B498"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -327,25 +369,49 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4670911F4D3546F0BA9FC7311F95B88F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_46D942E830954A5886B004C4B690C721"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4896006C8E584806A76BB3ED77978188"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_49F62FEBAB3848B3B5498B1A643A2E77"
+        "MsmKey" = "8:_494E9922EB614E4F956B64E2C9E84188"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4A83B2F56BFA4BB5A5D03FF92D1DD336"
+        "MsmKey" = "8:_4986B19362CF4A1084FC37FAF7D8B9F1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4AEA1356E5D34080B64EB11C527A518C"
+        "MsmKey" = "8:_4994BC88BC314119B95CADC7587E9220"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4A0F6AFE796D4CDBA3927337934052C9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4A892479939049738FA5EA375F8BB7EC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -363,6 +429,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4D3F7FA5BC274B539D03B34784717869"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4DBAD0C8844A439A87EBF33940C7445A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -375,7 +447,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4F04D0F8C02C421D87A9468097F31AA8"
+        "MsmKey" = "8:_4EF0E73630194406AA9A883E2064A7CA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -393,19 +465,37 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5103EDD7C3044FE6AE0AC6B42821CB7B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_519C73F1283148EFAD002539519C2A35"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_52165CD125DE4F8DAFEEE7AA36F3E423"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_528F695FF6B94FA1944B7F73CFAC7C31"
+        "MsmKey" = "8:_526375FE204E41C9A18684B45ED46C99"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_530B952897D048E394507A8782D7650E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_534BE75C1BC447F7950A3D87FD7E25F4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -423,7 +513,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5A48E91E2CD94633B0B137F7B1F1B0E6"
+        "MsmKey" = "8:_5A26AFE8B22D474BBB60ADB0CAE28570"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5A7F5A6F14A94606BEE60C9DC8E1CB3B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -435,19 +531,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5D8376E4847047138B9D38F22324411D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_5D8C656E5C4540E38AEA9D08543F7C77"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5EBD6612E8E24A5D897B5408F9AF4473"
+        "MsmKey" = "8:_5E88646E362A431D9D3631A9A81D8E5C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -459,13 +549,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5F111E7F6F87413BA2F56A26FEB0E03E"
+        "MsmKey" = "8:_5F81C4421BCF40AEB0329A1DD5BB1520"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5F81C4421BCF40AEB0329A1DD5BB1520"
+        "MsmKey" = "8:_60A1054BDF3743A0A5B7D9364ADE591E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -501,6 +591,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_649ACDC1DD9849758DB336AEB57D0702"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_68B84D3745734F77B088C27F85FC71D5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -513,7 +609,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6A31BF45B9D44A5493F473AD56DAA89B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6AC7BC237E2E4D02B2BC281E09F37BAE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6B2BEC54405C4C838576CE0521768A8B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6C27786235734F7681E691E3C73F78B8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -525,13 +639,31 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6EA660336F864D0A8BD3DA2D14ED7BDB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6F251AA170F44C19B9E5165C694EBC9B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6FA245AA05944FA39FF79D1401E08229"
+        "MsmKey" = "8:_6FC3838FA093485D88A86D0EBFE18B1D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_70A1F9ECBC7F428AB371912119A8A433"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7148D54F2FB54A8D83CA57D76911A7CA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -543,13 +675,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_730D0173193045BE8205CE95748C237E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_742C80D2851A471798D6E3349AEA06BA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_74A6F2C5CBF248F192C0CA4FA7F3275D"
+        "MsmKey" = "8:_74AC0989D4E4477DAE3AA9C4B89FBCA9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7521E6298C724CFB899C9B1FC2FAC87B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -561,7 +705,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7899AFDF23AF4503A25802FB479AC6B2"
+        "MsmKey" = "8:_783F9A7A8F04482C82404A45737CAA97"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_79B852E180524F278F956A99F8E2C11F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7BC7180DDBAF4546AA2B49A081092DD9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -597,13 +753,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_814827BB10F0494E9F0CA2744547B9CB"
+        "MsmKey" = "8:_81006B24E2714730AD9E68CBA9F0A09F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8302025AECA4482EBCC84CE372C6937B"
+        "MsmKey" = "8:_837FB992720849A6B99ECA80DC0322C5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -615,43 +771,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_84E0E3D067CC4753BB660E9579B7BDA0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8612F935964B4EABB305999A96EB85C2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_868228080EC94F53806A1392886C3B16"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_88D3A58189F64F18813B5F42B0A78F60"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_89FFD06ED15E44E58A0F721CE92B6692"
+        "MsmKey" = "8:_8A3893CCF84B47C9A7DBD6F6F5CA5788"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8AC6CB44962641C0B5928A3DB1D9FDBF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8BAC5CA6DB054119912C144CBAE8D8D4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -681,13 +807,43 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8EBDED4E273B4D7C8F66D0C9330D3FED"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8FC187D83E80459E8887F17955BD4032"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8FDE4F4A703141CBB99D823E78D5C586"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_9063CAF751A4478FAED14E261FF737BB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_93067837301A4EB190DB6EB8D7C47A13"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_93D0467AFFCE41D88201714DE9F0138C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_93F3C9F104084A21A279E2B861BD15F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -729,6 +885,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_98CBFBCEE2464CBE91F4FB6C72C519C8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_99A37A7F88DA4850AD98F7615EDE3A1E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -741,7 +903,37 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9A7E293E9E524D3DAD4D8C5DCC4B568C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9C8FAAD284344EC7AE0AE662F96D6205"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9F9BBF74DE464BC6A1F052D55CE30FA7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A01BBF446580495C8880E0681C187E80"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A073F668358B4E5F956AB1BBE6546054"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A1474C86FBC04E0FB5B27239AA1A7A1F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -753,13 +945,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A1D384FBBCEA417685285F820D6D925F"
+        "MsmKey" = "8:_A3533CBAEFBB4DE29FB6032137454D60"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A26353FE1AB64123BBC6ED9D1A0BA752"
+        "MsmKey" = "8:_A5583B7FE43748C0909935AB71C63F4A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -795,13 +987,37 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AF447839AB044B8984F0C2AABDDBCA3F"
+        "MsmKey" = "8:_A6CF6EA193694E5BBB0D0C86A24C66D1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AEE4F4BD11174852BDCD19A793692126"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B2F6C224A8B8449B912B39E16FFDD654"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B50E962096B6446C8AD534AEFBFE55EC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B6309BE16E8D41129F6404FFB133BAA1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B8CBA563038143ED92DBD96520CE4B4B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -819,7 +1035,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BB48AB1054D547DA856F34DB38C4638E"
+        "MsmKey" = "8:_BB3F0D5D8AD84322B59E293ACE5FE030"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -843,31 +1059,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BF5FABD5F06140FD90B0D03EED0B4C0D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BF870ACF1B7148FFACCB773AFC028E8D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C1DC8CACD8DA4A008BC61992633D411D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C35654DFFD2D4A809121CC654E76EF98"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C3C2D09D593F45A89494C3CB55F5CD89"
+        "MsmKey" = "8:_C03A49524140445D84AD5C985F07C023"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -885,25 +1077,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C5E08B23D4E647708ADAA3B281799D5F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C66E1735C2B446218C6125027F6AD2F5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C6A1FD53C12F4684AB2AC1AD48F16912"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C6B944F482AE422FA28B940C9940DCB2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -915,7 +1089,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C98926E2023F4C0CB85B927E9CB012A4"
+        "MsmKey" = "8:_C85841A80D0747C3986FED8D1C1CE4E5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C92AED963F2F4918AB86FB4F318F78D2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -927,19 +1107,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D155A43F6B0540438234896EB24A775F"
+        "MsmKey" = "8:_CF13C017F1B3444C8F1A36CD83C7F674"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D2E5972D2C1746CAA93675E5B8D0B302"
+        "MsmKey" = "8:_CFE328117A4146ABAA085130856E7243"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D3D3F6F450AC4E67A6FD492D86694B80"
+        "MsmKey" = "8:_D0F3A5B59D814AC2A7AA381A9E6CD12F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D12F98E3B4AB4D01AFAFADCF0467EE9C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -951,25 +1137,55 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D587DA9267504D79B991C916B45562BF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D8E802982BFD4492AD64AEE0035E8BC2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DBC1F2D328274F8887AEDD6CFAA66526"
+        "MsmKey" = "8:_D9B3B9DB463140DF9BB8FC9F2C3C3AA9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DD15FE7BD0D54587B9F292AEC3E0DEFA"
+        "MsmKey" = "8:_DA2A1C7BAE724D8BBA93F78781BE930B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DD20D5F0C0924558B9CF32E40D64B289"
+        "MsmKey" = "8:_DB85C7AB2EA746BAB97F6A1F662DC93E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DE2AA7DB68C5474EAFA37513422272F1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E133A506FE544388BFABC8373F14FC3E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E2C38ECF29984D00B91F70C0889C43E6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E3CA85719AF749118049C14D6969FB95"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -987,7 +1203,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E8D7DB7802674FEBB3A949864F95CC53"
+        "MsmKey" = "8:_E9AA6FF06D4842C4A963073ACC322133"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1005,13 +1221,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EAB9BAE399CF40C2A87AABFF7B4CC21A"
+        "MsmKey" = "8:_EA296FB44FAD48A5AAE82AFB44AC5EA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EB03484C5F4541DBB7930FC1CD0ADE09"
+        "MsmKey" = "8:_EAB9BAE399CF40C2A87AABFF7B4CC21A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1023,25 +1239,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EDBB3CC9214B452F837FEF9C1FB5A053"
+        "MsmKey" = "8:_ECE8C1BF526E4D96814962E7C6C780E9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EE2FB3B6BFEF43F98F691EB6EC9B3ED8"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EE50F7418A0C4B2BBF5892046FDCB42C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EF5B0C74A7F14ACB96D1D1E11480053C"
+        "MsmKey" = "8:_EEC472F6DA014252888993BB4A9CA3AE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1059,13 +1263,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F465412D292F417EA8784F17A37E1F85"
+        "MsmKey" = "8:_F1347752A1E9402588AAAEC8A3A6850B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F468331D65284A869D3C28E32FED395E"
+        "MsmKey" = "8:_F465412D292F417EA8784F17A37E1F85"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1089,7 +1293,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F662AEE6EE1340F5A25935F294AC27F7"
+        "MsmKey" = "8:_F6B37112D7704A459FA9923EA2CEDCAE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F79F70BE5F2F455CACE4287658988883"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1101,31 +1311,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F99D434A02F544AFBC12B34191A49061"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FAFCBE49BCCE4C9BA5ED6413709349BD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FD7A98A0FBBA4A42BA3EF10BFC5CDD1C"
+        "MsmKey" = "8:_FD2A0A8F98C24C0280DCC0013729C01E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_FE1B1D362383466A96E5DF86AD8804B1"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FE9CDF8E81AD4277A0D680C4E9361AC4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1220,6 +1412,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -1228,10 +1433,10 @@
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
         "OutputFilename" = "8:Release\\Install.msi"
-        "PackageFilesAs" = "3:2"
+        "PackageFilesAs" = "3:4"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -1250,6 +1455,11 @@
                     {
                     "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.10.0.x86"
+                    {
+                    "Name" = "8:Visual C++ 2010 Runtime Libraries (x86)"
+                    "ProductCode" = "8:Microsoft.Visual.C++.10.0.x86"
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
                     {
@@ -1292,26 +1502,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0260B1BFD0AA4C49BBF147139C57929D"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level2.xnb"
-            "TargetName" = "8:level2.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_02A57258213C4835985A8B9A0F14778D"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\InfoWindow\\sign.xnb"
@@ -1352,12 +1542,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_04B1F69C613C46289E9C7607AAEA3975"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_05809A8E1D58401E93150E5534A86782"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailLeft.xnb"
-            "TargetName" = "8:tailLeft.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerLU.xnb"
+            "TargetName" = "8:cornerLU.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1372,32 +1562,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_05F7BA58AFE54EFD9762A9E3FB3E10FC"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07458449DB7E428599C88AAA8DBCCD0A"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailUp.xnb"
-            "TargetName" = "8:tailUp.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Food\\bug1.xnb"
+            "TargetName" = "8:bug1.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_075285A35640401ABF9331D7E929D5E7"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headRight.xnb"
-            "TargetName" = "8:headRight.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_DC4FA5A5DB6E458B8A5D005A5AE0723F"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1472,6 +1642,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0BBCA3E3E9E24A01940998C3F3FD0C7E"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headUP.xnb"
+            "TargetName" = "8:headUP.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F4DF0FE97094E2DBD8D5863F68C465E"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\bodyUp.xnb"
+            "TargetName" = "8:bodyUp.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_13890F9398CE4DE5B16629221EA19B3C"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Font\\HighScoresFont.xnb"
@@ -1512,12 +1722,112 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_147E5EE0AD6E43679E0BFCB396D27436"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\Background\\owl.xnb"
+            "TargetName" = "8:owl.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_10F0C4C3CE134A8A92C24BE1F2658D41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14D22230DADC410983F43F5499DA7E9F"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\6.xnb"
             "TargetName" = "8:6.xnb"
             "Tag" = "8:"
             "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_154A03F71F07422CBC297D6F9DE678AA"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level3Marked.xnb"
+            "TargetName" = "8:level3Marked.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_15B27DFDED664A20B55C443ED053C652"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailRight.xnb"
+            "TargetName" = "8:tailRight.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_163426F7B60E41A4B5780D11DA4AE46A"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headDown.xnb"
+            "TargetName" = "8:headDown.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_180F9FDEDED34A7ABD4108AE42826A09"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailDown.xnb"
+            "TargetName" = "8:tailDown.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1552,12 +1862,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1ECF13B34EC345D79F661BBD3823F185"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D0C6EE23C2B482188CC21B8CBFC951A"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailRight.xnb"
-            "TargetName" = "8:tailRight.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerDR.xnb"
+            "TargetName" = "8:cornerDR.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1592,26 +1902,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_20275750D8C147DAB96F1C26E7430B92"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\bodyUp.xnb"
-            "TargetName" = "8:bodyUp.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2101A07741FA4EDAA2E70791ACD10628"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Main\\highscoresMarked.xnb"
@@ -1632,12 +1922,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_21CF4F0A29B0470497CD75863476508B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_25C8E03AF65F4F09B2244078CA466198"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailLeft.xnb"
-            "TargetName" = "8:tailLeft.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerLU.xnb"
+            "TargetName" = "8:cornerLU.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1698,6 +1988,26 @@
             "TargetName" = "8:changeUserMarked.xnb"
             "Tag" = "8:"
             "Folder" = "8:_40CB45F4EBBD45FBA77FB09A04C5A1D8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_292C1B660ACA43C5BBA7406C33E58214"
+            {
+            "SourcePath" = "8:C:\\Users\\Vytas\\Downloads\\delete.ico"
+            "TargetName" = "8:delete.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_C390A04BAA2142EB815334247801F5A7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1803,46 +2113,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32E93CCF35E84B6B89A79C884A86C84D"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerUR.xnb"
-            "TargetName" = "8:cornerUR.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_332693F20DFA4F6484303364ED58B6BC"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level6.xnb"
-            "TargetName" = "8:level6.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3384F4B07620416D8A19D8D132E88AB3"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Pauze\\pauzeSign.xnb"
@@ -1883,12 +2153,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_35197C35762D4D7D841BFE758A04A1F2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3491248409F74835BBECD32E32777032"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailRight.xnb"
-            "TargetName" = "8:tailRight.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\helpControl.xnb"
+            "TargetName" = "8:helpControl.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1927,7 +2197,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DomainModel, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DomainModel, Version=0.5.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_378E4D6A839F8325A3F4C67CEF42BBB5"
@@ -1954,12 +2224,32 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_38154F47D7B5414BA47E1218661E0357"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_38BD3AEB7F7F4679977718612394693D"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level5Marked.xnb"
-            "TargetName" = "8:level5Marked.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\helpBarrier.xnb"
+            "TargetName" = "8:helpBarrier.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3A2F7D9FBA8C498594CECF26B3DEBD0E"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerLD.xnb"
+            "TargetName" = "8:cornerLD.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2065,12 +2355,72 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_40229AB3CE0E491788F38103731809C6"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailUp.xnb"
+            "TargetName" = "8:tailUp.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_41603E3DEFDB46C0B05249C347EF83B7"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\InfoWindow\\playerTime.xnb"
             "TargetName" = "8:playerTime.xnb"
             "Tag" = "8:"
             "Folder" = "8:_76242659D0A740929A4D7E65080607D0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_41B7547945F444719797AD4FA0735771"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level1.xnb"
+            "TargetName" = "8:level1.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42178F2CE9884BCCA00BF52513434E41"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\Snake\\eat.xnb"
+            "TargetName" = "8:eat.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_53BF9BAC3C294A70BB7711591D11CBE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2116,12 +2466,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_430FFEAB05A94BB697AF91FDAF40D631"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44CC39EB070740AAB3FA284A8C0A8906"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headLeft.xnb"
-            "TargetName" = "8:headLeft.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Pauze\\backToMeniu.xnb"
+            "TargetName" = "8:backToMeniu.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_926F0FE76ACA4A1FB37E45260DE1E0A2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2136,12 +2486,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44CC39EB070740AAB3FA284A8C0A8906"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44DB430D567E4D24AB3129F822F1B498"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Pauze\\backToMeniu.xnb"
-            "TargetName" = "8:backToMeniu.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerLD.xnb"
+            "TargetName" = "8:cornerLD.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_926F0FE76ACA4A1FB37E45260DE1E0A2"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2196,6 +2546,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4670911F4D3546F0BA9FC7311F95B88F"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\bodyRight.xnb"
+            "TargetName" = "8:bodyRight.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46D942E830954A5886B004C4B690C721"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level3.xnb"
+            "TargetName" = "8:level3.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4896006C8E584806A76BB3ED77978188"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Background\\time.xnb"
@@ -2216,12 +2606,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_49F62FEBAB3848B3B5498B1A643A2E77"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_494E9922EB614E4F956B64E2C9E84188"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headRight.xnb"
-            "TargetName" = "8:headRight.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerLU.xnb"
+            "TargetName" = "8:cornerLU.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2236,12 +2626,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4A83B2F56BFA4BB5A5D03FF92D1DD336"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4986B19362CF4A1084FC37FAF7D8B9F1"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailUp.xnb"
-            "TargetName" = "8:tailUp.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailDown.xnb"
+            "TargetName" = "8:tailDown.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2256,12 +2646,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4AEA1356E5D34080B64EB11C527A518C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4994BC88BC314119B95CADC7587E9220"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\bodyUp.xnb"
-            "TargetName" = "8:bodyUp.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerUR.xnb"
+            "TargetName" = "8:cornerUR.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4A0F6AFE796D4CDBA3927337934052C9"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Food\\bug1D.xnb"
+            "TargetName" = "8:bug1D.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_DC4FA5A5DB6E458B8A5D005A5AE0723F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4A892479939049738FA5EA375F8BB7EC"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerLD.xnb"
+            "TargetName" = "8:cornerLD.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2307,6 +2737,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4D3F7FA5BC274B539D03B34784717869"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Food\\bug1L.xnb"
+            "TargetName" = "8:bug1L.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_DC4FA5A5DB6E458B8A5D005A5AE0723F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4DBAD0C8844A439A87EBF33940C7445A"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Background\\bush1.xnb"
@@ -2347,12 +2797,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4F04D0F8C02C421D87A9468097F31AA8"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4EF0E73630194406AA9A883E2064A7CA"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headRight.xnb"
-            "TargetName" = "8:headRight.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\Background\\The Snow Queen.xnb"
+            "TargetName" = "8:The Snow Queen.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_10F0C4C3CE134A8A92C24BE1F2658D41"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2407,6 +2857,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5103EDD7C3044FE6AE0AC6B42821CB7B"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\bodyUp.xnb"
+            "TargetName" = "8:bodyUp.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_519C73F1283148EFAD002539519C2A35"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headRight.xnb"
+            "TargetName" = "8:headRight.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_52165CD125DE4F8DAFEEE7AA36F3E423"
             {
             "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v4.0\\sqlceqp40.dll"
@@ -2427,12 +2917,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_528F695FF6B94FA1944B7F73CFAC7C31"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_526375FE204E41C9A18684B45ED46C99"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level4Marked.xnb"
-            "TargetName" = "8:level4Marked.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headRight.xnb"
+            "TargetName" = "8:headRight.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2453,6 +2943,26 @@
             "TargetName" = "8:lifeIcon.xnb"
             "Tag" = "8:"
             "Folder" = "8:_1158FFF96F994922B7204B4CBB99E67C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_534BE75C1BC447F7950A3D87FD7E25F4"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\darkLayer.xnb"
+            "TargetName" = "8:darkLayer.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2507,12 +3017,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A48E91E2CD94633B0B137F7B1F1B0E6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A26AFE8B22D474BBB60ADB0CAE28570"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerUR.xnb"
-            "TargetName" = "8:cornerUR.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\down.xnb"
+            "TargetName" = "8:down.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A7F5A6F14A94606BEE60C9DC8E1CB3B"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailUp.xnb"
+            "TargetName" = "8:tailUp.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2547,26 +3077,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5D8376E4847047138B9D38F22324411D"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailDown.xnb"
-            "TargetName" = "8:tailDown.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5D8C656E5C4540E38AEA9D08543F7C77"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Difficult\\hardMarked.xnb"
@@ -2587,12 +3097,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5EBD6612E8E24A5D897B5408F9AF4473"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E88646E362A431D9D3631A9A81D8E5C"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerUR.xnb"
-            "TargetName" = "8:cornerUR.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerDR.xnb"
+            "TargetName" = "8:cornerDR.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2627,12 +3137,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5F111E7F6F87413BA2F56A26FEB0E03E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5F81C4421BCF40AEB0329A1DD5BB1520"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level3Marked.xnb"
-            "TargetName" = "8:level3Marked.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\pole2.xnb"
+            "TargetName" = "8:pole2.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2647,12 +3157,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5F81C4421BCF40AEB0329A1DD5BB1520"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_60A1054BDF3743A0A5B7D9364ADE591E"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\pole2.xnb"
-            "TargetName" = "8:pole2.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailRight.xnb"
+            "TargetName" = "8:tailRight.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2767,6 +3277,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_649ACDC1DD9849758DB336AEB57D0702"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\previousMarked.xnb"
+            "TargetName" = "8:previousMarked.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68B84D3745734F77B088C27F85FC71D5"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Pauze\\resumeMarked.xnb"
@@ -2807,12 +3337,72 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A31BF45B9D44A5493F473AD56DAA89B"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level4.xnb"
+            "TargetName" = "8:level4.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AC7BC237E2E4D02B2BC281E09F37BAE"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\InfoWindow\\head.xnb"
             "TargetName" = "8:head.xnb"
             "Tag" = "8:"
             "Folder" = "8:_76242659D0A740929A4D7E65080607D0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B2BEC54405C4C838576CE0521768A8B"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\helpFood.xnb"
+            "TargetName" = "8:helpFood.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6C27786235734F7681E691E3C73F78B8"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\LevelMusic\\jungle-run.xnb"
+            "TargetName" = "8:jungle-run.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77F541B63D47E0A133A0B82D8CC91D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2847,6 +3437,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6EA660336F864D0A8BD3DA2D14ED7BDB"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\LevelMusic\\barn-beat.xnb"
+            "TargetName" = "8:barn-beat.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77F541B63D47E0A133A0B82D8CC91D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F251AA170F44C19B9E5165C694EBC9B"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\InfoWindow\\playerPoints.xnb"
@@ -2867,12 +3477,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FA245AA05944FA39FF79D1401E08229"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FC3838FA093485D88A86D0EBFE18B1D"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level1Marked.xnb"
-            "TargetName" = "8:level1Marked.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailLeft.xnb"
+            "TargetName" = "8:tailLeft.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_70A1F9ECBC7F428AB371912119A8A433"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headLeft.xnb"
+            "TargetName" = "8:headLeft.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7148D54F2FB54A8D83CA57D76911A7CA"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headLeft.xnb"
+            "TargetName" = "8:headLeft.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2907,6 +3557,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_730D0173193045BE8205CE95748C237E"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\snakeBugs.xnb"
+            "TargetName" = "8:snakeBugs.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_742C80D2851A471798D6E3349AEA06BA"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\ChooseSnake\\snakechooseTitle.xnb"
@@ -2927,12 +3597,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_74A6F2C5CBF248F192C0CA4FA7F3275D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_74AC0989D4E4477DAE3AA9C4B89FBCA9"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\darkLayer.xnb"
-            "TargetName" = "8:darkLayer.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\Background\\Nightime.xnb"
+            "TargetName" = "8:Nightime.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_10F0C4C3CE134A8A92C24BE1F2658D41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7521E6298C724CFB899C9B1FC2FAC87B"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Food\\bug1R.xnb"
+            "TargetName" = "8:bug1R.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_DC4FA5A5DB6E458B8A5D005A5AE0723F"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2967,12 +3657,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7899AFDF23AF4503A25802FB479AC6B2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_783F9A7A8F04482C82404A45737CAA97"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headDown.xnb"
-            "TargetName" = "8:headDown.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Night\\nightSquare.xnb"
+            "TargetName" = "8:nightSquare.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_6FC7E113B6A24CDDB2536B989918E321"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_79B852E180524F278F956A99F8E2C11F"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Meniu\\click.xnb"
+            "TargetName" = "8:click.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_20F3BDF15F9F497E860579BD7B0AB86A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7BC7180DDBAF4546AA2B49A081092DD9"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level2.xnb"
+            "TargetName" = "8:level2.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3051,7 +3781,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Snake Game.Service, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Snake Game.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_7E6E3C46D49BD39BC5DF30A711628126"
@@ -3098,12 +3828,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_814827BB10F0494E9F0CA2744547B9CB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_81006B24E2714730AD9E68CBA9F0A09F"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\kvadratas.xnb"
-            "TargetName" = "8:kvadratas.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headUP.xnb"
+            "TargetName" = "8:headUP.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_88A99BB9DBF04D7F8DF1E9EC4BE86A42"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3118,12 +3848,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8302025AECA4482EBCC84CE372C6937B"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_837FB992720849A6B99ECA80DC0322C5"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headUP.xnb"
-            "TargetName" = "8:headUP.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headRight.xnb"
+            "TargetName" = "8:headRight.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3158,92 +3888,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_84E0E3D067CC4753BB660E9579B7BDA0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8A3893CCF84B47C9A7DBD6F6F5CA5788"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level4.xnb"
-            "TargetName" = "8:level4.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\Snake\\hitToSnake.xnb"
+            "TargetName" = "8:hitToSnake.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8612F935964B4EABB305999A96EB85C2"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headLeft.xnb"
-            "TargetName" = "8:headLeft.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_868228080EC94F53806A1392886C3B16"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\bodyRight.xnb"
-            "TargetName" = "8:bodyRight.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_88D3A58189F64F18813B5F42B0A78F60"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\bodyRight.xnb"
-            "TargetName" = "8:bodyRight.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_89FFD06ED15E44E58A0F721CE92B6692"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headDown.xnb"
-            "TargetName" = "8:headDown.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_53BF9BAC3C294A70BB7711591D11CBE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3264,26 +3914,6 @@
             "TargetName" = "8:snake1.xnb"
             "Tag" = "8:"
             "Folder" = "8:_0843525ECDC348C190273D1D5B0C9A18"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8BAC5CA6DB054119912C144CBAE8D8D4"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level5.xnb"
-            "TargetName" = "8:level5.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3378,12 +4008,92 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8EBDED4E273B4D7C8F66D0C9330D3FED"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headDown.xnb"
+            "TargetName" = "8:headDown.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FC187D83E80459E8887F17955BD4032"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Night\\panelLayer.xnb"
+            "TargetName" = "8:panelLayer.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_6FC7E113B6A24CDDB2536B989918E321"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FDE4F4A703141CBB99D823E78D5C586"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\TMedium.xnb"
             "TargetName" = "8:TMedium.xnb"
             "Tag" = "8:"
             "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9063CAF751A4478FAED14E261FF737BB"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\previous.xnb"
+            "TargetName" = "8:previous.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93067837301A4EB190DB6EB8D7C47A13"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level1Marked.xnb"
+            "TargetName" = "8:level1Marked.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3418,11 +4128,31 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93F3C9F104084A21A279E2B861BD15F6"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\bodyRight.xnb"
+            "TargetName" = "8:bodyRight.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_96C1D3703E0DBA31FA57BBEECA40AD09"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DataContrats, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DataContrats, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_96C1D3703E0DBA31FA57BBEECA40AD09"
@@ -3473,7 +4203,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Repositories, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Repositories, Version=0.5.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_97B77B93AC05F6425DBC2E0C257E6939"
@@ -3498,6 +4228,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_98CBFBCEE2464CBE91F4FB6C72C519C8"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\back1.xnb"
+            "TargetName" = "8:back1.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_99A37A7F88DA4850AD98F7615EDE3A1E"
@@ -3540,12 +4290,112 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9A7E293E9E524D3DAD4D8C5DCC4B568C"
+            {
+            "SourcePath" = "8:..\\..\\..\\kodo pvz\\uninstall.bat"
+            "TargetName" = "8:uninstall.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_ADAFE48A798644848039029C955D6E5D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9C8FAAD284344EC7AE0AE662F96D6205"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailLeft.xnb"
+            "TargetName" = "8:tailLeft.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_48FB2D0768DC43B2B0C5A023AE948B45"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F9BBF74DE464BC6A1F052D55CE30FA7"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Radar\\radar.xnb"
             "TargetName" = "8:radar.xnb"
             "Tag" = "8:"
             "Folder" = "8:_0BCAEF875B9846F68B7A38AA26DE2150"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A01BBF446580495C8880E0681C187E80"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\snakeNight.xnb"
+            "TargetName" = "8:snakeNight.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A073F668358B4E5F956AB1BBE6546054"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\snakeBarrier.xnb"
+            "TargetName" = "8:snakeBarrier.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A1474C86FBC04E0FB5B27239AA1A7A1F"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailUp.xnb"
+            "TargetName" = "8:tailUp.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3580,12 +4430,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A1D384FBBCEA417685285F820D6D925F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3533CBAEFBB4DE29FB6032137454D60"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerDR.xnb"
-            "TargetName" = "8:cornerDR.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headLeft.xnb"
+            "TargetName" = "8:headLeft.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3600,12 +4450,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A26353FE1AB64123BBC6ED9D1A0BA752"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A5583B7FE43748C0909935AB71C63F4A"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\back1.xnb"
-            "TargetName" = "8:back1.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headUP.xnb"
+            "TargetName" = "8:headUP.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3644,7 +4494,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Snake Game.ServiceContracts, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Snake Game.ServiceContracts, Version=0.5.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_A5DF1317067585956A5E391E8F4F2A48"
@@ -3711,12 +4561,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AF447839AB044B8984F0C2AABDDBCA3F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A6CF6EA193694E5BBB0D0C86A24C66D1"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerDR.xnb"
-            "TargetName" = "8:cornerDR.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\chooseLevelTitle.xnb"
+            "TargetName" = "8:chooseLevelTitle.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AEE4F4BD11174852BDCD19A793692126"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level4Marked.xnb"
+            "TargetName" = "8:level4Marked.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2F6C224A8B8449B912B39E16FFDD654"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\back1Marked.xnb"
+            "TargetName" = "8:back1Marked.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3737,6 +4627,46 @@
             "TargetName" = "8:background.xnb"
             "Tag" = "8:"
             "Folder" = "8:_1158FFF96F994922B7204B4CBB99E67C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B6309BE16E8D41129F6404FFB133BAA1"
+            {
+            "SourcePath" = "8:C:\\Users\\Vytas\\Desktop\\icon.ico"
+            "TargetName" = "8:icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_C390A04BAA2142EB815334247801F5A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B8CBA563038143ED92DBD96520CE4B4B"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\Background\\birdsSounds.xnb"
+            "TargetName" = "8:birdsSounds.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_10F0C4C3CE134A8A92C24BE1F2658D41"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3791,12 +4721,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BB48AB1054D547DA856F34DB38C4638E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BB3F0D5D8AD84322B59E293ACE5FE030"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\bodyUp.xnb"
-            "TargetName" = "8:bodyUp.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level5.xnb"
+            "TargetName" = "8:level5.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3871,92 +4801,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF5FABD5F06140FD90B0D03EED0B4C0D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C03A49524140445D84AD5C985F07C023"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level1.xnb"
-            "TargetName" = "8:level1.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Effects\\lighting.xnb"
+            "TargetName" = "8:lighting.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF870ACF1B7148FFACCB773AFC028E8D"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailDown.xnb"
-            "TargetName" = "8:tailDown.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C1DC8CACD8DA4A008BC61992633D411D"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailDown.xnb"
-            "TargetName" = "8:tailDown.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C35654DFFD2D4A809121CC654E76EF98"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerDR.xnb"
-            "TargetName" = "8:cornerDR.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3C2D09D593F45A89494C3CB55F5CD89"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerLD.xnb"
-            "TargetName" = "8:cornerLD.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
+            "Folder" = "8:_3FFD8E8A313F402DB1D7B5C2622C71C0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4011,72 +4861,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C5E08B23D4E647708ADAA3B281799D5F"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerLU.xnb"
-            "TargetName" = "8:cornerLU.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C66E1735C2B446218C6125027F6AD2F5"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\meniu_background.xnb"
             "TargetName" = "8:meniu_background.xnb"
             "Tag" = "8:"
             "Folder" = "8:_28C38CBE3F3141F6A361D80999A0B6B4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6A1FD53C12F4684AB2AC1AD48F16912"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level2Marked.xnb"
-            "TargetName" = "8:level2Marked.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6B944F482AE422FA28B940C9940DCB2"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerLU.xnb"
-            "TargetName" = "8:cornerLU.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4111,10 +4901,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C98926E2023F4C0CB85B927E9CB012A4"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C85841A80D0747C3986FED8D1C1CE4E5"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\darkPole.xnb"
-            "TargetName" = "8:darkPole.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Food\\bug1U.xnb"
+            "TargetName" = "8:bug1U.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_DC4FA5A5DB6E458B8A5D005A5AE0723F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C92AED963F2F4918AB86FB4F318F78D2"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\fastSnake.xnb"
+            "TargetName" = "8:fastSnake.xnb"
             "Tag" = "8:"
             "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
@@ -4151,52 +4961,92 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D155A43F6B0540438234896EB24A775F"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\down.xnb"
-            "TargetName" = "8:down.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2E5972D2C1746CAA93675E5B8D0B302"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailUp.xnb"
-            "TargetName" = "8:tailUp.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D3D3F6F450AC4E67A6FD492D86694B80"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF13C017F1B3444C8F1A36CD83C7F674"
             {
             "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\help.xnb"
             "TargetName" = "8:help.xnb"
             "Tag" = "8:"
             "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CFE328117A4146ABAA085130856E7243"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Game\\LevelMusic\\destination.xnb"
+            "TargetName" = "8:destination.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77F541B63D47E0A133A0B82D8CC91D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D0F3A5B59D814AC2A7AA381A9E6CD12F"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailLeft.xnb"
+            "TargetName" = "8:tailLeft.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D12F98E3B4AB4D01AFAFADCF0467EE9C"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level6.xnb"
+            "TargetName" = "8:level6.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D587DA9267504D79B991C916B45562BF"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\bodyUp.xnb"
+            "TargetName" = "8:bodyUp.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4231,12 +5081,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBC1F2D328274F8887AEDD6CFAA66526"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D9B3B9DB463140DF9BB8FC9F2C3C3AA9"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailLeft.xnb"
-            "TargetName" = "8:tailLeft.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerUR.xnb"
+            "TargetName" = "8:cornerUR.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4251,12 +5101,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD15FE7BD0D54587B9F292AEC3E0DEFA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DA2A1C7BAE724D8BBA93F78781BE930B"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headUP.xnb"
-            "TargetName" = "8:headUP.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Sound\\Meniu\\Frost Waltz.xnb"
+            "TargetName" = "8:Frost Waltz.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_20F3BDF15F9F497E860579BD7B0AB86A"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4271,12 +5121,92 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD20D5F0C0924558B9CF32E40D64B289"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DB85C7AB2EA746BAB97F6A1F662DC93E"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\back1Marked.xnb"
-            "TargetName" = "8:back1Marked.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headDown.xnb"
+            "TargetName" = "8:headDown.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE2AA7DB68C5474EAFA37513422272F1"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level6Marked.xnb"
+            "TargetName" = "8:level6Marked.xnb"
             "Tag" = "8:"
             "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E133A506FE544388BFABC8373F14FC3E"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Night\\night.xnb"
+            "TargetName" = "8:night.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_6FC7E113B6A24CDDB2536B989918E321"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2C38ECF29984D00B91F70C0889C43E6"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\longSnake.xnb"
+            "TargetName" = "8:longSnake.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E3CA85719AF749118049C14D6969FB95"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerUR.xnb"
+            "TargetName" = "8:cornerUR.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4331,12 +5261,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E8D7DB7802674FEBB3A949864F95CC53"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E9AA6FF06D4842C4A963073ACC322133"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\headDown.xnb"
-            "TargetName" = "8:headDown.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\downMarked.xnb"
+            "TargetName" = "8:downMarked.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
+            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4391,12 +5321,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EAB9BAE399CF40C2A87AABFF7B4CC21A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EA296FB44FAD48A5AAE82AFB44AC5EA7"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\ChooseSnake\\snakeArrow2.xnb"
-            "TargetName" = "8:snakeArrow2.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\darkPole.xnb"
+            "TargetName" = "8:darkPole.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_0843525ECDC348C190273D1D5B0C9A18"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4411,12 +5341,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EB03484C5F4541DBB7930FC1CD0ADE09"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EAB9BAE399CF40C2A87AABFF7B4CC21A"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level3.xnb"
-            "TargetName" = "8:level3.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\ChooseSnake\\snakeArrow2.xnb"
+            "TargetName" = "8:snakeArrow2.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
+            "Folder" = "8:_0843525ECDC348C190273D1D5B0C9A18"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4451,12 +5381,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EDBB3CC9214B452F837FEF9C1FB5A053"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ECE8C1BF526E4D96814962E7C6C780E9"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\tailRight.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\tailRight.xnb"
             "TargetName" = "8:tailRight.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4471,52 +5401,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE2FB3B6BFEF43F98F691EB6EC9B3ED8"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EEC472F6DA014252888993BB4A9CA3AE"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\chooseLevelTitle.xnb"
-            "TargetName" = "8:chooseLevelTitle.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\cornerDR.xnb"
+            "TargetName" = "8:cornerDR.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE50F7418A0C4B2BBF5892046FDCB42C"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerLD.xnb"
-            "TargetName" = "8:cornerLD.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF5B0C74A7F14ACB96D1D1E11480053C"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\cornerLD.xnb"
-            "TargetName" = "8:cornerLD.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4571,12 +5461,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F465412D292F417EA8784F17A37E1F85"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F1347752A1E9402588AAAEC8A3A6850B"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\TEasy.xnb"
-            "TargetName" = "8:TEasy.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level5Marked.xnb"
+            "TargetName" = "8:level5Marked.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
+            "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4591,12 +5481,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F468331D65284A869D3C28E32FED395E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F465412D292F417EA8784F17A37E1F85"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\headLeft.xnb"
-            "TargetName" = "8:headLeft.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\HighScores\\TEasy.xnb"
+            "TargetName" = "8:TEasy.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_DCA0F54E066C4C5D82D7E0C49033AFB3"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4671,12 +5561,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F662AEE6EE1340F5A25935F294AC27F7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F6B37112D7704A459FA9923EA2CEDCAE"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake3\\bodyRight.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\bodyRight.xnb"
             "TargetName" = "8:bodyRight.xnb"
             "Tag" = "8:"
-            "Folder" = "8:_97B1260961F64DC8BB11E92E54BA875B"
+            "Folder" = "8:_4EBB029D8D114B11AC5A19690BF99BE2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F79F70BE5F2F455CACE4287658988883"
+            {
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\tailDown.xnb"
+            "TargetName" = "8:tailDown.xnb"
+            "Tag" = "8:"
+            "Folder" = "8:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4711,72 +5621,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F99D434A02F544AFBC12B34191A49061"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD2A0A8F98C24C0280DCC0013729C01E"
             {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake2\\cornerLU.xnb"
-            "TargetName" = "8:cornerLU.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FAFCBE49BCCE4C9BA5ED6413709349BD"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level6Marked.xnb"
-            "TargetName" = "8:level6Marked.xnb"
+            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Arcade\\level2Marked.xnb"
+            "TargetName" = "8:level2Marked.xnb"
             "Tag" = "8:"
             "Folder" = "8:_80F7313647004C2CBE7BC7B4C7C1224E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD7A98A0FBBA4A42BA3EF10BFC5CDD1C"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Game\\Snake\\Snake1\\headUP.xnb"
-            "TargetName" = "8:headUP.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_AF80E2A8DAC447FEA0E77B45C32A4259"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FE9CDF8E81AD4277A0D680C4E9361AC4"
-            {
-            "SourcePath" = "8:..\\Snake Game\\Snake Game\\bin\\x86\\Release\\Content\\Texture\\Meniu\\Help\\downMarked.xnb"
-            "TargetName" = "8:downMarked.xnb"
-            "Tag" = "8:"
-            "Folder" = "8:_FCF4D76EA77D4ADCAA5AA84FFBFE1ABD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4806,6 +5656,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_2CCFEC6372194A6C990EBF621AA61174"
+                    {
+                    "Name" = "8:Gyvatėlė"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_11A9E67F14F046B8B13367DD497761A0"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_334686E1EDA64448AB86050E89990AC4"
@@ -4821,7 +5682,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_ADAFE48A798644848039029C955D6E5D"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -4878,6 +5739,28 @@
                                                 {
                                                 }
                                             }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_3FFD8E8A313F402DB1D7B5C2622C71C0"
+                                            {
+                                            "Name" = "8:Effects"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_49F54B4495204667A625A529466FA69D"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_6FC7E113B6A24CDDB2536B989918E321"
+                                            {
+                                            "Name" = "8:Night"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_78819208811043F39CADF9C9315A518C"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
                                             "{9EF0B969-E518-4E46-987F-47570745A589}:_76242659D0A740929A4D7E65080607D0"
                                             {
                                             "Name" = "8:InfoWindow"
@@ -4898,35 +5781,35 @@
                                             "Property" = "8:_D50B8230AB5640A0BC9F406E328C378C"
                                                 "Folders"
                                                 {
-                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0CF0C0BAE13845B1B6BEBEC73DE2AE52"
-                                                    {
-                                                    "Name" = "8:Snake2"
-                                                    "AlwaysCreate" = "11:FALSE"
-                                                    "Condition" = "8:"
-                                                    "Transitive" = "11:FALSE"
-                                                    "Property" = "8:_F0C58A92BB4946FE8D803C4C5AD06C04"
-                                                        "Folders"
-                                                        {
-                                                        }
-                                                    }
-                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_97B1260961F64DC8BB11E92E54BA875B"
-                                                    {
-                                                    "Name" = "8:Snake3"
-                                                    "AlwaysCreate" = "11:FALSE"
-                                                    "Condition" = "8:"
-                                                    "Transitive" = "11:FALSE"
-                                                    "Property" = "8:_64BEF4136FAA47E9AC6B2CBBD637B25B"
-                                                        "Folders"
-                                                        {
-                                                        }
-                                                    }
-                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AF80E2A8DAC447FEA0E77B45C32A4259"
+                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_106D8D0FA3E44DDFBC3B8CC2DF077E26"
                                                     {
                                                     "Name" = "8:Snake1"
                                                     "AlwaysCreate" = "11:FALSE"
                                                     "Condition" = "8:"
                                                     "Transitive" = "11:FALSE"
-                                                    "Property" = "8:_3DB30BD8B6FB436DBBAF141511D9AABB"
+                                                    "Property" = "8:_1522D2292ACF43F69934957471BD2EF6"
+                                                        "Folders"
+                                                        {
+                                                        }
+                                                    }
+                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_48FB2D0768DC43B2B0C5A023AE948B45"
+                                                    {
+                                                    "Name" = "8:Snake3"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "Property" = "8:_214341E087244EC99EABEF20CD5042E7"
+                                                        "Folders"
+                                                        {
+                                                        }
+                                                    }
+                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_4EBB029D8D114B11AC5A19690BF99BE2"
+                                                    {
+                                                    "Name" = "8:Snake2"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "Property" = "8:_71B16719B8E3410198BAD4C4082BBA14"
                                                         "Folders"
                                                         {
                                                         }
@@ -5078,6 +5961,50 @@
                                         {
                                         }
                                     }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_527177B1FC9648028222D7770B5575E5"
+                                    {
+                                    "Name" = "8:Game"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_9BB74F75B67F4914B9B761DEFFC8F121"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_10F0C4C3CE134A8A92C24BE1F2658D41"
+                                            {
+                                            "Name" = "8:Background"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_F886843367974E2C99BC4E6F2CED15ED"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_1A77F541B63D47E0A133A0B82D8CC91D"
+                                            {
+                                            "Name" = "8:LevelMusic"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_A1FABB734D5A4E1C8756142A72125207"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_53BF9BAC3C294A70BB7711591D11CBE2"
+                                            {
+                                            "Name" = "8:Snake"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_DA6828D7E2A944C6ADD5DDC276F23D62"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_F379A4BD997D420583F00737CD2463B7"
@@ -5112,17 +6039,17 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Gyvatėlė"
         "ProductCode" = "8:{B4222466-2394-45B7-9C6D-98F0EDBC8819}"
-        "PackageCode" = "8:{01B9AED3-D199-4519-98E4-F9AB97A45854}"
+        "PackageCode" = "8:{622987AA-C0BE-4A44-A285-9DD3BC2A8F5B}"
         "UpgradeCode" = "8:{DE62F3D0-4F46-4CCF-8C7B-09D8C43C4C8B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Microsoft"
+        "Manufacturer" = "8:Vytuatas"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
+        "ARPHELPLINK" = "8:http://vytas.codeplex.com/"
         "Title" = "8:Install"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Vytautas Naudžius"
@@ -5232,6 +6159,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_249A630207074F5386A4C5B3F8DC677F"
+            {
+            "Name" = "8:Gyvatėlė"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_D40849AE57984037B8BD07BC5910CABD"
+            "Folder" = "8:_2CCFEC6372194A6C990EBF621AA61174"
+            "WorkingFolder" = "8:_ADAFE48A798644848039029C955D6E5D"
+            "Icon" = "8:_B6309BE16E8D41129F6404FFB133BAA1"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FBE5D5DFF0DC4AD49C5DF92F1914405A"
+            {
+            "Name" = "8:Uninstall"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_9A7E293E9E524D3DAD4D8C5DCC4B568C"
+            "Folder" = "8:_2CCFEC6372194A6C990EBF621AA61174"
+            "WorkingFolder" = "8:_ADAFE48A798644848039029C955D6E5D"
+            "Icon" = "8:_292C1B660ACA43C5BBA7406C33E58214"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FFBC6E62340146799BC86E02F7157AB7"
             {
             "Name" = "8:Gyvatėlė"
@@ -5243,7 +6198,7 @@
             "Target" = "8:_D40849AE57984037B8BD07BC5910CABD"
             "Folder" = "8:_334686E1EDA64448AB86050E89990AC4"
             "WorkingFolder" = "8:_ADAFE48A798644848039029C955D6E5D"
-            "Icon" = "8:"
+            "Icon" = "8:_B6309BE16E8D41129F6404FFB133BAA1"
             "Feature" = "8:"
             }
         }

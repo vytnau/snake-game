@@ -967,13 +967,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sound\Game\Background\Accordion edit.wav">
-      <Name>Accordion edit</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Sound\Game\Background\owl.wav">
       <Name>owl</Name>
       <Importer>WavImporter</Importer>

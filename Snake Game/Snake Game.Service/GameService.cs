@@ -258,8 +258,7 @@ namespace Snake_Game.Service
         {
             FillSnakeCoord(snake.GetSnakeCoordinates());
             FillFoodCoord(food.GetList());
-            FillBarrierCoord(barrier.GetList());
-            
+            FillBarrierCoord(barrier.GetList());            
         }
 
         private void RemoveBug(Vector3 bugCoor)
