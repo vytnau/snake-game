@@ -149,7 +149,7 @@ namespace SnakeGame.Test
             var gameService = new GameService(sound);
             gameService.SetLevel(6);
 
-            Assert.AreEqual("ar6", gameService.GetGameType());
-        }
+            Assert.AreEqual("ar6", gameService.GetGameType());            
+        }        
     }
 }
