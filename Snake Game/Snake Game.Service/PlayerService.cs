@@ -6,7 +6,7 @@ using Snake_Game.ServiceContracts;
 
 namespace Snake_Game.Service
 {
-    class PlayerService : IPlayerService
+    public class PlayerService : IPlayerService
     {
         private int points;
         private int lives;
